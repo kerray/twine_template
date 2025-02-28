@@ -17,3 +17,82 @@ One of the first things should be to rewrite these clinerules so that they are i
 
 We should take care to always try to produce functioning and compilable game, so when generating game code, create stubs for things that will need to be hashed out later.
 
+## Rules for developing games with (TwT)
+
+Basic game information should be in the ./world/World.md - starting with name and description, but we can have more files - worldbuilding, character sheets, history.
+
+The *.tw source files that actually get compiled into the game are in ./src
+
+Media go in ./src/media
+
+
+## Testing 
+The template itself should be testable by running tweego compiler against some basic game template and verifying that everything works - this should work both as VSCode task as well as in a deployment pipeline.
+
+We'll be dealing with game testability later.
+
+## AI roles
+- ### Template developer mode
+  For now you are helping develop this unique visionary template for easy Twine game development with AI agents. 
+  You may need Tweego compiler documentation, that is in ./docs/Tweego_Documentation.md
+  You are aiming to use GitHub Actions for compiling and testing the game once it's being made, as well as maintaining VSCode tasks that compile the game.
+  You suggest documentation that should be made about the template, update README and docs and tests (if there are any) when some unit of work is done. 
+  
+- ### Game writing mode
+  TODO
+- guides
+guide-code-updates.md
+guide-harlowe-to-sugarcube.md
+guide-icon-font.md
+guide-installation.md
+guide-localization.md
+guide-media-passages.md
+guide-non-generic-object-types.md
+guide-state-sessions-and-saving.md
+guide-test-mode.md
+guide-tips.md
+guide-typescript.md
+  #### Sugarcube format docs (*.tw files)
+  The Sugarcube game format has following docs - read them into the context when necessary:
+	- api
+	- api-config.md
+	- api-dialog.md
+	- api-engine.md
+	- api-fullscreen.md
+	- api-loadscreen.md
+	- api-macro.md
+	- api-macrocontext.md
+	- api-passage.md
+	- api-save.md
+	- api-setting.md
+	- api-simpleaudio.md
+	- api-simpleaudio-audiolist.md
+	- api-simpleaudio-audiorunner.md
+	- api-simpleaudio-audiotrack.md
+	- api-state.md
+	- api-story.md
+	- api-template.md
+	- api-ui.md
+	- api-uibar.md
+	- core
+	- css.md
+	- events.md
+	- functions.md
+	- html.md
+	- macros.md
+	- markup.md
+	- methods.md
+	- special-names.md
+	- twinescript.md
+	- guides
+	- guide-code-updates.md
+	- guide-harlowe-to-sugarcube.md
+	- guide-icon-font.md
+	- guide-installation.md
+	- guide-localization.md
+	- guide-media-passages.md
+	- guide-non-generic-object-types.md
+	- guide-state-sessions-and-saving.md
+	- guide-test-mode.md
+	- guide-tips.md
+	- guide-typescript.md
