@@ -1,0 +1,32 @@
+:: StoryAuthor
+Created with Twine Template (TwT)
+
+:: StoryBanner
+<h1>My Twine Game</h1>
+
+:: StoryCaption
+Navigation and game info can go here
+
+:: StoryDisplayTitle
+My Twine Game
+
+:: StoryMenu
+[[Start]]
+[[Credits]]
+
+:: StorySubtitle
+A game created with TwT
+
+:: PassageHeader
+<hr>
+
+:: PassageFooter
+<hr>
+<div class="footer-links">
+[[Start]] | [[Credits]]
+</div>
+
+:: Credits
+Created using the Twine Template (TwT).
+
+[[Back to Start->Start]]

@@ -1,0 +1,6 @@
+:: Start
+# Welcome to My Twine Game
+
+This is the starting point of your adventure.
+
+[[Begin your journey->FirstChoice]]

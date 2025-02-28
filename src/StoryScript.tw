@@ -1,0 +1,32 @@
+:: Script [script]
+// Game variables
+State.variables.visitedStart = true;
+
+// Game functions
+window.gameUtils = {
+    randomNumber: function(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    },
+    
+    checkInventory: function(item) {
+        return State.variables.inventory && State.variables.inventory.includes(item);
+    },
+    
+    addToInventory: function(item) {
+        if (!State.variables.inventory) {
+            State.variables.inventory = [];
+        }
+        if (!State.variables.inventory.includes(item)) {
+            State.variables.inventory.push(item);
+        }
+    },
+    
+    removeFromInventory: function(item) {
+        if (State.variables.inventory) {
+            const index = State.variables.inventory.indexOf(item);
+            if (index !== -1) {
+                State.variables.inventory.splice(index, 1);
+            }
+        }
+    }
+};

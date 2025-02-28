@@ -1,0 +1,71 @@
+:: StoryStylesheet [stylesheet]
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+#passages {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.passage {
+    background-color: white;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+.link-internal {
+    color: #0066cc;
+}
+
+.link-internal:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+/* Footer styles */
+.footer-links {
+    text-align: center;
+    margin-top: 1em;
+}
+
+/* Inventory styles */
+.inventory {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+}
+
+.inventory-title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.inventory-items {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.inventory-item {
+    margin-bottom: 0.25em;
+}
+
+/* Character and location styles */
+.character-name {
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.location-name {
+    font-style: italic;
+    color: #666;
+}

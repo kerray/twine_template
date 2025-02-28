@@ -1,0 +1,6 @@
+:: FirstChoice
+You find yourself at a crossroads.
+
+[[Go left->LeftPath]]
+[[Go right->RightPath]]
+[[Go back->Start]]

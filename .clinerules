@@ -3,6 +3,13 @@
 
 This project is a template for a text game in Twine with Sugarcube (for now). 
 
+## Developing (TwT)
+We have ./memlog, where we save in datetime stamped files overall information about what work was successfully done (finished, tested, documentation updated is the definition of done for the template part of the project).
+
+Plans on what should be done go into ./memlog/*-plan.md files and we keep it precise and current by marking sections as completed and cleaning up things once some larger unit of work is done. 
+
+
+
 Our aim is to have the user clone this template repo, open it with an AI agent (currently VSCode with Cline and Claude Sonnet 3.5 or 3.7), and then telling the agent what the game content should be, what the presentation should look like, and have it automatically compiled and verified and publishable with GitHub Actions and possibly other pipelines.
 
 But before we get there, we need to set up the template itself, since this project here - starting with these .clinerules, README.md that will hold the gist of it, ./docs/ folder, where we will store documentation for the template development and for Twine.
@@ -26,6 +33,7 @@ The *.tw source files that actually get compiled into the game are in ./src
 Media go in ./src/media
 
 
+
 ## Testing 
 The template itself should be testable by running tweego compiler against some basic game template and verifying that everything works - this should work both as VSCode task as well as in a deployment pipeline.
 
@@ -40,21 +48,10 @@ We'll be dealing with game testability later.
   
 - ### Game writing mode
   TODO
-- guides
-guide-code-updates.md
-guide-harlowe-to-sugarcube.md
-guide-icon-font.md
-guide-installation.md
-guide-localization.md
-guide-media-passages.md
-guide-non-generic-object-types.md
-guide-state-sessions-and-saving.md
-guide-test-mode.md
-guide-tips.md
-guide-typescript.md
+  
   #### Sugarcube format docs (*.tw files)
   The Sugarcube game format has following docs - read them into the context when necessary:
-	- api
+  - api
 	- api-config.md
 	- api-dialog.md
 	- api-engine.md
@@ -74,7 +71,7 @@ guide-typescript.md
 	- api-template.md
 	- api-ui.md
 	- api-uibar.md
-	- core
+  - core
 	- css.md
 	- events.md
 	- functions.md
@@ -84,7 +81,7 @@ guide-typescript.md
 	- methods.md
 	- special-names.md
 	- twinescript.md
-	- guides
+  - guides
 	- guide-code-updates.md
 	- guide-harlowe-to-sugarcube.md
 	- guide-icon-font.md
