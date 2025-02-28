@@ -3,6 +3,68 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* UI Bar styling */
+#ui-bar {
+    background-color: #333;
+    border-right: 1px solid #444;
+}
+
+#ui-bar-body {
+    padding: 1em;
+}
+
+#ui-bar.stowed {
+    background-color: #333;
+    border-right: 1px solid #444;
+}
+
+#ui-bar-toggle {
+    color: #fff;
+    background-color: #444;
+    border: 1px solid #555;
+}
+
+#ui-bar-toggle:hover {
+    background-color: #555;
+}
+
+/* Story title styling */
+#story-title {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/* Menu button styling */
+#menu-core {
+    margin-top: 1em;
+}
+
+#menu-core .button {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    width: 100%;
+    text-align: center;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+#menu-core .button:hover {
+    background-color: #555;
+}
+
+/* Main content area */
+#story {
+    margin-left: 17.5em; /* Adjust based on UI bar width */
+    padding: 2em;
 }
 
 #passages {
@@ -15,14 +77,20 @@ body {
     padding: 2em;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
 }
 
+/* Headers */
 h1 {
     color: #333;
+    margin-bottom: 1em;
 }
 
+/* Links */
 .link-internal {
     color: #0066cc;
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
 .link-internal:hover {
@@ -33,7 +101,9 @@ h1 {
 /* Footer styles */
 .footer-links {
     text-align: center;
-    margin-top: 1em;
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #eee;
 }
 
 /* Inventory styles */
@@ -48,6 +118,7 @@ h1 {
 .inventory-title {
     font-weight: bold;
     margin-bottom: 0.5em;
+    color: #333;
 }
 
 .inventory-items {
@@ -57,6 +128,7 @@ h1 {
 
 .inventory-item {
     margin-bottom: 0.25em;
+    padding: 0.25em 0;
 }
 
 /* Character and location styles */
@@ -68,4 +140,29 @@ h1 {
 .location-name {
     font-style: italic;
     color: #666;
+}
+
+/* Save slots styling */
+#menu-core .saves {
+    border: 1px solid #555;
+    background-color: #444;
+    padding: 0.5em;
+    margin-top: 1em;
+    border-radius: 3px;
+}
+
+#menu-core .saves:hover {
+    background-color: #555;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #story {
+        margin-left: 0;
+        padding: 1em;
+    }
+    
+    .passage {
+        padding: 1em;
+    }
 }

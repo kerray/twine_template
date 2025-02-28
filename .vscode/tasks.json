@@ -4,12 +4,10 @@
 		{
 			"label": "Compile Game",
 			"type": "shell",
-			"command": "${workspaceFolder}/bin/tweego-2.1.1-linux-x64/tweego",
+			"command": "${workspaceFolder}/bin/tweego-2.1.1-${command:cline.getPlatform}/tweego${command:cline.getExeExt}",
 			"args": [
 				"-o",
 				"${workspaceFolder}/pub/game.html",
-				"--head",
-				"${workspaceFolder}/src/head.html",
 				"-f",
 				"sugarcube-2",
 				"${workspaceFolder}/src"
@@ -27,12 +25,10 @@
 		{
 			"label": "Watch and Compile",
 			"type": "shell",
-			"command": "${workspaceFolder}/bin/tweego-2.1.1-linux-x64/tweego",
+			"command": "${workspaceFolder}/bin/tweego-2.1.1-${command:cline.getPlatform}/tweego${command:cline.getExeExt}",
 			"args": [
 				"-o",
 				"${workspaceFolder}/pub/game.html",
-				"--head",
-				"${workspaceFolder}/src/head.html",
 				"-f",
 				"sugarcube-2",
 				"-w",
@@ -48,13 +44,11 @@
 		{
 			"label": "Test Compilation",
 			"type": "shell",
-			"command": "${workspaceFolder}/bin/tweego-2.1.1-linux-x64/tweego",
+			"command": "${workspaceFolder}/bin/tweego-2.1.1-${command:cline.getPlatform}/tweego${command:cline.getExeExt}",
 			"args": [
 				"-t",
 				"-o",
 				"${workspaceFolder}/pub/game.html",
-				"--head",
-				"${workspaceFolder}/src/head.html",
 				"-f",
 				"sugarcube-2",
 				"${workspaceFolder}/src"
