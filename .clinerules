@@ -1,0 +1,19 @@
+# Twine Template
+### '(TwT)' for short, intentionally looking like crying face
+
+This project is a template for a text game in Twine with Sugarcube (for now). 
+
+Our aim is to have the user clone this template repo, open it with an AI agent (currently VSCode with Cline and Claude Sonnet 3.5 or 3.7), and then telling the agent what the game content should be, what the presentation should look like, and have it automatically compiled and verified and publishable with GitHub Actions and possibly other pipelines.
+
+But before we get there, we need to set up the template itself, since this project here - starting with these .clinerules, README.md that will hold the gist of it, ./docs/ folder, where we will store documentation for the template development and for Twine.
+
+Part of this template project should be ./prompts, because the AI agents working on this projects will need to be able to take on several separate roles - developer, web developer, story writer, game designer... 
+
+And we should also make is self-contained as much as possible, so we'll have ./bin to hold Tweego compiler binaries and possibly other tools.
+
+We should have VSCode tasks, that will run Tweego and compile whatever is in ./src into a game in ./pub
+
+One of the first things should be to rewrite these clinerules so that they are in sections that will make sense for a project that combines template with later user updated prompts and game code.
+
+We should take care to always try to produce functioning and compilable game, so when generating game code, create stubs for things that will need to be hashed out later.
+
