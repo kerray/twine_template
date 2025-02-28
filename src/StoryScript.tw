@@ -1,9 +1,32 @@
 :: Script [script]
-// Game variables
-State.variables.visitedStart = true;
+// Game variables initialization
+$(document).on(':storyready', function() {
+    if (!State.variables.gameStarted) {
+        State.variables.gameStarted = false;
+        State.variables.visitedStart = true;
+    }
+});
 
 // Game functions
 window.gameUtils = {
+    resetGameState: function() {
+        // Reset all game variables to their initial state
+        // Clear existing variables
+        Object.keys(State.variables).forEach(function(key) {
+            delete State.variables[key];
+        });
+        
+        // Set initial values
+        State.variables.gameStarted = true;
+        State.variables.visitedStart = true;
+        State.variables.inventory = [];
+        
+        // Add any other variables that need to be reset here
+        
+        // Save the clean state
+        Save.autosave.save();
+    },
+    
     randomNumber: function(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     },

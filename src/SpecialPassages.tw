@@ -11,7 +11,7 @@ Navigation and game info can go here
 My Twine Game
 
 :: StoryMenu
-[[Start]]
+<<link "Start">><<goto "Start">><</link>>
 [[Credits]]
 
 :: StorySubtitle
@@ -23,10 +23,10 @@ A game created with TwT
 :: PassageFooter
 <hr>
 <div class="footer-links">
-[[Start]] | [[Credits]]
+<<link "Start">><<goto "Start">><</link>> | [[Credits]]
 </div>
 
 :: Credits
 Created using the Twine Template (TwT).
 
-[[Back to Start->Start]]
+<<link "Back to Start">><<goto "Start">><</link>>

@@ -1,6 +1,23 @@
 :: Start
-# Welcome to My Twine Game
-
-This is the starting point of your adventure.
-
-[[Begin your journey->FirstChoice]]
+<<if $gameStarted>>
+  # Restart Game?
+  
+  You've already started a game. Would you like to restart?
+  
+  <<link "Yes, restart the game">>
+    <<run gameUtils.resetGameState()>>
+    <<goto "Start">>
+  <</link>>
+  
+  <<link "No, continue my current game">>
+    <<goto "FirstChoice">>
+  <</link>>
+<<else>>
+  <<set $gameStarted to true>>
+  
+  # Welcome to My Twine Game
+  
+  This is the starting point of your adventure.
+  
+  [[Begin your journey->FirstChoice]]
+<</if>>

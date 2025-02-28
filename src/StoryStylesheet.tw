@@ -1,124 +1,259 @@
 :: StoryStylesheet [stylesheet]
-/* Base styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
+/* Base styles with enhanced colors and fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #6a5acd;
+    --primary-dark: #483d8b;
+    --primary-light: #8a7ddb;
+    --accent-color: #ff6b6b;
+    --text-color: #333;
+    --bg-color: #f5f5f7;
+    --ui-bg: #2d2b42;
+    --ui-text: #ffffff;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+    --transition-fast: 0.2s ease;
+    --transition-med: 0.3s ease;
+    --transition-slow: 0.5s ease;
 }
 
-/* UI Bar styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    margin: 0;
+    padding: 0;
+    transition: background-color var(--transition-med);
+}
+
+/* UI Bar styling with gradient and improved contrast */
 #ui-bar {
-    background-color: #333;
+    background: var(--ui-bg);
+    background: linear-gradient(to bottom, #343256, #2d2b42);
     border-right: 1px solid #444;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: all var(--transition-med);
 }
 
 #ui-bar-body {
-    padding: 1em;
+    padding: 1.2em;
 }
 
 #ui-bar.stowed {
-    background-color: #333;
+    background: var(--ui-bg);
     border-right: 1px solid #444;
 }
 
 #ui-bar-toggle {
-    color: #fff;
+    color: var(--ui-text);
     background-color: #444;
     border: 1px solid #555;
+    border-radius: 4px;
+    transition: all var(--transition-fast);
 }
 
 #ui-bar-toggle:hover {
-    background-color: #555;
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-sm);
 }
 
-/* Story title styling */
+/* Story title styling with text effects */
 #story-title {
-    color: #fff;
-    font-size: 1.5em;
-    margin-bottom: 1em;
+    color: var(--ui-text);
+    font-size: 1.7em;
+    font-weight: 600;
+    margin-bottom: 1.2em;
     text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    transition: all var(--transition-med);
 }
 
-/* Menu button styling */
+#story-title:hover {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Menu button styling with improved hover effects */
 #menu-core {
-    margin-top: 1em;
+    margin-top: 1.2em;
 }
 
 #menu-core .button {
     background-color: #444;
-    color: #fff;
+    background-image: linear-gradient(to bottom, #555, #444);
+    color: var(--ui-text);
     border: 1px solid #555;
-    padding: 0.5em;
-    margin-bottom: 0.5em;
+    padding: 0.6em;
+    margin-bottom: 0.7em;
     width: 100%;
     text-align: center;
-    border-radius: 3px;
-    transition: background-color 0.2s;
+    border-radius: 5px;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
 }
 
 #menu-core .button:hover {
-    background-color: #555;
+    background-image: linear-gradient(to bottom, var(--primary-color), var(--primary-dark));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
-/* Main content area */
+#menu-core .button:active {
+    transform: translateY(1px);
+    box-shadow: var(--shadow-sm);
+}
+
+#menu-core .button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+#menu-core .button:hover::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+/* Main content area with improved spacing and transitions */
 #story {
     margin-left: 17.5em; /* Adjust based on UI bar width */
-    padding: 2em;
+    padding: 2.5em;
+    transition: margin var(--transition-med);
 }
 
 #passages {
     max-width: 800px;
     margin: 0 auto;
+    transition: opacity var(--transition-med);
 }
 
 .passage {
     background-color: white;
-    padding: 2em;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    line-height: 1.6;
+    padding: 2.5em;
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    line-height: 1.7;
+    transition: all var(--transition-med);
+    animation: fadeIn 0.5s ease-out;
 }
 
-/* Headers */
+.passage:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Headers with improved styling */
 h1 {
-    color: #333;
+    color: var(--primary-dark);
     margin-bottom: 1em;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.3em;
 }
 
-/* Links */
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+/* Links with enhanced hover effects */
 .link-internal {
-    color: #0066cc;
+    color: var(--primary-color);
     text-decoration: none;
-    transition: color 0.2s;
+    transition: all var(--transition-fast);
+    position: relative;
+    padding: 0 2px;
 }
 
 .link-internal:hover {
-    color: #004499;
-    text-decoration: underline;
+    color: var(--primary-dark);
+    text-decoration: none;
 }
 
-/* Footer styles */
+.link-internal::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.link-internal:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Footer styles with improved spacing */
 .footer-links {
     text-align: center;
-    margin-top: 2em;
-    padding-top: 1em;
+    margin-top: 2.5em;
+    padding-top: 1.2em;
     border-top: 1px solid #eee;
+    color: #777;
+    font-size: 0.9em;
 }
 
-/* Inventory styles */
+/* Inventory styles with card-like appearance */
 .inventory {
     background-color: #f8f8f8;
     border: 1px solid #ddd;
-    padding: 1em;
-    margin-bottom: 1em;
-    border-radius: 5px;
+    padding: 1.2em;
+    margin-bottom: 1.2em;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
+}
+
+.inventory:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
 }
 
 .inventory-title {
-    font-weight: bold;
-    margin-bottom: 0.5em;
-    color: #333;
+    font-weight: 600;
+    margin-bottom: 0.7em;
+    color: var(--primary-dark);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 0.3em;
 }
 
 .inventory-items {
@@ -127,42 +262,160 @@ h1 {
 }
 
 .inventory-item {
-    margin-bottom: 0.25em;
-    padding: 0.25em 0;
+    margin-bottom: 0.4em;
+    padding: 0.4em 0;
+    transition: all var(--transition-fast);
+    border-left: 0 solid var(--primary-light);
+    padding-left: 0;
 }
 
-/* Character and location styles */
+.inventory-item:hover {
+    border-left: 3px solid var(--primary-light);
+    padding-left: 8px;
+    background-color: rgba(106, 90, 205, 0.05);
+}
+
+/* Character and location styles with enhanced colors */
 .character-name {
-    font-weight: bold;
-    color: #0066cc;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: all var(--transition-fast);
+}
+
+.character-name:hover {
+    text-shadow: 0 0 1px var(--primary-light);
 }
 
 .location-name {
     font-style: italic;
-    color: #666;
+    color: #555;
+    transition: all var(--transition-fast);
+    border-bottom: 1px dotted transparent;
 }
 
-/* Save slots styling */
+.location-name:hover {
+    border-bottom: 1px dotted #555;
+}
+
+/* Save slots styling with improved appearance */
 #menu-core .saves {
     border: 1px solid #555;
     background-color: #444;
-    padding: 0.5em;
-    margin-top: 1em;
-    border-radius: 3px;
+    background-image: linear-gradient(to bottom, #555, #444);
+    padding: 0.6em;
+    margin-top: 1.2em;
+    border-radius: 5px;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-sm);
 }
 
 #menu-core .saves:hover {
-    background-color: #555;
+    background-image: linear-gradient(to bottom, var(--primary-color), var(--primary-dark));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
-/* Mobile responsiveness */
+/* Dialog styling */
+.ui-dialog {
+    border-radius: 10px;
+    box-shadow: var(--shadow-lg);
+    border: none;
+    overflow: hidden;
+    animation: dialogFadeIn 0.3s ease-out;
+}
+
+.ui-dialog-titlebar {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    padding: 0.8em 1em;
+}
+
+.ui-dialog-content {
+    padding: 1.5em;
+    background: white;
+}
+
+.ui-dialog-buttonpane {
+    background: #f5f5f7;
+    border-top: 1px solid #eee;
+    padding: 0.8em;
+}
+
+.ui-dialog-buttonpane button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    transition: all var(--transition-fast);
+}
+
+.ui-dialog-buttonpane button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+@keyframes dialogFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile responsiveness with improved transitions */
 @media screen and (max-width: 768px) {
     #story {
         margin-left: 0;
-        padding: 1em;
+        padding: 1.2em;
     }
     
     .passage {
-        padding: 1em;
+        padding: 1.5em;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    #ui-bar.stowed {
+        box-shadow: none;
+    }
+    
+    #ui-bar-toggle {
+        box-shadow: var(--shadow-sm);
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a2e;
+        --text-color: #e6e6e6;
+        --ui-bg: #16213e;
+        --ui-text: #ffffff;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+    
+    body {
+        background-image: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: var(--text-color);
+    }
+    
+    .passage {
+        background-color: #222639;
+        color: var(--text-color);
+    }
+    
+    .inventory {
+        background-color: #2c2c44;
+        border-color: #3d3d5c;
+    }
+    
+    .footer-links {
+        border-top-color: #3d3d5c;
+        color: #aaa;
     }
 }

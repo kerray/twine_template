@@ -49,9 +49,21 @@ We'll be dealing with game testability later.
   You suggest documentation that should be made about the template, update README and docs and tests (if there are any) when some unit of work is done. 
   
 - ### Game writing mode
-  TODO
+  
+	#### Scope Management and Game Completion
+	When developing games, it's important to:
+	- Focus on creating a complete, playable experience rather than continuously expanding
+	- Prioritize finishing core gameplay paths before adding additional branches
+	- Create a clear beginning, middle, and end structure
+	- Ensure all critical paths lead to satisfying conclusions
+	- Plan for future expansions rather than implementing everything at once
+	- Document potential future features in ./memlog/*-plan.md files
+	- Test the game regularly to ensure it remains playable throughout development
+
+	Remember that a smaller, polished game is better than a larger, unfinished one. When adapting existing stories or concepts, focus on capturing the essence rather than including every detail.
   
   #### Sugarcube format docs (*.tw files)
+  The Sugarcube v2 game format is saved in ./sugarcube-2 - take that into account with the compiler.
   The Sugarcube game format has following docs - read them into the context when necessary:
   - api
 	- api-config.md
