@@ -1,0 +1,23 @@
+:: EdgeOfCamp [childhood]
+# The Edge of the Known World
+
+You wander toward the edge of camp, where the circle of shelters ends and the wilderness begins. From here, you can see the landscape that surrounds your home - a mix of open grassland and scattered trees, with a line of denser forest visible in the distance. A small stream runs not far from camp, providing the tribe with fresh water.
+
+Adults always warn the children not to go beyond the camp alone. The world outside is full of dangers - predators, getting lost, or other hazards that a small child cannot handle.
+
+As you stand at this boundary between safety and the unknown, you feel both fear and curiosity. Someday, when you're older, you'll venture out with the adults to learn hunting, gathering, and navigation.
+
+For now, you notice small details at the edge of camp - animal tracks in the soft earth, interesting stones, and small insects going about their business.
+
+<<link "Examine the animal tracks">>
+  <<set $skills.tracking += 0.2>>
+  <<goto "ExamineAnimalTracks">>
+<</link>>
+
+<<link "Collect interesting stones">>
+  <<goto "CollectStones">>
+<</link>>
+
+<<link "Return to the center of camp">>
+  <<goto "ReturnToCampCenter">>
+<</link>>

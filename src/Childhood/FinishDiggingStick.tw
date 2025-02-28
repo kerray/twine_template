@@ -1,0 +1,28 @@
+:: FinishDiggingStick [childhood]
+# Completing Your First Tool
+
+You continue working on the digging stick under your father's guidance. Your small hands grow more confident as you scrape and shape the wood.
+
+"Good," your father encourages. "Now we need to harden the tip in the fire. This makes the wood stronger and less likely to break when digging in hard soil."
+
+He takes you to one of the smaller fires and shows you how to carefully hold the pointed end in the hot coals, not so close that it burns, but close enough to slowly harden the wood. You rotate the stick as he instructs, making sure all sides are treated evenly.
+
+When it's done, your father helps you smooth the handle end with a piece of rough stone. The finished tool is simple but effective - a straight stick with one end sharpened and fire-hardened.
+
+"This is a good first tool," your father says proudly. "You can use it to help the women dig for roots, or to make holes for planting seeds."
+
+You feel a sense of accomplishment holding your very first completed tool - something you made with your own hands that will be useful to the tribe.
+
+<<if gameUtils.hasSkillLevelIncreased("toolMaking")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your tool making skill has improved!</span>
+  </div>
+<</if>>
+
+<<link "Try using your new digging stick">>
+  <<goto "UseDiggingStick">>
+<</link>>
+
+<<link "Return to camp activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

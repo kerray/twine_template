@@ -1,0 +1,26 @@
+:: AgeProgression [childhood]
+# Growing Older
+
+<<run gameUtils.ageCharacter(1)>>
+
+<div class="character-info">
+  <div class="character-basics">
+    <span class="character-name"><<print $character.name>></span>
+    <span class="character-age">Age: <<print Math.floor($character.age)>></span>
+    <span class="character-stage"><<print $character.lifeStage.toUpperCase()>></span>
+  </div>
+</div>
+
+Another year has passed in your young life. You are now <<print Math.floor($character.age)>> summers old, and have grown taller and stronger. Your understanding of the world and your place in the tribe has deepened.
+
+The adults notice your growth and begin to give you more responsibilities appropriate to your age. The games you play become more complex, preparing you for the skills you'll need as you continue to grow.
+
+<<if $character.age >= 7>>
+  You are no longer considered a small child. The tribe now expects you to contribute more significantly and learn the specific skills that will determine your role as an adult.
+<<elseif $character.age >= 5>>
+  You are becoming more independent, able to help with simple tasks without constant supervision. The elders begin to teach you more about tribal traditions and beliefs.
+<</if>>
+
+<<link "Continue your childhood journey">>
+  <<goto "ChildhoodContinued">>
+<</link>>

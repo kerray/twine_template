@@ -1,0 +1,20 @@
+:: GrandmothersStory [childhood]
+# Tales of the Ancestors
+
+You join several other children sitting in a semicircle around your grandmother. Her face is lined with age, but her eyes are bright and her voice strong as she begins to speak.
+
+"Today I will tell you the story of how our people first found this land," she says, and the children grow quiet with anticipation.
+
+She tells of a time long ago when the tribe lived far away, in a place where food became scarce and the weather grew too cold. The tribal leaders had a dream vision of a better place, and led the people on a long, dangerous journey.
+
+"They followed the path of the sun," your grandmother says, gesturing westward. "For many moons they traveled, facing hunger, thirst, and strange tribes who sometimes welcomed them and sometimes tried to drive them away."
+
+Her story is filled with details that make it come alive - the names of brave ancestors, the landmarks they passed, the animals they encountered. You can almost see the journey in your mind.
+
+"Finally, they came to this valley, where the rivers were full of fish, the forests rich with game, and the soil good for the plants we gather. And so our people made their home here, where we have lived ever since."
+
+These stories do more than entertain - they teach the history of your people, important survival lessons, and the values the tribe holds dear. They connect you to those who came before, whose blood runs in your veins.
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

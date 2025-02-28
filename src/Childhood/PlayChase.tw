@@ -1,0 +1,16 @@
+:: PlayChase [childhood]
+# Swift as the Wind
+
+You join the game of chase, your small legs working hard to keep up with the older children. The game weaves between shelters and around the central fire pit, with children laughing and calling to each other.
+
+When it's your turn to be chased, Saulā gives you a head start before pursuing you. Your heart pounds with excitement as you dart between obstacles, looking for the best escape route.
+
+When you're the chaser, you focus intently on your target, learning to anticipate their movements and cut off their path. These same skills will be vital later for hunting or avoiding dangers.
+
+After several rounds, you're breathing hard but feeling strong and happy. The physical exertion has taught your body about speed, agility, and endurance without you even realizing it.
+
+As the game winds down, Saulā ruffles your hair. "You're quick for such a little one," she says with approval. "Soon you'll be outrunning all of us!"
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

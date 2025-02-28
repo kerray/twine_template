@@ -1,0 +1,32 @@
+:: EldersStories [childhood]
+# Tales of the Ancestors
+
+Instead of joining the dance, you find a spot near the elders who have gathered to tell stories. These are special tales, often only shared during celebrations when the whole tribe is together.
+
+You sit quietly, listening as the oldest member of the tribe, a woman whose face is deeply lined with age, begins to speak. Her voice is surprisingly strong and clear.
+
+"Long ago, when the world was new," she begins, "our people came from the direction of the rising sun, following the great herds..."
+
+She tells the origin story of your tribe - how your ancestors journeyed across vast distances, guided by spirit animals and surviving many hardships before finding this territory where you now live.
+
+Another elder continues with tales of great hunts from generations past - how the tribe once brought down a mammoth that fed everyone for many days, how a legendary hunter tracked a wounded lion to save the tribe from its attacks.
+
+A third elder shares stories of times when the tribe faced starvation during terrible winters, and how knowledge of special plants and clever hunting techniques saved them.
+
+These stories are more than entertainment - they contain practical knowledge about survival, warnings about dangers, and guidance about how to live properly. They connect you to those who came before, whose knowledge and sacrifices allow your tribe to thrive today.
+
+You notice that the storytellers use special rhythms and gestures, making the tales easier to remember. Sometimes they pause, and children who have heard the stories before chime in with certain phrases or responses, participating in keeping these oral traditions alive.
+
+<<if gameUtils.hasSkillLevelIncreased("storytelling")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your storytelling skill has improved!</span>
+  </div>
+<</if>>
+
+<<link "Ask a question about the stories">>
+  <<goto "QuestionElders">>
+<</link>>
+
+<<link "Return to the main celebration">>
+  <<goto "TribalCelebration">>
+<</link>>

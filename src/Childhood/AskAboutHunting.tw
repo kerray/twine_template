@@ -1,0 +1,18 @@
+:: AskAboutHunting [childhood]
+# The Hunter's Knowledge
+
+"How do you hunt animals?" you ask the tracker who showed you the footprints. Your eyes are wide with curiosity about this important tribal skill.
+
+The hunter crouches down to your level, pleased by your interest. "Hunting is more than just chasing and catching," he explains. "It begins with understanding the animals - where they go for water, what foods they prefer, when they sleep, how they protect their young."
+
+He points to different tracks around you. "Each animal leaves signs - not just footprints, but broken twigs, disturbed earth, droppings, and marks on trees. A good hunter learns to read these signs like you will someday read the stars."
+
+The hunter explains that different animals require different hunting methods. Some are stalked quietly, others are driven toward waiting hunters, and some are caught with traps or snares.
+
+"We also must honor the spirits of the animals we hunt," he adds more solemnly. "We never kill more than we need, we use every part of the animal, and we perform rituals to thank its spirit for providing for our tribe."
+
+You learn that hunting is not just about strength and speed, but about patience, observation, and deep knowledge passed down through generations. Though you're too young to join hunts now, these early lessons are preparing you for this vital tribal role.
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

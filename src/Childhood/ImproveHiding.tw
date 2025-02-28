@@ -1,0 +1,26 @@
+:: ImproveHiding [childhood]
+# Moving Unseen
+
+From your hiding spot, you notice an even better location a short distance away - a small depression behind some large storage baskets that would conceal you completely.
+
+The challenge is getting there without being seen by the seeker, who is currently looking in the opposite direction but could turn around at any moment.
+
+You watch carefully, timing your movements. When the seeker moves behind a shelter to look for other children, you seize your opportunity. Moving slowly and staying low to the ground, you creep toward the new hiding spot.
+
+A twig snaps under your foot, and you freeze instantly. The seeker pauses, listening, but then continues searching elsewhere. You release the breath you were holding and complete your journey to the new hiding place.
+
+Safely concealed in your improved spot, you feel a sense of accomplishment. The skills you're practicing now - moving quietly, timing your actions, and staying aware of your surroundings - are the same skills hunters use to approach prey without being detected.
+
+<<if gameUtils.hasSkillLevelIncreased("perception")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your perception has improved!</span>
+  </div>
+<</if>>
+
+<<link "Wait until the game ends">>
+  <<goto "StayHidden">>
+<</link>>
+
+<<link "Return to camp activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

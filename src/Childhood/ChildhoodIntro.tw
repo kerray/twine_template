@@ -1,0 +1,113 @@
+:: ChildhoodIntro [childhood]
+<<if not def $needs>>
+  <<set $needs = {
+    hunger: 70,
+    thirst: 70,
+    fatigue: 30,
+    health: 100
+  }>>
+<</if>>
+
+<<if not def $attributes>>
+  <<set $attributes = {
+    strength: 3,
+    dexterity: 3,
+    perception: 3,
+    intelligence: 3,
+    charisma: 3
+  }>>
+<</if>>
+
+<<if not def $skills>>
+  <<set $skills = {
+    hunting: 0,
+    tracking: 0,
+    fishing: 0,
+    fireMaking: 0,
+    plantIdentification: 0,
+    foraging: 0,
+    waterFinding: 0,
+    toolMaking: 0,
+    hideWorking: 0,
+    weaving: 0,
+    storytelling: 0,
+    leadership: 0,
+    trading: 0,
+    running: 1,
+    climbing: 0,
+    swimming: 0,
+    strength: 1,
+    medicinalPlants: 0,
+    weatherPrediction: 0,
+    navigation: 0
+  }>>
+<</if>>
+
+<<if not def $relationships>>
+  <<set $relationships = {
+    "mother": 80,
+    "father": 80,
+    "sibling": 70,
+    "grandmother": 75,
+    "grandfather": 75,
+    "tribalLeader": 50,
+    "shaman": 50,
+    "bestFriend": 70,
+    "rival": 30
+  }>>
+<</if>>
+
+<<if not def $inventory>>
+  <<set $inventory = {
+    carrying: [],
+    familyStorage: {
+      food: ["dried berries", "smoked fish"],
+      materials: ["flint", "animal hide", "sinew"],
+      tools: ["small knife", "digging stick"],
+      medicine: ["healing herbs"],
+      personal: ["bone necklace"]
+    }
+  }>>
+<</if>>
+
+<<if not def $environment>>
+  <<set $environment = {
+    season: "summer",
+    weather: "clear",
+    timeOfDay: "morning",
+    currentLocation: "homecamp"
+  }>>
+<</if>>
+
+<<if not def $gameProgress>>
+  <<set $gameProgress = {
+    discoveredLocations: ["homecamp"],
+    completedEvents: [],
+    currentQuests: [],
+    ageProgressionPoints: [],
+    tribeStatus: "neutral"
+  }>>
+<</if>>
+
+# Early Childhood
+
+<div class="season-indicator season-<<print $environment.season>>">
+  <<print $environment.season.charAt(0).toUpperCase() + $environment.season.slice(1)>> • 
+  <<print $environment.weather.charAt(0).toUpperCase() + $environment.weather.slice(1)>>
+</div>
+
+The morning sun filters through the hide covering of your family's shelter, casting warm patterns on the ground. You are three summers old, a child of the <<if $language eq "proto-indo-european">>Weidōs<<elseif $language eq "proto-uralic">>Metsäkansa<<else>>Kemet<</if>> tribe.
+
+Your mother gently wakes you, her weathered hands warm against your small shoulders. "Wake up, little <<print $character.name>>," she says with a smile. "The day is already bright."
+
+Your earliest memories are of the tribe's camp - the circle of shelters made from hides stretched over wooden frames, the central fire pit where the elders tell stories at night, and the sounds of people working, talking, and living together.
+
+As a small child, your days are filled with simple tasks, play, and learning the ways of your people. Your mother and father teach you about the world around you, and the other children of the tribe become your playmates and friends.
+
+<<link "Explore the camp">>
+  <<goto "ExploreChildhoodCamp">>
+<</link>>
+
+<<link "Stay with your mother">>
+  <<goto "StayWithMother">>
+<</link>>

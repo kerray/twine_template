@@ -1,0 +1,18 @@
+:: GrandparentsStories [childhood]
+# Tales of Ancestors
+
+Your grandparents join your family gathering, their faces creased with age but their eyes bright with wisdom. They are the living connection to the tribe's past, carriers of stories that stretch back many generations.
+
+Your grandmother takes your hands in hers, her skin papery and soft against yours. "When I was your age," she begins, "the tribe lived differently. We moved more often, following the great herds across the plains."
+
+She tells you of her own coming-of-age ceremony, of the fears and hopes she felt, and how her life unfolded afterward - learning her skills, meeting your grandfather, raising children, and now seeing grandchildren grow.
+
+Your grandfather speaks of hunts and journeys, of times of plenty and times of hardship. "The tribe endures," he says. "Through all seasons, through all challenges. And now you will help carry us forward."
+
+They share stories of your parents as children, making you see your mother and father in a new light. You begin to understand the continuity of generations, how each builds upon the knowledge of those who came before.
+
+"Remember these stories," your grandmother urges. "Someday, you will pass them to your own grandchildren."
+
+<<link "Return to prepare for your ceremony">>
+  <<goto "PrepareForCeremony">>
+<</link>>

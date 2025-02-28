@@ -1,0 +1,26 @@
+:: PrepareFood [childhood]
+# Kitchen Lessons
+
+You approach the women who are preparing the day's food. Your mother smiles and makes space for you in the circle. Today, they are processing berries and roots gathered earlier.
+
+"Here, <<print $character.name>>," your mother says, handing you a small stone. "You can help crush these berries."
+
+She shows you how to mash the berries against a flat stone, extracting the juice and pulp. Other women are scraping roots, cutting meat into strips for drying, or grinding seeds into flour.
+
+As you work, the women talk and sing, sharing news and stories. You learn not just how to prepare food, but also about which plants are in season, where they can be found, and how to preserve food for times when it is scarce.
+
+<<if gameUtils.hasSkillLevelIncreased("foraging")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your foraging knowledge has improved!</span>
+  </div>
+<</if>>
+
+<<link "Ask about different berries">>
+  <<set $skills.plantIdentification += 0.2>>
+  <<goto "LearnAboutBerries">>
+<</link>>
+
+<<link "Help with cooking at the fire">>
+  <<set $skills.fireMaking += 0.1>>
+  <<goto "HelpWithCooking">>
+<</link>>

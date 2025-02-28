@@ -1,0 +1,20 @@
+:: ExploreChildhoodCamp [childhood]
+# Exploring the Camp
+
+You toddle out of your family's shelter, blinking in the bright sunlight. The camp is already bustling with activity. Women sit in groups, some grinding seeds between stones, others scraping hides or weaving plant fibers into baskets. Men prepare for hunting or work on crafting tools, carefully knapping stone to create sharp edges.
+
+Children run between the shelters, playing games of chase or pretending to hunt with small toy spears. A few older children are helping with tasks, learning the skills they will need as adults.
+
+In the center of the camp, the shaman sits near the main fire, mixing something in a small bowl made from a turtle shell. The tribal leader stands nearby, deep in conversation with two hunters.
+
+<<link "Watch the other children play">>
+  <<goto "WatchChildrenPlay">>
+<</link>>
+
+<<link "Approach the shaman">>
+  <<goto "ApproachShaman">>
+<</link>>
+
+<<link "Go to the edge of camp">>
+  <<goto "EdgeOfCamp">>
+<</link>>

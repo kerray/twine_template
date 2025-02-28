@@ -1,0 +1,36 @@
+:: HuntingLessons [childhood]
+# Learning the Hunter's Ways
+
+"How do you hunt real animals?" you ask the older boy who's been leading the hunting game.
+
+He seems pleased by your interest and takes a moment to share some real knowledge, speaking with the seriousness of someone passing down important information.
+
+"My father has taken me on real hunts," he says proudly. "The most important thing is to understand the animal you're hunting."
+
+He explains that different animals require different approaches:
+
+"Deer have excellent hearing and smell, but their vision isn't as good for things that don't move. So hunters must stay downwind, move very slowly, and freeze if the deer looks their way."
+
+"Rabbits have eyes on the sides of their head, so they can see almost all around them. But they have blind spots directly in front and behind. Hunters can approach from these directions."
+
+"Birds can see movement very well, but they don't always look down. Sometimes hunters can hide beneath brush and wait for birds to land nearby."
+
+He demonstrates different stalking techniques - the slow, careful steps for approaching deer, the quick pounce needed for smaller animals, the patient stillness required when waiting at a watering hole.
+
+"Real hunting takes patience," he emphasizes. "Sometimes hunters wait for hours without moving. And they must respect the animals they hunt, thanking their spirits for providing food."
+
+Though you're still too young to join real hunts, these early lessons help you understand the skills you'll need to develop as you grow older.
+
+<<if gameUtils.hasSkillLevelIncreased("hunting")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your hunting knowledge has improved!</span>
+  </div>
+<</if>>
+
+<<link "Practice stalking techniques">>
+  <<goto "PracticeStalking">>
+<</link>>
+
+<<link "Return to play activities">>
+  <<goto "ChildhoodPlay">>
+<</link>>

@@ -1,0 +1,28 @@
+:: ReturnGift [childhood]
+# A Token of Friendship
+
+Touched by your friend's gift of the beautiful shell, you want to give something in return. You think carefully about what would make a meaningful gift.
+
+After some consideration, you decide to create a small woven bracelet. You've been watching the women of the tribe make cordage and simple woven items, and though your skills are basic, you want to try making something special.
+
+You gather some plant fibers that your mother has shown you how to collect and prepare. Working carefully with your small fingers, you twist the fibers into a thin cord, then weave them together in a simple pattern.
+
+It takes several attempts before you're satisfied with your work. The finished bracelet isn't perfect - the weaving is a bit uneven in places - but you've put your heart into making it.
+
+The next day, you find your friend and present your gift. "I made this for you," you say shyly, "because you gave me the special shell."
+
+Your friend's face lights up with delight. Immediately, <<if $character.gender eq "female">>she<<else>>he<</if>> ties the bracelet around <<if $character.gender eq "female">>her<<else>>his<</if>> wrist. "I'll wear it always," your friend promises.
+
+This exchange of gifts cements your friendship. In your tribe, such sharing strengthens bonds between people and is an important part of community life. From the youngest children to the oldest elders, everyone participates in this giving and receiving that helps ensure the tribe's survival through cooperation.
+
+<div class="relationship-change positive-change">
+  Your relationship with your best friend has improved!
+</div>
+
+<<link "Spend the day playing together">>
+  <<goto "PlayWithFriend">>
+<</link>>
+
+<<link "Return to camp activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

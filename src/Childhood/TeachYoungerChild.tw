@@ -1,0 +1,30 @@
+:: TeachYoungerChild [childhood]
+# Passing on Knowledge
+
+You notice a younger child watching your stone game with curious eyes. Though you're still learning yourself, you decide to teach what you know to this smaller child.
+
+"Would you like to learn how to play?" you ask.
+
+The little one nods shyly and sits down beside you. You begin by arranging the stones in the simplest pattern and explaining the basic rules.
+
+"You can move one stone at a time, like this," you demonstrate. "And you can only move to an empty space. If you jump over my stone, you capture it."
+
+Teaching, you discover, requires you to understand the game even better than when you're just playing. You must break down each concept into simple parts that a younger child can grasp. When the little one makes mistakes, you must explain patiently why certain moves don't work.
+
+The older children who taught you are watching with approval. In your tribe, knowledge flows from older to younger members - each generation teaching the next. By taking on this teaching role, even in a small way, you're participating in this important tradition.
+
+By the end of your lesson, the younger child has grasped the basics of the game and is beaming with pride at this new accomplishment.
+
+<<if gameUtils.hasSkillLevelIncreased("leadership")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your leadership skill has improved!</span>
+  </div>
+<</if>>
+
+<<link "Continue playing with the younger child">>
+  <<goto "PlayWithYoungerChild">>
+<</link>>
+
+<<link "Return to play activities">>
+  <<goto "ChildhoodPlay">>
+<</link>>

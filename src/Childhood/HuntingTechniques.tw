@@ -1,0 +1,34 @@
+:: HuntingTechniques [childhood]
+# Ways of the Hunter
+
+"How do you catch animals?" you ask the hunter, fascinated by the tools and weapons he's been showing you.
+
+The hunter, <<if $language eq "proto-indo-european">>Koryos<<elseif $language eq "proto-uralic">>Metsästäjä<<else>>Anhur<</if>>, smiles at your curiosity. "There are many ways to hunt, little one. Each animal requires different methods."
+
+He explains the main hunting techniques used by your tribe:
+
+"For large animals like deer or wild boar, we often use the chase and ambush. Some hunters drive the animal toward others who wait with spears. This requires many people working together."
+
+"For smaller animals like rabbits, we set snares and traps. The animal walks into the trap and is caught without a hunter needing to be present."
+
+"Birds can be brought down with throwing sticks or caught in nets."
+
+"Fish are speared in shallow water or caught with woven basket traps."
+
+The hunter emphasizes that successful hunting requires more than just weapons and techniques. "You must understand the animal - where it drinks, what it eats, when it sleeps. You must know how to move silently, how to hide your scent, and how to be patient."
+
+He also explains the importance of respecting the animals that give their lives to feed the tribe. "We thank the animal's spirit and use every part - meat for food, hide for clothing, bones for tools. Nothing is wasted."
+
+<<if gameUtils.hasSkillLevelIncreased("hunting")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your hunting knowledge has improved!</span>
+  </div>
+<</if>>
+
+<<link "Ask about tracking animals">>
+  <<goto "TrackingLessons">>
+<</link>>
+
+<<link "Return to watching the hunters">>
+  <<goto "WatchHunters">>
+<</link>>

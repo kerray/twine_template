@@ -1,0 +1,26 @@
+:: ChildhoodChores [childhood]
+# Daily Tasks
+
+<div class="season-indicator season-<<print $environment.season>>">
+  <<print $environment.season.charAt(0).toUpperCase() + $environment.season.slice(1)>> • 
+  <<print $environment.weather.charAt(0).toUpperCase() + $environment.weather.slice(1)>>
+</div>
+
+Even as a child, you have responsibilities within the tribe. Everyone must contribute according to their abilities, and learning these tasks is an important part of growing up.
+
+What would you like to help with today?
+
+<<link "Gather firewood with the other children">>
+  <<set $skills.strength += 0.2>>
+  <<goto "GatherFirewood">>
+<</link>>
+
+<<link "Help prepare food with the women">>
+  <<set $skills.foraging += 0.2>>
+  <<goto "PrepareFood">>
+<</link>>
+
+<<link "Learn to make simple tools">>
+  <<set $skills.toolMaking += 0.2>>
+  <<goto "MakeSimpleTools">>
+<</link>>

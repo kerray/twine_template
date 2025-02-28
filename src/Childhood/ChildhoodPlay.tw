@@ -1,0 +1,26 @@
+:: ChildhoodPlay [childhood]
+# Games and Learning
+
+<div class="season-indicator season-<<print $environment.season>>">
+  <<print $environment.season.charAt(0).toUpperCase() + $environment.season.slice(1)>> • 
+  <<print $environment.weather.charAt(0).toUpperCase() + $environment.weather.slice(1)>>
+</div>
+
+Play is not just for fun - it teaches important skills that you will need as an adult. The games children play mimic hunting, gathering, and other tribal activities.
+
+What would you like to play today?
+
+<<link "Hide and seek in the camp">>
+  <<set $skills.perception += 0.2>>
+  <<goto "HideAndSeek">>
+<</link>>
+
+<<link "Practice with a small toy spear">>
+  <<set $skills.hunting += 0.2>>
+  <<goto "ToySpear">>
+<</link>>
+
+<<link "Play the stone and seed game">>
+  <<set $skills.intelligence += 0.2>>
+  <<goto "StoneGame">>
+<</link>>

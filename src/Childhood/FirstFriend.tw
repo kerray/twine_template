@@ -1,0 +1,30 @@
+:: FirstFriend [childhood]
+# A Special Bond
+
+Over the past moon, you've been playing more and more with another child your age. <<if $language eq "proto-indo-european">><<if $character.gender eq "female">>Pria<<else>>Agnis<</if>><<elseif $language eq "proto-uralic">><<if $character.gender eq "female">>Aino<<else>>Sampo<</if>><<else>><<if $character.gender eq "female">>Nefert<<else>>Khenti<</if>><</if>> seems to seek you out specifically, and you enjoy each other's company.
+
+Today, <<if $character.gender eq "female">>she<<else>>he<</if>> approaches with something hidden behind <<if $character.gender eq "female">>her<<else>>his<</if>> back.
+
+"I found something special," your friend says with a grin. "Close your eyes and hold out your hands."
+
+When you do, you feel something placed in your palms. Opening your eyes, you see a beautiful shell, unlike any you've seen before. It must have come from far away, perhaps traded from another tribe that lives near the great water.
+
+"It's for you," your friend says. "Because you're my favorite person to play with."
+
+This simple gift represents something important - your first real friendship, a bond that goes beyond just playing together. In a small tribe where cooperation is essential for survival, these relationships will be crucial throughout your life.
+
+<<set $relationships.bestFriend += 10>>
+
+<div class="relationship-change positive-change">
+  Your relationship with your best friend has greatly improved!
+</div>
+
+<<link "Give a gift in return">>
+  <<set $relationships.bestFriend += 5>>
+  <<goto "ReturnGift">>
+<</link>>
+
+<<link "Suggest a special adventure together">>
+  <<set $relationships.bestFriend += 3>>
+  <<goto "FriendAdventure">>
+<</link>>

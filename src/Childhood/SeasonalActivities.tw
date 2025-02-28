@@ -1,0 +1,40 @@
+:: SeasonalActivities [childhood]
+# The Rhythm of the Seasons
+
+You join the adults and other children in the seasonal activities that are vital to the tribe's survival.
+
+<<if $environment.season eq "spring">>
+  Spring is a time of renewal and planting. You help the women dig for the first tender roots and gather early greens that appear as the snow melts. The hunters track animals that are emerging from winter dens or returning from migration.
+  
+  You learn to identify the first edible plants of the season and help collect materials for repairing shelters damaged during winter. The tribe is busy replenishing supplies that were depleted during the cold months.
+  
+  "Spring food gives strength after the lean winter," your mother explains as she shows you how to dig for sweet tubers that are just beginning to grow.
+<<elseif $environment.season eq "summer">>
+  Summer brings abundance and long days of work and play. The tribe spreads out to gather the plentiful berries, fruits, and plants that grow in the warm weather.
+  
+  You join the children assigned to collect berries, your fingers stained purple and red from the juicy harvest. Adults work to preserve food for the coming winter - smoking meat, drying fruits, and storing nuts.
+  
+  "We must gather enough now to see us through when the snow comes," an elder reminds everyone. "The summer's bounty is winter's survival."
+<<elseif $environment.season eq "fall">>
+  Fall is the final push to prepare for winter. The tribe works urgently to gather the last harvests and hunt animals that have grown fat preparing for the cold season.
+  
+  You help collect nuts that have fallen from trees and late-season berries. The women are busy processing hides from recent hunts to make warm clothing and shelter coverings.
+  
+  "The animals know winter is coming," your father tells you as he repairs hunting tools. "We must learn from them and prepare while we can."
+<<else>>
+  Winter is a time of endurance and close community. The tribe stays near the shelters, conserving energy and living on stored food.
+  
+  You help maintain the fires that are kept burning day and night, and listen to the elders tell long stories that preserve tribal knowledge and history.
+  
+  Despite the challenges, winter has its joys - special games played in the snow, crafts made during the long evenings, and the closeness of the tribe gathered around the fires.
+<</if>>
+
+Through these seasonal activities, you learn the rhythm of the year and how your tribe has adapted to survive through the changing conditions.
+
+<<link "Learn more about seasonal changes">>
+  <<goto "SeasonalLearning">>
+<</link>>
+
+<<link "Return to camp activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

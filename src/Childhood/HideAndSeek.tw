@@ -1,0 +1,25 @@
+:: HideAndSeek [childhood]
+# Sharpening the Senses
+
+You join several children in a game of hide and seek around the camp. One child covers their eyes and counts slowly while the rest of you scatter to find hiding places.
+
+You look around quickly, considering your options. Behind a shelter? Too obvious. Near the storage area? The adults might not approve. Finally, you spot a perfect place - a small depression near some baskets, partially covered by a hide that's been set out to dry.
+
+You curl up small, trying to control your breathing and remain still. These are the same skills hunters use to avoid detection by animals or rival tribes.
+
+As you wait, you listen carefully to the sounds around you - footsteps approaching and receding, the seeker finding other children, the normal sounds of camp life continuing around your game.
+
+<<if gameUtils.hasSkillLevelIncreased("perception")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your perception has improved!</span>
+  </div>
+<</if>>
+
+<<link "Try to move to a better hiding spot without being seen">>
+  <<set $skills.perception += 0.2>>
+  <<goto "ImproveHiding">>
+<</link>>
+
+<<link "Stay perfectly still until the game ends">>
+  <<goto "StayHidden">>
+<</link>>

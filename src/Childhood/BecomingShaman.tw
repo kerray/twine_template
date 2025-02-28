@@ -1,0 +1,24 @@
+:: BecomingShaman [childhood]
+# The Sacred Path
+
+"How does someone become a shaman?" you ask, fascinated by the spiritual knowledge and special role that the shaman holds in your tribe.
+
+The shaman regards you thoughtfully, perhaps wondering if your question comes from simple curiosity or a deeper calling.
+
+"The path to becoming a shaman is not one that is simply chosen," <<if $language eq "proto-indo-european">>Wekwos<<elseif $language eq "proto-uralic">>Tietäjä<<else>>Imhotep<</if>> explains. "Rather, it is the spirits who choose the person."
+
+The shaman describes how future shamans often show signs from an early age - unusual dreams, a special connection to animals, surviving a serious illness, or being born with distinctive marks or features that set them apart.
+
+"When such signs appear, the current shaman begins to teach the chosen one. This learning takes many years, for there is much to know about plants, healing, spirits, and the sacred rituals that maintain harmony between our tribe and the unseen world."
+
+The training involves fasting, learning to enter trance states, memorizing the tribe's sacred stories, and developing healing skills. It also requires great personal sacrifice, as the shaman's first responsibility is always to the tribe and the spirits, not to themselves.
+
+"It is a difficult path," the shaman admits, "but one of great honor and importance. Without the shaman to interpret the will of the spirits and maintain the sacred knowledge, the tribe would lose its way."
+
+<<link "Ask if you might have the calling">>
+  <<goto "ShamanCalling">>
+<</link>>
+
+<<link "Return to the shaman's teachings">>
+  <<goto "ShamanStories">>
+<</link>>

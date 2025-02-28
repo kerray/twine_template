@@ -1,0 +1,18 @@
+:: CeremonyDetails [childhood]
+# The Sacred Transition
+
+"What will happen during my coming-of-age ceremony?" you ask, both excited and nervous about the important ritual ahead.
+
+The shaman leans forward, speaking in a low, serious tone. "The ceremony has three parts, as all important transitions do. First is the ending - you will symbolically leave behind your childhood. Then comes the threshold - a time between what was and what will be. Finally, there is the beginning - your entry into your new status."
+
+The tribal leader explains more practical details. "You will fast for one day before the ceremony to purify your body and sharpen your mind. The women of the tribe will prepare a special garment for you to wear. The men will build a special ceremonial space."
+
+"During the ceremony," the shaman continues, "you will be asked to speak the ancient words that generations of our people have spoken at this time. You will receive a mark that shows your new status. And you will be given your first adult challenge - a task that tests your courage and commitment to the tribe."
+
+"It may seem frightening," the tribal leader adds, "but remember that every adult you see has passed through this same ceremony. It is the way we have always acknowledged this important transition."
+
+The shaman smiles reassuringly. "You are ready for this step. The child in you has learned well, and now it is time for the young adult to emerge."
+
+<<link "Return to prepare for your ceremony">>
+  <<goto "PrepareForCeremony">>
+<</link>>

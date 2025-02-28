@@ -1,0 +1,30 @@
+:: LearnAboutBerries [childhood]
+# Fruits of the Forest
+
+"Which berries are good to eat?" you ask, pointing at the different piles being processed.
+
+Your mother smiles at your curiosity. "This is important knowledge," she says. "Some berries feed us, others heal us, and some can make us very sick."
+
+She shows you several types, explaining the differences:
+
+"These red ones are sweet and safe, but these other red ones with a different leaf pattern will give you a terrible stomach pain."
+
+"The dark blue berries are very good for you - they give strength during winter."
+
+"These small black ones can help with coughing sickness."
+
+You try to memorize the shapes, colors, and growing patterns of each type. This knowledge could save your life someday, especially when you begin to gather food on your own.
+
+<<if gameUtils.hasSkillLevelIncreased("plantIdentification")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your plant identification skill has improved!</span>
+  </div>
+<</if>>
+
+<<link "Return to food preparation">>
+  <<goto "PrepareFood">>
+<</link>>
+
+<<link "Return to camp activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

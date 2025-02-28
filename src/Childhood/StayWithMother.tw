@@ -1,0 +1,20 @@
+:: StayWithMother [childhood]
+# Learning from Mother
+
+You decide to stay close to your mother today. She smiles and hands you a small piece of soft hide to play with while she works. "Watch carefully, <<print $character.name>>," she says. "Someday you will need to know these things."
+
+Your mother is skilled at many tasks. Today, she is preparing plant fibers, soaking them in water before pounding them to make them soft and pliable for weaving. She explains each step as she works, naming the plants and describing where to find them.
+
+"These tall reeds grow by the river," she tells you. "They are strong but can be made flexible. We use them for baskets, mats, and sometimes even to help build our shelters."
+
+As you watch, you begin to understand the importance of knowing which plants are useful and how to prepare them.
+
+<<link "Try to help">>
+  <<set $skills.weaving += 0.2>>
+  <<goto "HelpMother">>
+<</link>>
+
+<<link "Ask about food plants">>
+  <<set $skills.plantIdentification += 0.2>>
+  <<goto "AskAboutPlants">>
+<</link>>

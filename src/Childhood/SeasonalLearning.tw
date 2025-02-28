@@ -1,0 +1,34 @@
+:: SeasonalLearning [childhood]
+# Signs of Change
+
+You approach one of the tribal elders, curious about how they know when the seasons will change. The elder, a woman with gray hair and eyes that have seen many winters, smiles at your question.
+
+"The world speaks to us, little one," she says. "We must only learn to listen."
+
+She explains that there are many signs that indicate seasonal changes:
+
+"Before spring truly arrives, certain birds return from their winter journeys. The sap begins to rise in the trees, and particular plants emerge from the ground in a specific order."
+
+"Summer's approach is marked by longer days, specific flowering plants, and the behavior of insects and animals."
+
+"Fall announces itself when certain berries ripen, when the leaves of trees begin to change color, and when animals start to prepare their winter stores."
+
+"And winter's coming is foretold by migrating birds flying south, by the thickening of animal fur, and by changes in the smell of the air."
+
+The elder teaches you that these signs are interconnected - the behavior of animals, the growth of plants, the movement of stars, and the changing length of days all form a pattern that can be read by those who pay attention.
+
+"Our ancestors have observed these patterns for countless generations," she explains. "This knowledge helps us know when to move to new hunting grounds, when to gather certain plants before they disappear, and when to prepare for the challenges of winter."
+
+<<if gameUtils.hasSkillLevelIncreased("weatherPrediction")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your weather prediction skill has improved!</span>
+  </div>
+<</if>>
+
+<<link "Ask about predicting weather">>
+  <<goto "WeatherPrediction">>
+<</link>>
+
+<<link "Return to seasonal activities">>
+  <<goto "SeasonalActivities">>
+<</link>>

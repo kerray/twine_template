@@ -1,0 +1,28 @@
+:: AdvancedStoneGame [childhood]
+# Complex Patterns
+
+The older girl who taught you the basic stone game notices your growing skill. "Would you like to learn the more difficult version?" she asks.
+
+You nod eagerly, and she begins to rearrange the stones in a more complex pattern - three concentric circles with connecting lines between them.
+
+"In this version," she explains, "you can move along any line, but you must plan several moves ahead. Each time you complete a circle, you capture one of your opponent's stones."
+
+The game is much more challenging than the simpler version. You have to think about not just your next move, but what might happen three or four moves later. Sometimes sacrificing a stone in one position allows you to capture two stones elsewhere.
+
+As you play, you begin to recognize patterns and develop strategies. The older girl is a patient teacher, pointing out opportunities you miss and explaining why certain moves are better than others.
+
+This game teaches more than just strategy - it develops your ability to visualize future possibilities and understand complex relationships between different elements. These same mental skills will be valuable for planning hunts, managing resources, and navigating unfamiliar territory.
+
+<<if gameUtils.hasSkillLevelIncreased("intelligence")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your intelligence has improved!</span>
+  </div>
+<</if>>
+
+<<link "Challenge an older child to a game">>
+  <<goto "ChallengeOlderChild">>
+<</link>>
+
+<<link "Return to play activities">>
+  <<goto "ChildhoodPlay">>
+<</link>>

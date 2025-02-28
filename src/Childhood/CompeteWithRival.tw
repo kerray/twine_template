@@ -1,0 +1,32 @@
+:: CompeteWithRival [childhood]
+# A Fair Challenge
+
+Instead of directly confronting your rival, you decide to suggest a fair competition to resolve the dispute.
+
+"Let's have a contest to see who goes first," you propose. "We can race to that big tree and back."
+
+Your rival considers this for a moment, then nods with a competitive gleam in <<if $character.gender eq "female">>her<<else>>his<</if>> eye. "I'll win easily," <<if $character.gender eq "female">>she<<else>>he<</if>> boasts.
+
+The other children quickly form a line to mark the starting point. One of them counts down: "Ready... set... go!"
+
+You both dash toward the tree, running as fast as your young legs will carry you. Your rival is indeed quick, but you put all your effort into the race, determined to prove yourself.
+
+The race is close. As you round the tree and head back toward the starting line, you're nearly side by side. In the final stretch, <<if $skills.running > 2>>your practice pays off and you pull ahead, crossing the line just before your rival<<else>>your rival's longer legs give <<if $character.gender eq "female">>her<<else>>him<</if>> the advantage, and <<if $character.gender eq "female">>she<<else>>he<</if>> wins by a small margin<</if>>.
+
+Win or lose, the competition has transformed the conflict into something more positive. Your rival seems to respect your willingness to compete fairly, and the tension between you has decreased.
+
+"Good race," <<if $character.gender eq "female">>she<<else>>he<</if>> acknowledges, slightly out of breath.
+
+The other children, seeing that the dispute has been resolved through fair competition rather than fighting, return to their game with renewed enthusiasm.
+
+<div class="relationship-change positive-change">
+  Your relationship with your rival has slightly improved!
+</div>
+
+<<link "Suggest another competition">>
+  <<goto "AnotherCompetition">>
+<</link>>
+
+<<link "Return to play with the group">>
+  <<goto "ChildhoodPlay">>
+<</link>>

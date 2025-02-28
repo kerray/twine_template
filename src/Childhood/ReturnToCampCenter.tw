@@ -1,0 +1,20 @@
+:: ReturnToCampCenter [childhood]
+# The Heart of the Tribe
+
+You make your way back to the center of camp, where the main fire burns even during the day. This is the gathering place for the tribe, where food is shared, stories are told, and decisions are made.
+
+The tribal leader, <<if $language eq "proto-indo-european">>Tewtēr<<elseif $language eq "proto-uralic">>Päällikkö<<else>>Pharaoh<</if>>, sits on a mat near the fire, now speaking with several elders. They discuss hunting plans, the movement of animal herds, and when the tribe might need to relocate to follow food sources.
+
+Children play nearby, and women work on various tasks while talking and laughing together. The atmosphere is one of community and shared purpose.
+
+Your grandmother notices you and waves you over. "Come, <<print $character.name>>," she calls. "I am about to tell a story to the little ones. Would you like to listen?"
+
+<<link "Listen to grandmother's story">>
+  <<set $relationships.grandmother += 5>>
+  <<goto "GrandmothersStory">>
+<</link>>
+
+<<link "Watch the tribal leader">>
+  <<set $relationships.tribalLeader += 3>>
+  <<goto "ObserveTribalLeader">>
+<</link>>

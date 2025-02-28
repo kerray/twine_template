@@ -1,0 +1,16 @@
+:: ObserveTribalLeader [childhood]
+# Leadership in Action
+
+You sit quietly near the central fire, watching the tribal leader as he speaks with several hunters and elders. Though you're too young to participate in these discussions, no one minds your presence as long as you remain quiet and respectful.
+
+The tribal leader's voice is calm but authoritative as he listens to different opinions about hunting grounds and the movement of animal herds. When there is disagreement, he asks questions that help the hunters find common ground.
+
+You notice how he gives each person time to speak without interruption, showing respect for their knowledge and experience. Yet when a decision must be made, he does not hesitate to provide clear direction.
+
+"We will send scouts to both areas," he finally declares. "Based on their reports, we will decide where the main hunting party should go. We cannot afford to waste energy on uncertain hunts with winter approaching."
+
+The hunters nod in agreement, satisfied that their concerns have been heard and a wise plan has been made. You begin to understand that leadership is not just about giving orders, but about listening, weighing options, and finding solutions that benefit the entire tribe.
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

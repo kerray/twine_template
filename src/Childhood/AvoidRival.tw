@@ -1,0 +1,26 @@
+:: AvoidRival [childhood]
+# Choosing Your Battles
+
+Rather than engaging with your rival's challenging behavior, you decide to simply walk away and find other children to play with.
+
+"I'm going to play over there instead," you say calmly, turning away from the confrontation.
+
+Your rival calls after you, "What's wrong? Are you scared?" But you continue walking, not taking the bait.
+
+You find a smaller group of children playing a different game and ask to join them. They welcome you, and soon you're engaged in their activity, enjoying yourself away from the tension of the rivalry.
+
+From time to time, you notice your rival glancing in your direction. Perhaps <<if $character.gender eq "female">>she<<else>>he<</if>> is surprised that the taunting didn't work, or maybe <<if $character.gender eq "female">>she<<else>>he<</if>> is curious about what game you're playing now.
+
+An older child who has been watching approaches you later. "Sometimes walking away is wise," she tells you. "We can't fight every challenge, and some battles aren't worth the energy."
+
+In your tribe, knowing when to engage and when to withdraw is an important skill. While standing up for yourself has value, so does choosing your conflicts carefully and maintaining peace within the group when possible.
+
+Your decision to avoid the confrontation hasn't necessarily resolved the rivalry, but it has demonstrated your self-control and ability to find alternative solutions to problems.
+
+<<link "Try to make peace with your rival later">>
+  <<goto "MakePeaceWithRival">>
+<</link>>
+
+<<link "Continue playing with your new group">>
+  <<goto "NewPlayGroup">>
+<</link>>

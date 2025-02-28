@@ -1,0 +1,32 @@
+:: LearnHealingPlants [childhood]
+# Medicine of the Earth
+
+"Which plants can heal sickness?" you ask your grandmother, curious about this important knowledge.
+
+Your grandmother's expression becomes more serious. "This is sacred knowledge," she says. "Plants that heal can also harm if used incorrectly. You must promise to listen carefully and respect what I teach you."
+
+After you solemnly promise, she begins to show you several plants with healing properties:
+
+"This plant with the fuzzy leaves," she points to a low-growing herb, "helps reduce fever when made into a tea."
+
+She indicates another plant with small white flowers. "The roots of this one can be chewed to ease the pain of a toothache."
+
+A plant with distinctive jagged leaves is next. "This one helps stop bleeding when crushed and applied to a wound. But be careful - too much of it inside the body can make you sick."
+
+Your grandmother explains that healing knowledge is passed down carefully from one generation to the next. While the shaman knows the most powerful healing plants and the rituals that enhance their effects, every member of the tribe should know basic remedies.
+
+"Someday," she says, "you may need this knowledge to help yourself or others when no healer is nearby."
+
+<<if gameUtils.hasSkillLevelIncreased("medicinalPlants")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your knowledge of medicinal plants has improved!</span>
+  </div>
+<</if>>
+
+<<link "Ask about treating specific ailments">>
+  <<goto "TreatAilments">>
+<</link>>
+
+<<link "Return to your grandmother's teachings">>
+  <<goto "GrandmotherPlants">>
+<</link>>

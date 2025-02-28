@@ -1,0 +1,18 @@
+:: ChildhoodReflection [childhood]
+# Looking Back
+
+As your childhood draws to a close, you find a quiet moment to reflect on the years that have shaped you. Memories flood your mind - some clear and vivid, others soft and dreamlike.
+
+You remember your earliest days, toddling around camp, watching the adults with wide eyes. You recall the first time you helped gather firewood, your small arms struggling with even the lightest branches, but your heart swelling with pride at contributing to the tribe.
+
+There were games with the other children - chasing each other through camp, pretending to be hunters stalking prey, or animals evading capture. These weren't just play; they were preparation, teaching you agility, stealth, and cooperation.
+
+You think of the stories told around the evening fires - tales of ancestors, explanations of the world's mysteries, lessons about the spirits that inhabit everything around you. These stories connected you to something larger than yourself - the unbroken line of your people stretching back to the beginning of time.
+
+Most precious are the moments with family - your mother's patient teaching, your father's quiet strength, your grandparents' wisdom, and the bonds with siblings and cousins that form the core of your support in the tribe.
+
+These experiences have shaped who you are becoming. Though childhood is ending, these memories and lessons will remain part of you forever.
+
+<<link "Join the evening meal">>
+  <<goto "EveningMeal">>
+<</link>>

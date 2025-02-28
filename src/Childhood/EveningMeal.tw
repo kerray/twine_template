@@ -1,0 +1,20 @@
+:: EveningMeal [childhood]
+# Gathering of the Tribe
+
+As the sun begins to set, you and your friends return to camp for the evening meal. The entire tribe gathers around the central fires, where several cooking pits have been prepared with different foods.
+
+Tonight's meal is special - not a major ceremony, but a good hunt has provided meat for everyone, and the women have gathered plenty of seasonal plants to accompany it. The atmosphere is festive and warm.
+
+You notice how the tribe naturally organizes itself - elders in positions of honor, hunters who brought in today's meal serving the best portions to others before taking their own, mothers ensuring children are fed, young adults engaged in lively conversation.
+
+Soon, your position in these gatherings will change. No longer will you sit with the children; instead, you'll join the teenagers who sit slightly apart, learning adult conversations but still separate from full adult responsibilities.
+
+As you eat, you observe the interactions around you with new awareness, appreciating the complex social bonds that hold the tribe together and enable your collective survival.
+
+<<link "Listen to the adults' conversations">>
+  <<goto "AdultConversations">>
+<</link>>
+
+<<link "Spend time with the other children">>
+  <<goto "LastChildhoodEvening">>
+<</link>>

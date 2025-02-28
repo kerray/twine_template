@@ -1,0 +1,22 @@
+:: StayHidden [childhood]
+# Patience and Stillness
+
+You decide to remain perfectly still in your hiding place, controlling your breathing and resisting the urge to peek out and see where the seeker is.
+
+Time passes slowly when you're trying not to move. You hear the sounds of the seeker finding other children - exclamations of discovery, laughter, and the patter of feet as newly found children join the search.
+
+Your legs begin to cramp, but you remember what the hunters have said about waiting for prey - sometimes they must remain motionless for long periods, ignoring discomfort and maintaining focus.
+
+The sounds of searching come closer. You can hear the seeker just on the other side of the hide you're concealed behind. You hold your breath, willing yourself to become as small and quiet as possible.
+
+The footsteps pause, then move away. You've successfully remained hidden!
+
+Eventually, you hear the call that signals the end of the game. You emerge from your hiding place to discover that you are one of the last two children to be found. The others look at you with new respect for your patience and stealth.
+
+<<link "Play another game">>
+  <<goto "ChildhoodPlay">>
+<</link>>
+
+<<link "Return to camp activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

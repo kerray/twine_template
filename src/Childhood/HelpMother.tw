@@ -1,0 +1,14 @@
+:: HelpMother [childhood]
+# Learning Domestic Skills
+
+You try to help your mother with her work, your small hands mimicking her movements. Though your attempts are clumsy, she encourages your efforts.
+
+"That's right," she says as you twist the plant fibers. "Feel how they become stronger when woven together? One fiber alone is weak, but many together can hold great weight."
+
+She shows you how different plants have different properties - some are flexible, others stiff; some absorb water, others repel it. This knowledge has been passed down through generations of women in your tribe.
+
+As you work together, your mother sings a soft working song, the rhythm helping to coordinate your movements. You begin to understand that these tasks are not just chores but a way of connecting to your ancestors and contributing to the tribe's well-being.
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

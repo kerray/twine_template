@@ -1,0 +1,16 @@
+:: FinalChildhoodGame [childhood]
+# Last Day of Play
+
+You gather your closest friends for one final day of play before you all begin the transition to your teenage years. There's a bittersweet quality to your games today - you all know that while you'll remain friends, your relationships will change as you take on different roles and responsibilities.
+
+You revisit all your favorite childhood games - chase games that taught you speed and agility, hiding games that honed your stealth, and make-believe scenarios where you practiced adult roles. Each game now carries the weight of nostalgia, even as you're still playing it.
+
+As the day progresses, your play takes you to the edge of the territory you were allowed to explore as children. Your best friend suggests one last adventure - climbing a distinctive rock formation just beyond your usual boundaries.
+
+The climb is challenging but exhilarating. When you reach the top, you're rewarded with a view that seems to encompass the entire world - the forest, the river in the distance, the rolling plains, and the mountains on the horizon.
+
+"No matter what happens as we grow," your friend says, "let's remember this moment."
+
+<<link "Return to prepare for your ceremony">>
+  <<goto "PrepareForCeremony">>
+<</link>>

@@ -1,0 +1,20 @@
+:: GiveStoneGift [childhood]
+# A Token of Respect
+
+From your collection of stones, you select the most beautiful one - a small piece of quartz that catches the light and seems to glow from within. You hold it out to your grandfather.
+
+"For you," you say simply.
+
+Your grandfather's eyes widen with surprise, then crinkle with pleasure. He takes the stone carefully, examining it in the sunlight.
+
+"This is a special stone," he says, his voice warm with appreciation. "It holds the light of the sun inside it."
+
+He explains that such stones are rare and valued by the tribe. Some believe they have special powers - to protect from harm, to bring good dreams, or to help the shaman communicate with spirits.
+
+"I will keep this as a treasure," your grandfather tells you, tucking the stone into a small pouch he wears around his neck. "And whenever I look at it, I will think of you and your generous heart."
+
+The simple act of giving has created a stronger bond between you and your grandfather. You begin to understand that gifts are not just about the objects themselves, but about the connections they create between people.
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

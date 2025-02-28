@@ -1,0 +1,28 @@
+:: RecoverFromInjury [childhood]
+# Healing Time
+
+Your mother makes you a comfortable spot near the family fire, where you can rest your injured leg. "Stay quiet now," she instructs. "Your body needs rest to heal."
+
+As you lie there, watching the activities of the camp continue around you, you learn another important lesson about tribal life - the community cares for those who are injured or ill.
+
+Various members of the tribe stop by to check on you. An elder tells you stories to distract you from the pain. Children bring you interesting stones or feathers they've found. Your father carves a small wooden animal for you to play with.
+
+The shaman visits again to change the poultice on your wound, explaining, "We must keep bad spirits from entering through the broken skin."
+
+Your grandmother brings a special tea made from herbs that helps reduce pain and promotes healing. "Sip it slowly," she advises. "The plant spirits are helping your body fight the injury."
+
+Though being injured is uncomfortable and frustrating, you observe how the tribe works together to care for members who cannot contribute temporarily. This cooperation is essential for survival - no one is left behind or forgotten when they are vulnerable.
+
+After a day of rest, your leg feels much better. The wound is beginning to heal, though you'll need to be careful with it for several more days.
+
+<div class="need-message">
+  Your health has improved with rest and care.
+</div>
+
+<<link "Thank those who helped you">>
+  <<goto "ThankHealers">>
+<</link>>
+
+<<link "Return to camp activities (moving carefully)">>
+  <<goto "ChildhoodContinued">>
+<</link>>

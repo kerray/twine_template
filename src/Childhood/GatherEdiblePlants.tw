@@ -1,0 +1,33 @@
+:: GatherEdiblePlants [childhood]
+# Harvesting Nature's Gifts
+
+"Can we gather some of these plants now?" you ask your grandmother, eager to put your new knowledge into practice.
+
+She smiles at your enthusiasm. "Yes, that would be good. The best way to learn is by doing."
+
+Your grandmother hands you a small woven basket and shows you how to harvest properly. "Always take some, but leave enough for the plants to grow back," she instructs. "And give thanks to the plant spirits for their gifts."
+
+Together, you gather several types of edible plants:
+
+Sweet berries that grow in clusters on low bushes.
+Starchy roots that must be dug from the ground with a digging stick.
+Tender young leaves from plants growing near the stream.
+Seeds from tall grasses that can be ground into flour.
+
+Your grandmother shows you not just which plants to gather, but how to do so without damaging them. "If we care for the plants, they will return season after season to feed us," she explains.
+
+As you work, she points out signs that indicate ripeness, and explains which parts of each plant are edible and which should be avoided. She also teaches you to watch for animal tracks nearby - animals often lead humans to good food sources.
+
+<<if gameUtils.hasSkillLevelIncreased("foraging")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your foraging skill has improved!</span>
+  </div>
+<</if>>
+
+<<link "Help prepare what you've gathered">>
+  <<goto "PrepareGatheredFood">>
+<</link>>
+
+<<link "Return to your grandmother's teachings">>
+  <<goto "GrandmotherPlants">>
+<</link>>

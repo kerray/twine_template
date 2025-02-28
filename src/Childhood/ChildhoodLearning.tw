@@ -1,0 +1,27 @@
+:: ChildhoodLearning [childhood]
+# Wisdom of the Elders
+
+<div class="season-indicator season-<<print $environment.season>>">
+  <<print $environment.season.charAt(0).toUpperCase() + $environment.season.slice(1)>> • 
+  <<print $environment.weather.charAt(0).toUpperCase() + $environment.weather.slice(1)>>
+</div>
+
+The elders of the tribe hold the knowledge that has allowed your people to survive for generations. They teach through stories, demonstrations, and guided practice.
+
+Who would you like to learn from today?
+
+<<link "Listen to the shaman's stories about spirits">>
+  <<set $relationships.shaman += 3>>
+  <<goto "ShamanStories">>
+<</link>>
+
+<<link "Learn about plants from your grandmother">>
+  <<set $skills.plantIdentification += 0.2>>
+  <<set $relationships.grandmother += 3>>
+  <<goto "GrandmotherPlants">>
+<</link>>
+
+<<link "Watch the hunters prepare their weapons">>
+  <<set $skills.toolMaking += 0.1>>
+  <<goto "WatchHunters">>
+<</link>>

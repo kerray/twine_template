@@ -1,0 +1,24 @@
+:: LearnAboutTools [childhood]
+# The Tools of Survival
+
+"What other tools do we make?" you ask your father, curious about the various implements used by the tribe.
+
+Your father smiles at your interest and begins to show you different tools laid out near his work area.
+
+"Each tool has a purpose," he explains, picking up a stone axe with a wooden handle. "This axe helps us cut wood for fires and shelters." He demonstrates the binding technique that secures the stone head to the wooden handle.
+
+Next, he shows you a bone needle. "Your mother uses this for sewing hides together to make clothing and shelter coverings." The needle is delicately carved from an animal bone, with a small eye for threading sinew through.
+
+He points to various other tools - scrapers for cleaning hides, hammerstones for knapping flint, awls for punching holes in leather, and spear points for hunting.
+
+"As you grow, you'll learn to make and use many of these," he promises. "Each generation improves upon the knowledge of the last, finding better ways to shape stone, wood, and bone."
+
+You begin to understand how these simple but effective tools are the foundation of your tribe's survival, each one representing generations of accumulated knowledge.
+
+<<link "Ask about hunting tools specifically">>
+  <<goto "HuntingTools">>
+<</link>>
+
+<<link "Return to camp activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

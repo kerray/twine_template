@@ -1,0 +1,24 @@
+:: ShamanStories [childhood]
+# Tales of the Spirit World
+
+You sit near the shaman's shelter, where several children have gathered to hear stories. The shaman, <<if $language eq "proto-indo-european">>Wekwos<<elseif $language eq "proto-uralic">>Tietäjä<<else>>Imhotep<</if>>, begins with a ritual gesture, waving a bundle of dried herbs through the smoke of a small fire.
+
+"The smoke carries our words to the spirits," the shaman explains. "Today I will tell you about the great spirits that watch over our tribe."
+
+The stories are fascinating - tales of animal spirits that can help or hinder hunters, of ancestor spirits that guide the tribe through dreams, and of the powerful spirits of sun, moon, and stars that govern the cycles of day, night, and seasons.
+
+You learn that everything has a spirit - trees, stones, animals, and even the wind. The shaman teaches that these spirits must be respected and sometimes appeased with offerings.
+
+"This is why we give thanks when we take from the land," the shaman explains. "And why we perform ceremonies before hunts and at the changing of seasons."
+
+<div class="relationship-change positive-change">
+  Your relationship with the shaman has improved!
+</div>
+
+<<link "Ask about dream spirits">>
+  <<goto "DreamSpirits">>
+<</link>>
+
+<<link "Ask about becoming a shaman">>
+  <<goto "BecomingShaman">>
+<</link>>

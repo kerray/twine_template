@@ -1,0 +1,30 @@
+:: ElderWisdom [childhood]
+# Guidance for the Path Ahead
+
+You seek out the elders of the tribe, knowing that their wisdom will be valuable as you prepare for the next phase of your life.
+
+You find the shaman, <<if $language eq "proto-indo-european">>Wekwos<<elseif $language eq "proto-uralic">>Tietäjä<<else>>Imhotep<</if>>, and the tribal leader, <<if $language eq "proto-indo-european">>Tewtēr<<elseif $language eq "proto-uralic">>Päällikkö<<else>>Pharaoh<</if>>, sitting together near the central fire, deep in conversation. They welcome you when you approach.
+
+"Ah, <<print $character.name>>," the tribal leader says. "You stand at the threshold of a new journey. What guidance do you seek?"
+
+You explain that you want to understand what will be expected of you in the years ahead, and how you can best serve the tribe.
+
+The shaman nods approvingly. "It is good to think of your place in the tribe. Each person has gifts to offer, and finding your true path brings harmony to yourself and strength to us all."
+
+The tribal leader speaks of the practical aspects of tribal life - the need for hunters and gatherers, toolmakers and healers, storytellers and leaders. "Watch for the signs that show where your strengths lie," he advises. "The tribe needs all these skills to survive."
+
+The shaman speaks of the spiritual journey ahead. "In your coming ceremony, you will begin to form your connection to the spirit world. Listen for their guidance in dreams and in the signs of nature."
+
+Both elders emphasize that the teenage years are a time of learning and testing, when you will try different roles before finding your place as an adult.
+
+<div class="relationship-change positive-change">
+  Your relationships with the shaman and tribal leader have improved!
+</div>
+
+<<link "Ask about your personal strengths">>
+  <<goto "PersonalStrengths">>
+<</link>>
+
+<<link "Ask about the coming-of-age ceremony">>
+  <<goto "CeremonyDetails">>
+<</link>>

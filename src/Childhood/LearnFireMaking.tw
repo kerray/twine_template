@@ -1,0 +1,20 @@
+:: LearnFireMaking [childhood]
+# The Sacred Flame
+
+You sit near one of the women tending the main fire, watching carefully as she maintains the flames. She notices your interest and begins to explain.
+
+"Fire is life," she says. "Without it, we would have no warmth in winter, no protection from predators, no way to cook our food to make it safer and easier to eat."
+
+She shows you how to arrange the wood properly, how to control the flames by adding more or less fuel, and how to keep the fire from spreading beyond its stone circle.
+
+"Someday, when you're older, you'll learn to start a fire from nothing," she promises. "But for now, it's important to learn how to tend what we already have."
+
+<<if gameUtils.hasSkillLevelIncreased("fireMaking")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your fire making skill has improved!</span>
+  </div>
+<</if>>
+
+<<link "Return to camp activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

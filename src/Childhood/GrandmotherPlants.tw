@@ -1,0 +1,32 @@
+:: GrandmotherPlants [childhood]
+# Wisdom of the Earth
+
+Your grandmother takes you by the hand and leads you to the edge of camp. "Today we will learn about the plants that feed us," she says.
+
+She points out different plants growing nearby, naming each one and explaining its uses. Some are good for food, others for medicine, some for making tools or baskets, and a few that must be avoided because they are poisonous.
+
+"See these leaves? They have five points, like your hand. These are safe to eat and taste sweet in the spring." She picks a few and gives you one to taste.
+
+"But these," she points to a similar plant with slightly different leaves, "will make your stomach hurt badly. See how the edges of the leaves are different? You must learn to tell them apart."
+
+Your grandmother's knowledge is vast, gained from a lifetime of gathering and using plants. She explains that women are often the keepers of this knowledge, passing it from mother to daughter through many generations.
+
+<<if gameUtils.hasSkillLevelIncreased("plantIdentification")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your plant identification skill has improved!</span>
+  </div>
+<</if>>
+
+<div class="relationship-change positive-change">
+  Your relationship with your grandmother has improved!
+</div>
+
+<<link "Help gather some edible plants">>
+  <<set $skills.foraging += 0.2>>
+  <<goto "GatherEdiblePlants">>
+<</link>>
+
+<<link "Ask about healing plants">>
+  <<set $skills.medicinalPlants += 0.2>>
+  <<goto "LearnHealingPlants">>
+<</link>>

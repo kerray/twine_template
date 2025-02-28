@@ -1,0 +1,27 @@
+:: MakeSimpleTools [childhood]
+# Crafting Beginnings
+
+You approach your father, who is working on crafting a new spear. He smiles when he sees your interest.
+
+"Would you like to learn?" he asks, and when you nod eagerly, he sets aside his work and finds a small piece of wood for you.
+
+"We'll start with something simple," he says. "A digging stick for finding roots."
+
+He shows you how to select the right piece of wood - straight, without too many knots - and how to use a stone scraper to remove the bark. Then he demonstrates how to sharpen one end by carefully scraping it against a rough stone.
+
+The work is harder than it looks. Your small hands struggle with the tools, but your father is patient, guiding you when needed and praising your efforts.
+
+<<if gameUtils.hasSkillLevelIncreased("toolMaking")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your tool making skill has improved!</span>
+  </div>
+<</if>>
+
+<<link "Continue working on your digging stick">>
+  <<set $skills.toolMaking += 0.2>>
+  <<goto "FinishDiggingStick">>
+<</link>>
+
+<<link "Ask about making other tools">>
+  <<goto "LearnAboutTools">>
+<</link>>

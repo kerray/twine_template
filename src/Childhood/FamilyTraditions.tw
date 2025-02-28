@@ -1,0 +1,18 @@
+:: FamilyTraditions [childhood]
+# Heritage and Legacy
+
+Your parents take you to a quiet spot near your family's shelter. From a small bundle of treasured possessions, your mother removes a necklace made of carefully carved bone beads and animal teeth.
+
+"This has belonged to our family for many generations," she explains. "Each piece tells a story of our ancestors."
+
+She points to different beads, relating tales of family members long gone - their achievements, their struggles, and the wisdom they left behind. Some beads represent successful hunts, others commemorate births or important journeys.
+
+Your father joins you, bringing a small tool that has special significance. "This stone knife was made by my father," he tells you. "And his father before him. The knowledge of how to find the right stone and shape it properly has been passed down through our line."
+
+Together, your parents share stories of your birth, your first steps, and the signs they observed that hinted at the person you would become. They speak of their hopes for your future and the role you will play in continuing family traditions.
+
+"No matter what path you choose," your mother says, "you carry our family's strength with you."
+
+<<link "Return to prepare for your ceremony">>
+  <<goto "PrepareForCeremony">>
+<</link>>

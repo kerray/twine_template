@@ -1,0 +1,26 @@
+:: StoneGame [childhood]
+# Strategy and Counting
+
+You sit down with a few other children to play the stone game. Small pebbles are arranged in patterns on the ground, and players take turns moving them according to specific rules.
+
+An older girl explains the game to you. "You must move one stone at a time, and you can only move to an empty space. If you jump over another player's stone, you capture it."
+
+The game is challenging for your young mind, requiring you to count, plan ahead, and anticipate your opponent's moves. These same skills will be useful later for planning hunts, managing resources, and navigating.
+
+As you play, you begin to see patterns and strategies. Sometimes it's better to sacrifice one stone to capture two. Sometimes patience is rewarded when your opponent makes a mistake.
+
+<<if gameUtils.hasSkillLevelIncreased("intelligence")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your intelligence has improved!</span>
+  </div>
+<</if>>
+
+<<link "Try a more complex version of the game">>
+  <<set $skills.intelligence += 0.2>>
+  <<goto "AdvancedStoneGame">>
+<</link>>
+
+<<link "Teach a younger child how to play">>
+  <<set $skills.leadership += 0.2>>
+  <<goto "TeachYoungerChild">>
+<</link>>

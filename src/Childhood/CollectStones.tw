@@ -1,0 +1,22 @@
+:: CollectStones [childhood]
+# Simple Treasures
+
+You begin picking up interesting stones at the edge of camp. Some are smooth and rounded, polished by water long ago. Others have interesting patterns or unusual colors - white quartz that catches the light, red stones with bands of different colors, or black stones that feel heavier than they look.
+
+As you collect your treasures, an elder of the tribe approaches. It's your grandfather, his face weathered by many seasons of sun and wind.
+
+"What have you found, little one?" he asks, his voice gentle.
+
+You show him your collection proudly. He examines each stone, nodding appreciatively. "You have a good eye," he says. "This one," he holds up a piece of flint, "is very valuable. We use it to make tools and start fires."
+
+He shows you how certain stones can be struck together to create sparks, while others can be shaped into tools with sharp edges. "The earth gives us many gifts," he explains. "We must learn to recognize them."
+
+<<link "Ask to learn more about stones">>
+  <<set $relationships.grandfather += 5>>
+  <<goto "LearnAboutStones">>
+<</link>>
+
+<<link "Give your grandfather a special stone as a gift">>
+  <<set $relationships.grandfather += 7>>
+  <<goto "GiveStoneGift">>
+<</link>>

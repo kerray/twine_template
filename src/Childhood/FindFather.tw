@@ -1,0 +1,20 @@
+:: FindFather [childhood]
+# Father's Wisdom
+
+You decide to look for your father, curious about what he might be doing. You find him at the edge of camp with several other men, working on crafting tools.
+
+Your father smiles when he sees you approaching. "Come, little one," he says, making space for you beside him. "Would you like to see what I'm making?"
+
+He shows you a spear he's crafting, explaining each step of the process. "First, we find the right wood - straight and strong. Then we remove the bark and dry it carefully so it won't warp."
+
+You watch as he uses stone tools to shape the tip of the spear, then binds a sharp stone point to it with sinew. "The binding must be tight and secure," he explains. "A hunter's life may depend on his tools not failing."
+
+The other men occasionally offer advice or show different techniques. You realize that toolmaking, like other tribal skills, is learned through observation and practice, with knowledge shared freely among the group.
+
+Your father lets you help with simple tasks - holding the spear while he works on it, or fetching items he needs. Though your contribution is small, you feel proud to be included in this important work.
+
+"Tools are what make us human," your father tells you. "With our hands and our minds, we create what our bodies lack - the strength of the bear, the speed of the deer, the sharp teeth of the wolf."
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

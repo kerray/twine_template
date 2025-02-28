@@ -1,0 +1,14 @@
+:: CurrentAge [childhood]
+# Your Current Journey
+
+<<if $character.age < 13>>
+  <<goto "ChildhoodContinued">>
+<<elseif $character.age < 18>>
+  <<goto "TeenageYears">>
+<<elseif $character.age < 26>>
+  <<goto "YoungAdulthood">>
+<<elseif $character.age < 46>>
+  <<goto "Parenthood">>
+<<else>>
+  <<goto "ElderYears">>
+<</if>>

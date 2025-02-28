@@ -1,0 +1,20 @@
+:: FriendshipPact [childhood]
+# Bonds That Endure
+
+Sitting atop the tall rock with your best friend, overlooking the vast landscape that is your tribe's territory, you feel moved to formalize your friendship before you both enter the next phase of life.
+
+"Let's make a pact," you suggest. "No matter what paths we take as we grow older, we will always remain friends and support each other."
+
+Your friend's face lights up with a smile. "Yes! We should seal it with a token."
+
+Together, you search the area and find two similar stones with interesting patterns. Using techniques you've learned from watching the toolmakers, you strike the stones against each other, breaking each in half. The broken edges fit together perfectly.
+
+"You keep one half, and I'll keep the other," your friend says. "If we're ever separated, these stones will help us find each other again, because they belong together - just like our friendship."
+
+You exchange the stone halves solemnly, then clasp hands in agreement. This simple ritual, created by children on the verge of growing up, feels as significant as any formal tribal ceremony.
+
+"No matter what happens," you promise, "this friendship will remain."
+
+<<link "Return to prepare for your ceremony">>
+  <<goto "PrepareForCeremony">>
+<</link>>

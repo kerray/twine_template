@@ -1,0 +1,35 @@
+:: FriendAdventure [childhood]
+# Exploring Together
+
+"Let's go on an adventure!" you suggest to your friend, excited by the special bond you feel after receiving the shell gift.
+
+Your friend's eyes light up at the suggestion. "Where should we go?" <<if $character.gender eq "female">>she<<else>>he<</if>> asks eagerly.
+
+You both know that children aren't supposed to wander far from camp alone, but there's a small stream not far away where adults can still see you if they look in that direction.
+
+"Let's go to the stream and look for special stones," you suggest. Your friend agrees, and together you head to the water's edge.
+
+The stream is shallow enough for children to wade safely, with clear water running over a bed of smooth stones. You and your friend roll up your leggings and step carefully into the cool water.
+
+"Look!" your friend exclaims, pointing to a small fish darting between the stones. You both try to catch it, laughing as it easily evades your slow hands.
+
+As you play and explore, you find several interesting items:
+- A stone with a natural hole through it, which your friend says brings good luck
+- A piece of wood smoothed by the water into an unusual shape
+- Tiny water creatures that scurry away when you lift their stone homes
+
+The shared adventure strengthens your friendship. You're learning to work together, share discoveries, and look out for each other - skills that will be essential throughout your lives in the tribe.
+
+When you finally return to camp, wet and muddy but happy, your mothers shake their heads but smile at your excitement as you show off your treasures.
+
+<div class="relationship-change positive-change">
+  Your relationship with your best friend has improved!
+</div>
+
+<<link "Plan another adventure for another day">>
+  <<goto "PlanNextAdventure">>
+<</link>>
+
+<<link "Return to camp activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

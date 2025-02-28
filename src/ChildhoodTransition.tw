@@ -1,0 +1,172 @@
+:: ChildhoodTransition [childhood]
+# The End of Childhood
+
+<<run gameUtils.ageCharacter(0, 6)>>
+
+<div class="season-indicator season-<<print $environment.season>>">
+  <<print $environment.season.charAt(0).toUpperCase() + $environment.season.slice(1)>> • 
+  <<print $environment.weather.charAt(0).toUpperCase() + $environment.weather.slice(1)>>
+</div>
+
+The seasons have continued to change, and you have grown with them. You are now approaching your thirteenth summer, the time when childhood ends and a new phase of life begins.
+
+Your body has grown taller and stronger. Your mind has absorbed many lessons about survival, tribal customs, and your place in the community. The games you played as a small child have gradually given way to more serious training for adult responsibilities.
+
+The elders have been watching your development, noting your strengths and the skills you seem most drawn to. Soon, you will undergo the coming-of-age ceremony that marks the transition to your teenage years - a time of more focused learning and greater responsibilities.
+
+Before this important transition, you have time for one more childhood activity. What would you like to do?
+
+<<link "Spend time with your parents, learning family traditions">>
+  <<set $relationships.mother += 5>>
+  <<set $relationships.father += 5>>
+  <<goto "FamilyTraditions">>
+<</link>>
+
+<<link "Play one last game with your childhood friends">>
+  <<set $relationships.bestFriend += 5>>
+  <<goto "FinalChildhoodGame">>
+<</link>>
+
+<<link "Seek wisdom from the tribal elders">>
+  <<set $relationships.shaman += 3>>
+  <<set $relationships.tribalLeader += 3>>
+  <<goto "ElderWisdom">>
+<</link>>
+
+:: FamilyTraditions [childhood]
+# The Ways of Your Family
+
+You choose to spend this special time with your parents, absorbing the traditions that have been passed down through your family line for generations.
+
+Your mother takes you to a quiet spot near the family shelter. From a small bundle of treasured possessions, she removes a necklace made of carefully carved bone beads and animal teeth.
+
+"This has belonged to the women of our family for many generations," she explains, if you're female, or "This was made by your grandmother's mother, to protect our family," if you're male. "Each piece tells a story of our ancestors."
+
+She points to different beads, relating tales of family members long gone - their achievements, their struggles, and the wisdom they left behind.
+
+Your father joins you later, bringing a small tool that has special significance. "This stone knife was made by my father," he tells you. "And his father before him. The knowledge of how to find the right stone and shape it properly has been passed down through our line."
+
+Together, your parents share stories of your birth, your first steps, and the signs they observed that hinted at the person you would become. They speak of their hopes for your future and the role you will play in continuing family traditions.
+
+"No matter what path you choose," your mother says, "you carry our family's strength with you."
+
+<div class="relationship-change positive-change">
+  Your relationships with your mother and father have improved!
+</div>
+
+<<link "Ask about your grandparents' lives">>
+  <<set $relationships.grandmother += 3>>
+  <<set $relationships.grandfather += 3>>
+  <<goto "GrandparentsStories">>
+<</link>>
+
+<<link "Prepare for your coming-of-age ceremony">>
+  <<goto "PrepareForCeremony">>
+<</link>>
+
+:: FinalChildhoodGame [childhood]
+# One Last Adventure
+
+You gather your closest friends for one final day of play before you all begin the transition to your teenage years. Some have already turned thirteen and are awaiting their ceremonies; others, like you, are on the cusp of this change.
+
+There's a bittersweet quality to your play today. You all know that while you'll remain friends, your relationships will change as you take on different roles and responsibilities within the tribe.
+
+You decide to revisit all your favorite childhood games - chase games that taught you speed and agility, hiding games that honed your stealth, and make-believe scenarios where you practiced adult roles.
+
+As the day progresses, your play takes you to the edge of the territory you were allowed to explore as children. Your best friend, <<if $language eq "proto-indo-european">><<if $character.gender eq "female">>Pria<<else>>Agnis<</if>><<elseif $language eq "proto-uralic">><<if $character.gender eq "female">>Aino<<else>>Sampo<</if>><<else>><<if $character.gender eq "female">>Nefert<<else>>Khenti<</if>><</if>>, suggests one last adventure.
+
+"Let's go to the tall rock," <<if $character.gender eq "female">>she<<else>>he<</if>> suggests, pointing to a distinctive formation just beyond your usual boundaries. "We'll be able to see far across the land from there."
+
+The climb is challenging but exhilarating. When you reach the top, you're rewarded with a view that seems to encompass the entire world - the forest, the river in the distance, the rolling plains, and the mountains on the horizon.
+
+"No matter what happens as we grow," your friend says, "let's remember this moment."
+
+<div class="relationship-change positive-change">
+  Your relationship with your best friend has improved!
+</div>
+
+<<link "Make a pact of friendship">>
+  <<set $relationships.bestFriend += 5>>
+  <<goto "FriendshipPact">>
+<</link>>
+
+<<link "Return to camp for the evening meal">>
+  <<goto "EveningMeal">>
+<</link>>
+
+:: ReturnToCamp [childhood]
+# The Journey Home
+
+As the sun begins to lower in the sky, you and your friend make your way back to camp. The stone token of your friendship pact is tucked safely in a small pouch at your waist, a physical reminder of the bond you've formed.
+
+The walk back is filled with comfortable conversation and shared memories. You talk about the adventures you've had as children and speculate about what the coming years might bring.
+
+"Do you think we'll be sent on different paths?" your friend asks. "What if one of us becomes a hunter and the other a gatherer?"
+
+"It doesn't matter," you reply. "We'll still be part of the same tribe, living in the same camp."
+
+As you approach the camp, you can see the smoke from cooking fires rising into the evening sky. The familiar sounds of the tribe - voices calling, children laughing, tools being used - welcome you home.
+
+This place, these people, are the foundation of your life. Even as you grow and change, the tribe remains your anchor, providing security and belonging in an often dangerous world.
+
+<<link "Join the evening meal">>
+  <<goto "EveningMeal">>
+<</link>>
+
+:: TribalHistory [childhood]
+# Stories of the People
+
+Your grandparents' eyes light up when you ask about the tribe's history. This is knowledge they consider precious, stories that connect you to all who came before.
+
+"Our tribe has lived in these lands for more generations than anyone can count," your grandfather begins. "But we have not always stayed in the same place. We follow the animals, the seasons, and sometimes, we must move because of other tribes or changes in the land itself."
+
+Your grandmother adds, "Long ago, when I was a small child, the elders told of a time when ice covered much of the northern lands. Our ancestors lived at the edge of this ice, hunting the great woolly animals that thrived in the cold."
+
+They tell you of tribal migrations, following herds or fleeing from natural disasters. They speak of times of plenty and times of hunger, of peaceful interactions with other tribes and occasional conflicts over territory or resources.
+
+"The most important thing to remember," your grandfather says, "is that our tribe has survived because we work together, because we share knowledge, and because we respect the spirits of the land, the animals, and our ancestors."
+
+Your grandmother nods in agreement. "This is why we have ceremonies, why we tell these stories. They remind us who we are and how we must live to continue."
+
+These stories give you a sense of being part of something much larger than yourself - a continuous line of people stretching back into the distant past and forward into the future.
+
+<<link "Ask about the tribe's sacred places">>
+  <<goto "SacredPlaces">>
+<</link>>
+
+<<link "Prepare for your ceremony">>
+  <<goto "PrepareForCeremony">>
+<</link>>
+
+:: ComingOfAgeCeremony [childhood]
+# The Threshold of Change
+
+<<set $character.lifeStage to "teenage">>
+
+The day of your coming-of-age ceremony arrives with the dawn. Your mother wakes you early, before most of the tribe is stirring.
+
+"Today you cross the threshold," she says softly. "You enter the time between childhood and adulthood."
+
+After a ritual washing in the stream, you are dressed in the special garment prepared for this day. It is decorated with symbols of your childhood achievements and the qualities your family has observed in you. Your face is painted with designs that represent your family lineage and your connection to the tribe.
+
+As the sun climbs higher, the entire tribe gathers in a circle around the ceremonial space that has been prepared. The shaman and tribal leader stand at the center, waiting for you.
+
+Your heart pounds as you walk to the center of the circle. The faces around you are solemn but encouraging - every adult has stood where you stand now.
+
+The ceremony unfolds in three parts, as you were told it would:
+
+First, you symbolically leave your childhood behind, placing a token of your early years into a small fire.
+
+Next, you stand at the threshold, neither child nor adult, as the shaman chants ancient words and the tribal leader presents you with a challenge you must complete in the coming days.
+
+Finally, you are marked with a small tattoo - your first - signifying your new status. The pain is sharp but brief, and you bear it without crying out.
+
+When the ceremony concludes, the tribe erupts in celebration. You have successfully taken your first step into a new phase of life.
+
+<<link "Join the celebration">>
+  <<goto "TeenageCelebration">>
+<</link>>
+
+<<link "Reflect on your new status">>
+  <<goto "TeenageReflection">>
+<</link>>

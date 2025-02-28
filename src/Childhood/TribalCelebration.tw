@@ -1,0 +1,22 @@
+:: TribalCelebration [childhood]
+# Festival of Abundance
+
+The tribe has gathered for a special celebration. After a successful hunt that brought down a large deer, the entire community comes together to share in the bounty and give thanks to the spirits.
+
+The central fire is built larger than usual, and the meat is roasted slowly. Women have prepared special foods - nuts ground into paste and mixed with berries, roots roasted in the coals, and herbs that add flavor to the feast.
+
+As darkness falls, the elders begin to sing and tell stories. The shaman performs a ritual, offering the deer's heart to the spirits and painting symbols on the faces of the hunters who brought it down.
+
+Children are allowed to stay up late, watching the adults dance around the fire. The rhythmic movements tell the story of the hunt, honoring both the hunters' skill and the deer's sacrifice.
+
+This is more than just a meal - it's a way to strengthen tribal bonds, share food equally among all members, and teach the young about the tribe's values and beliefs.
+
+<<link "Join the children's dance">>
+  <<set $skills.charisma += 0.2>>
+  <<goto "ChildrensDance">>
+<</link>>
+
+<<link "Listen to the elders' stories">>
+  <<set $skills.storytelling += 0.2>>
+  <<goto "EldersStories">>
+<</link>>

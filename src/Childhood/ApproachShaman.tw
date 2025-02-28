@@ -1,0 +1,21 @@
+:: ApproachShaman [childhood]
+# The Tribe's Shaman
+
+Curious, you toddle toward the shaman sitting by the central fire. The shaman, <<if $language eq "proto-indo-european">>Wekwos<<elseif $language eq "proto-uralic">>Tietäjä<<else>>Imhotep<</if>>, is an elder with deep knowledge of healing, spirits, and the tribe's history.
+
+As you approach, the shaman looks up from the mixture being prepared in the turtle shell bowl. The smell is strong and herbal, with hints of crushed leaves and tree sap.
+
+"Ah, little <<print $character.name>>," the shaman says with a gentle smile. "Come, sit. Even the youngest must learn the ways of our people."
+
+The shaman shows you the mixture - a healing paste for wounds made from specific plants and tree resins. "These plants have power," the shaman explains. "They can heal, but only if we respect them and know how to use them properly."
+
+<<link "Ask about the plants">>
+  <<set $skills.medicinalPlants += 0.2>>
+  <<set $relationships.shaman += 5>>
+  <<goto "AskShamanAboutPlants">>
+<</link>>
+
+<<link "Ask about spirits">>
+  <<set $relationships.shaman += 3>>
+  <<goto "AskAboutSpirits">>
+<</link>>

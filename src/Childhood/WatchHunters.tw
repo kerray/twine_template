@@ -1,0 +1,30 @@
+:: WatchHunters [childhood]
+# Weapons of the Hunt
+
+You approach the area where several hunters are preparing their weapons. They check spears for straightness, sharpen stone points, and repair any damage from previous hunts.
+
+One of the hunters, a man named <<if $language eq "proto-indo-european">>Koryos<<elseif $language eq "proto-uralic">>Metsästäjä<<else>>Anhur<</if>>, notices your interest.
+
+"Curious about our tools, little one?" he asks with a smile. When you nod, he shows you the spear he's working on.
+
+"This shaft must be straight and strong," he explains. "We find the best wood and dry it carefully. Then we attach the point - see how it's shaped to cut deeply?"
+
+He demonstrates how the stone point is bound to the shaft with sinew and sealed with tree resin to keep it secure. Then he shows you other hunting tools - a throwing stick that can extend the range of a spear, a stone knife for skinning, and snares for catching small animals.
+
+"Each tool has its purpose," he explains. "And each must be made with care, or it might fail when you need it most."
+
+<<if gameUtils.hasSkillLevelIncreased("toolMaking")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your tool making knowledge has improved!</span>
+  </div>
+<</if>>
+
+<<link "Ask about hunting techniques">>
+  <<set $skills.hunting += 0.1>>
+  <<goto "HuntingTechniques">>
+<</link>>
+
+<<link "Ask to help prepare a simple tool">>
+  <<set $skills.toolMaking += 0.2>>
+  <<goto "HelpWithTools">>
+<</link>>

@@ -1,0 +1,26 @@
+:: PlayDifferentAnimal [childhood]
+# Changing Roles
+
+"Can I be a different animal next time?" you ask the older boy who's been playing the mammoth.
+
+He considers for a moment, then nods. "What animal do you want to be?"
+
+"A wolf!" you say excitedly. Wolves are both feared and respected by your tribe - dangerous predators but also clever hunters that sometimes work in groups, much like humans do.
+
+The older boy smiles. "Good choice. Wolves are tricky to hunt because they're fast and smart."
+
+He gathers the other children and explains the new game. "<<print $character.name>> will be the wolf. Wolves are different from mammoths - they're quicker and can turn around fast. They also hunt in packs, so we'll need to be careful not to let the wolf separate us."
+
+You drop to all fours, baring your teeth in what you hope is a fierce wolf snarl. The other children spread out, holding their toy spears defensively.
+
+The game begins, and you dart between the "hunters," trying to touch them before they can "spear" you by tapping you with their sticks. You learn to move unpredictably, to fake in one direction before darting in another.
+
+Through play, you're all learning important lessons about different animals' behaviors and the various hunting strategies needed for different prey.
+
+<<link "Continue playing hunting games">>
+  <<goto "MoreHuntingGames">>
+<</link>>
+
+<<link "Return to play activities">>
+  <<goto "ChildhoodPlay">>
+<</link>>

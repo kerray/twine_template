@@ -1,0 +1,20 @@
+:: HelpShaman [childhood]
+# Apprentice Healer
+
+"Can I help you make medicine?" you ask the shaman, your eyes wide with curiosity.
+
+The shaman considers you for a moment, then nods. "It is good for the young to learn these ways. Come, I will show you a simple healing paste."
+
+The shaman guides you through the process of preparing a remedy for minor wounds. First, you help gather specific leaves that the shaman points out. "These must be picked with respect," you're told. "Always leave some plants to grow and spread."
+
+Next, you watch as the shaman demonstrates how to crush the leaves with a smooth stone, adding a small amount of water and tree resin to create a sticky paste. "The resin helps the medicine stay on the wound and keeps bad spirits out," the shaman explains.
+
+You're allowed to help with the grinding, your small hands working under the shaman's guidance. The work requires patience and attention to detail - the paste must be just the right consistency.
+
+"This knowledge is sacred," the shaman tells you. "It comes from our ancestors and from the spirits who guide us. Not everyone has the gift to be a healer, but everyone should know some basic remedies."
+
+When the paste is complete, the shaman places a small amount in a tiny container made from a hollowed nut. "Keep this with you. It may be useful if you or a friend gets a scratch or burn."
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

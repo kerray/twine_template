@@ -1,0 +1,16 @@
+:: TeenageAnticipation [childhood]
+# Looking Forward
+
+As you prepare for your coming-of-age ceremony, your thoughts turn to the future. The teenage years ahead will be a time of greater freedom, but also greater responsibility.
+
+You've watched the teenagers in your tribe - no longer required to stay close to camp like the children, but not yet carrying the full weight of adult duties. They travel with hunting parties to learn but may not take the most dangerous positions. They gather plants under supervision, learning which are safe and useful. They practice toolmaking, weaving, and other crafts with increasing independence.
+
+Most exciting is the prospect of specialized training. Based on your demonstrated abilities and interests, you'll begin to focus more on specific skills - perhaps hunting, plant knowledge, toolmaking, or even preparation for a spiritual role if you've shown aptitude for connecting with the spirit world.
+
+You'll also have more say in tribal discussions, though not a full voice yet. Your opinions will be heard, even if the final decisions rest with the adults and elders.
+
+These thoughts fill you with a mixture of excitement and nervousness. Childhood has been safe and familiar; what lies ahead is more challenging but offers the chance to discover who you truly are.
+
+<<link "Join the evening meal">>
+  <<goto "EveningMeal">>
+<</link>>

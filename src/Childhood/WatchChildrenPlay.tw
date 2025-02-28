@@ -1,0 +1,21 @@
+:: WatchChildrenPlay [childhood]
+# Games and Play
+
+You approach the group of children playing near the center of camp. They are engaged in a game of chase, squealing with delight as they run between shelters. One of the older children, about six summers old, notices you watching.
+
+"<<print $character.name>>! Come play with us!" she calls. Her name is <<if $language eq "proto-indo-european">>Saulā<<elseif $language eq "proto-uralic">>Aino<<else>>Nefert<</if>>, and she often looks out for the younger children.
+
+The game is simple but teaches important skills - quick movements, dodging, and awareness of your surroundings. These same skills will be vital later in life for hunting or avoiding dangers.
+
+As you play, you notice how the older children sometimes let the younger ones catch them, teaching through encouragement rather than competition.
+
+<<link "Join the game of chase">>
+  <<set $skills.running += 0.3>>
+  <<set $relationships.bestFriend += 5>>
+  <<goto "PlayChase">>
+<</link>>
+
+<<link "Watch a different game with sticks and stones">>
+  <<set $skills.perception += 0.2>>
+  <<goto "WatchSticksAndStones">>
+<</link>>

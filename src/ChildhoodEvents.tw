@@ -1,0 +1,388 @@
+:: ChildhoodChores [childhood]
+# Daily Tasks
+
+<div class="season-indicator season-<<print $environment.season>>">
+  <<print $environment.season.charAt(0).toUpperCase() + $environment.season.slice(1)>> • 
+  <<print $environment.weather.charAt(0).toUpperCase() + $environment.weather.slice(1)>>
+</div>
+
+Even as a child, you have responsibilities within the tribe. Everyone must contribute according to their abilities, and learning these tasks is an important part of growing up.
+
+What would you like to help with today?
+
+<<link "Gather firewood with the other children">>
+  <<set $skills.strength += 0.2>>
+  <<goto "GatherFirewood">>
+<</link>>
+
+<<link "Help prepare food with the women">>
+  <<set $skills.foraging += 0.2>>
+  <<goto "PrepareFood">>
+<</link>>
+
+<<link "Learn to make simple tools">>
+  <<set $skills.toolMaking += 0.2>>
+  <<goto "MakeSimpleTools">>
+<</link>>
+
+:: ChildhoodPlay [childhood]
+# Games and Learning
+
+<div class="season-indicator season-<<print $environment.season>>">
+  <<print $environment.season.charAt(0).toUpperCase() + $environment.season.slice(1)>> • 
+  <<print $environment.weather.charAt(0).toUpperCase() + $environment.weather.slice(1)>>
+</div>
+
+Play is not just for fun - it teaches important skills that you will need as an adult. The games children play mimic hunting, gathering, and other tribal activities.
+
+What would you like to play today?
+
+<<link "Hide and seek in the camp">>
+  <<set $skills.perception += 0.2>>
+  <<goto "HideAndSeek">>
+<</link>>
+
+<<link "Practice with a small toy spear">>
+  <<set $skills.hunting += 0.2>>
+  <<goto "ToySpear">>
+<</link>>
+
+<<link "Play the stone and seed game">>
+  <<set $skills.intelligence += 0.2>>
+  <<goto "StoneGame">>
+<</link>>
+
+:: ChildhoodLearning [childhood]
+# Wisdom of the Elders
+
+<div class="season-indicator season-<<print $environment.season>>">
+  <<print $environment.season.charAt(0).toUpperCase() + $environment.season.slice(1)>> • 
+  <<print $environment.weather.charAt(0).toUpperCase() + $environment.weather.slice(1)>>
+</div>
+
+The elders of the tribe hold the knowledge that has allowed your people to survive for generations. They teach through stories, demonstrations, and guided practice.
+
+Who would you like to learn from today?
+
+<<link "Listen to the shaman's stories about spirits">>
+  <<set $relationships.shaman += 3>>
+  <<goto "ShamanStories">>
+<</link>>
+
+<<link "Learn about plants from your grandmother">>
+  <<set $skills.plantIdentification += 0.2>>
+  <<set $relationships.grandmother += 3>>
+  <<goto "GrandmotherPlants">>
+<</link>>
+
+<<link "Watch the hunters prepare their weapons">>
+  <<set $skills.toolMaking += 0.1>>
+  <<goto "WatchHunters">>
+<</link>>
+
+:: GatherFirewood [childhood]
+# Collecting Wood
+
+You join a small group of children heading to the edge of camp to gather firewood. An older boy leads the way, showing you which branches are best - dry, dead wood that will burn well without too much smoke.
+
+"Never take living branches," he explains. "They won't burn well, and the trees need them."
+
+You work together, collecting sticks and small branches that have fallen to the ground. Even though you're small, you can carry a bundle of twigs back to camp. The work makes your arms tired, but you feel proud to be contributing to the tribe's needs.
+
+When you return, the adults praise your effort. "Good work, little ones," says one of the women tending the main fire. "Without fire, we would have no warmth, no cooked food, and no protection from animals at night."
+
+<<if gameUtils.hasSkillLevelIncreased("strength")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your strength has improved!</span>
+  </div>
+<</if>>
+
+<<link "Help sort the wood by size">>
+  <<goto "SortFirewood">>
+<</link>>
+
+<<link "Watch how the fire is maintained">>
+  <<set $skills.fireMaking += 0.2>>
+  <<goto "LearnFireMaking">>
+<</link>>
+
+:: PrepareFood [childhood]
+# Kitchen Lessons
+
+You approach the women who are preparing the day's food. Your mother smiles and makes space for you in the circle. Today, they are processing berries and roots gathered earlier.
+
+"Here, <<print $character.name>>," your mother says, handing you a small stone. "You can help crush these berries."
+
+She shows you how to mash the berries against a flat stone, extracting the juice and pulp. Other women are scraping roots, cutting meat into strips for drying, or grinding seeds into flour.
+
+As you work, the women talk and sing, sharing news and stories. You learn not just how to prepare food, but also about which plants are in season, where they can be found, and how to preserve food for times when it is scarce.
+
+<<if gameUtils.hasSkillLevelIncreased("foraging")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your foraging knowledge has improved!</span>
+  </div>
+<</if>>
+
+<<link "Ask about different berries">>
+  <<set $skills.plantIdentification += 0.2>>
+  <<goto "LearnAboutBerries">>
+<</link>>
+
+<<link "Help with cooking at the fire">>
+  <<set $skills.fireMaking += 0.1>>
+  <<goto "HelpWithCooking">>
+<</link>>
+
+:: MakeSimpleTools [childhood]
+# Crafting Beginnings
+
+You approach your father, who is working on crafting a new spear. He smiles when he sees your interest.
+
+"Would you like to learn?" he asks, and when you nod eagerly, he sets aside his work and finds a small piece of wood for you.
+
+"We'll start with something simple," he says. "A digging stick for finding roots."
+
+He shows you how to select the right piece of wood - straight, without too many knots - and how to use a stone scraper to remove the bark. Then he demonstrates how to sharpen one end by carefully scraping it against a rough stone.
+
+The work is harder than it looks. Your small hands struggle with the tools, but your father is patient, guiding you when needed and praising your efforts.
+
+<<if gameUtils.hasSkillLevelIncreased("toolMaking")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your tool making skill has improved!</span>
+  </div>
+<</if>>
+
+<<link "Continue working on your digging stick">>
+  <<set $skills.toolMaking += 0.2>>
+  <<goto "FinishDiggingStick">>
+<</link>>
+
+<<link "Ask about making other tools">>
+  <<goto "LearnAboutTools">>
+<</link>>
+
+:: HideAndSeek [childhood]
+# Sharpening the Senses
+
+You join several children in a game of hide and seek around the camp. One child covers their eyes and counts slowly while the rest of you scatter to find hiding places.
+
+You look around quickly, considering your options. Behind a shelter? Too obvious. Near the storage area? The adults might not approve. Finally, you spot a perfect place - a small depression near some baskets, partially covered by a hide that's been set out to dry.
+
+You curl up small, trying to control your breathing and remain still. These are the same skills hunters use to avoid detection by animals or rival tribes.
+
+As you wait, you listen carefully to the sounds around you - footsteps approaching and receding, the seeker finding other children, the normal sounds of camp life continuing around your game.
+
+<<if gameUtils.hasSkillLevelIncreased("perception")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your perception has improved!</span>
+  </div>
+<</if>>
+
+<<link "Try to move to a better hiding spot without being seen">>
+  <<set $skills.perception += 0.2>>
+  <<goto "ImproveHiding">>
+<</link>>
+
+<<link "Stay perfectly still until the game ends">>
+  <<goto "StayHidden">>
+<</link>>
+
+:: ToySpear [childhood]
+# First Hunting Skills
+
+You pick up a small toy spear - really just a straight stick with the end sharpened slightly, made safe for children to play with. Several other children have similar toy weapons, and you begin a game of pretend hunting.
+
+One of the older boys, about eight summers old, takes the lead. "I'll be the mammoth," he says, getting down on all fours. "You have to work together to hunt me."
+
+The "mammoth" moves around, while the rest of you try to surround it and make "attacks" with your toy spears. The older boy gives advice as you play.
+
+"No, don't approach from the front - that's where the tusks are! Circle around to the sides."
+
+"Stay downwind so the mammoth doesn't smell you!"
+
+"Work together - one distract, others attack!"
+
+Through play, you're learning the basics of hunting strategy that will be essential when you're old enough to join real hunts.
+
+<<if gameUtils.hasSkillLevelIncreased("hunting")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your hunting skill has improved!</span>
+  </div>
+<</if>>
+
+<<link "Practice your spear throwing">>
+  <<set $skills.hunting += 0.2>>
+  <<goto "PracticeSpearThrowing">>
+<</link>>
+
+<<link "Ask to play a different animal next">>
+  <<goto "PlayDifferentAnimal">>
+<</link>>
+
+:: StoneGame [childhood]
+# Strategy and Counting
+
+You sit down with a few other children to play the stone game. Small pebbles are arranged in patterns on the ground, and players take turns moving them according to specific rules.
+
+An older girl explains the game to you. "You must move one stone at a time, and you can only move to an empty space. If you jump over another player's stone, you capture it."
+
+The game is challenging for your young mind, requiring you to count, plan ahead, and anticipate your opponent's moves. These same skills will be useful later for planning hunts, managing resources, and navigating.
+
+As you play, you begin to see patterns and strategies. Sometimes it's better to sacrifice one stone to capture two. Sometimes patience is rewarded when your opponent makes a mistake.
+
+<<if gameUtils.hasSkillLevelIncreased("intelligence")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your intelligence has improved!</span>
+  </div>
+<</if>>
+
+<<link "Try a more complex version of the game">>
+  <<set $skills.intelligence += 0.2>>
+  <<goto "AdvancedStoneGame">>
+<</link>>
+
+<<link "Teach a younger child how to play">>
+  <<set $skills.leadership += 0.2>>
+  <<goto "TeachYoungerChild">>
+<</link>>
+
+:: ShamanStories [childhood]
+# Tales of the Spirit World
+
+You sit near the shaman's shelter, where several children have gathered to hear stories. The shaman, <<if $language eq "proto-indo-european">>Wekwos<<elseif $language eq "proto-uralic">>Tietäjä<<else>>Imhotep<</if>>, begins with a ritual gesture, waving a bundle of dried herbs through the smoke of a small fire.
+
+"The smoke carries our words to the spirits," the shaman explains. "Today I will tell you about the great spirits that watch over our tribe."
+
+The stories are fascinating - tales of animal spirits that can help or hinder hunters, of ancestor spirits that guide the tribe through dreams, and of the powerful spirits of sun, moon, and stars that govern the cycles of day, night, and seasons.
+
+You learn that everything has a spirit - trees, stones, animals, and even the wind. The shaman teaches that these spirits must be respected and sometimes appeased with offerings.
+
+"This is why we give thanks when we take from the land," the shaman explains. "And why we perform ceremonies before hunts and at the changing of seasons."
+
+<div class="relationship-change positive-change">
+  Your relationship with the shaman has improved!
+</div>
+
+<<link "Ask about dream spirits">>
+  <<goto "DreamSpirits">>
+<</link>>
+
+<<link "Ask about becoming a shaman">>
+  <<goto "BecomingShaman">>
+<</link>>
+
+:: GrandmotherPlants [childhood]
+# Wisdom of the Earth
+
+Your grandmother takes you by the hand and leads you to the edge of camp. "Today we will learn about the plants that feed us," she says.
+
+She points out different plants growing nearby, naming each one and explaining its uses. Some are good for food, others for medicine, some for making tools or baskets, and a few that must be avoided because they are poisonous.
+
+"See these leaves? They have five points, like your hand. These are safe to eat and taste sweet in the spring." She picks a few and gives you one to taste.
+
+"But these," she points to a similar plant with slightly different leaves, "will make your stomach hurt badly. See how the edges of the leaves are different? You must learn to tell them apart."
+
+Your grandmother's knowledge is vast, gained from a lifetime of gathering and using plants. She explains that women are often the keepers of this knowledge, passing it from mother to daughter through many generations.
+
+<<if gameUtils.hasSkillLevelIncreased("plantIdentification")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your plant identification skill has improved!</span>
+  </div>
+<</if>>
+
+<div class="relationship-change positive-change">
+  Your relationship with your grandmother has improved!
+</div>
+
+<<link "Help gather some edible plants">>
+  <<set $skills.foraging += 0.2>>
+  <<goto "GatherEdiblePlants">>
+<</link>>
+
+<<link "Ask about healing plants">>
+  <<set $skills.medicinalPlants += 0.2>>
+  <<goto "LearnHealingPlants">>
+<</link>>
+
+:: WatchHunters [childhood]
+# Weapons of the Hunt
+
+You approach the area where several hunters are preparing their weapons. They check spears for straightness, sharpen stone points, and repair any damage from previous hunts.
+
+One of the hunters, a man named <<if $language eq "proto-indo-european">>Koryos<<elseif $language eq "proto-uralic">>Metsästäjä<<else>>Anhur<</if>>, notices your interest.
+
+"Curious about our tools, little one?" he asks with a smile. When you nod, he shows you the spear he's working on.
+
+"This shaft must be straight and strong," he explains. "We find the best wood and dry it carefully. Then we attach the point - see how it's shaped to cut deeply?"
+
+He demonstrates how the stone point is bound to the shaft with sinew and sealed with tree resin to keep it secure. Then he shows you other hunting tools - a throwing stick that can extend the range of a spear, a stone knife for skinning, and snares for catching small animals.
+
+"Each tool has its purpose," he explains. "And each must be made with care, or it might fail when you need it most."
+
+<<if gameUtils.hasSkillLevelIncreased("toolMaking")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your tool making knowledge has improved!</span>
+  </div>
+<</if>>
+
+<<link "Ask about hunting techniques">>
+  <<set $skills.hunting += 0.1>>
+  <<goto "HuntingTechniques">>
+<</link>>
+
+<<link "Ask to help prepare a simple tool">>
+  <<set $skills.toolMaking += 0.2>>
+  <<goto "HelpWithTools">>
+<</link>>
+
+:: SeasonalEvent [childhood]
+# The Changing Seasons
+
+<<set $environment.season to gameUtils.changeSeason()>>
+<<set $environment.weather to gameUtils.changeWeather()>>
+
+<div class="season-indicator season-<<print $environment.season>>">
+  <<print $environment.season.charAt(0).toUpperCase() + $environment.season.slice(1)>> • 
+  <<print $environment.weather.charAt(0).toUpperCase() + $environment.weather.slice(1)>>
+</div>
+
+The world around your camp has changed. <<if $environment.season eq "spring">>The snow has melted, new plants push through the soil, and animals return from their winter territories. The tribe is busy gathering fresh plants and hunting animals that have grown thin over winter.<<elseif $environment.season eq "summer">>The days are long and warm, plants are abundant, and the tribe spends much time gathering and preserving food for the colder seasons ahead. Children play in the nearby stream, and nights are filled with stories around the fire.<<elseif $environment.season eq "fall">>The leaves have turned bright colors and begun to fall. The tribe works hard to gather the last fruits and nuts, and hunters bring in animals that have grown fat preparing for winter.<<else>>Snow covers the ground, and the air is bitter cold. The tribe stays close to the fires, conserving energy and living on stored food. Elders tell long stories to pass the time and teach the young.
+<</if>>
+
+This is an important time for the tribe, with specific activities and challenges.
+
+<<link "Help with seasonal activities">>
+  <<goto "SeasonalActivities">>
+<</link>>
+
+<<link "Learn about seasonal changes from the elders">>
+  <<set $skills.weatherPrediction += 0.2>>
+  <<goto "SeasonalLearning">>
+<</link>>
+
+:: AgeProgression [childhood]
+# Growing Older
+
+<<run gameUtils.ageCharacter(1)>>
+
+<div class="character-info">
+  <div class="character-basics">
+    <span class="character-name"><<print $character.name>></span>
+    <span class="character-age">Age: <<print Math.floor($character.age)>></span>
+    <span class="character-stage"><<print $character.lifeStage.toUpperCase()>></span>
+  </div>
+</div>
+
+Another year has passed in your young life. You are now <<print Math.floor($character.age)>> summers old, and have grown taller and stronger. Your understanding of the world and your place in the tribe has deepened.
+
+The adults notice your growth and begin to give you more responsibilities appropriate to your age. The games you play become more complex, preparing you for the skills you'll need as you continue to grow.
+
+<<if $character.age >= 7>>
+  You are no longer considered a small child. The tribe now expects you to contribute more significantly and learn the specific skills that will determine your role as an adult.
+<<elseif $character.age >= 5>>
+  You are becoming more independent, able to help with simple tasks without constant supervision. The elders begin to teach you more about tribal traditions and beliefs.
+<</if>>
+
+<<link "Continue your childhood journey">>
+  <<goto "ChildhoodContinued">>
+<</link>>

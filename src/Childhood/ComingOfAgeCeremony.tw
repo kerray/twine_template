@@ -1,0 +1,26 @@
+:: ComingOfAgeCeremony [childhood]
+# The Threshold of Change
+
+The day of your coming-of-age ceremony arrives with the dawn. Your mother wakes you early, before most of the tribe is stirring.
+
+"Today you cross the threshold," she says softly. "You enter the time between childhood and adulthood."
+
+After a ritual washing in the stream, you are dressed in the special garment prepared for this day. It is decorated with symbols of your childhood achievements and the qualities your family has observed in you. Your face is painted with designs that represent your family lineage and your connection to the tribe.
+
+As the sun climbs higher, the entire tribe gathers in a circle around the ceremonial space that has been prepared. The shaman and tribal leader stand at the center, waiting for you.
+
+Your heart pounds as you walk to the center of the circle. The faces around you are solemn but encouraging - every adult has stood where you stand now.
+
+The ceremony unfolds in three parts, as you were told it would:
+
+First, you symbolically leave your childhood behind, placing a token of your early years into a small fire.
+
+Next, you stand at the threshold, neither child nor adult, as the shaman chants ancient words and the tribal leader presents you with a challenge you must complete in the coming days.
+
+Finally, you are marked with a small tattoo - your first - signifying your new status. The pain is sharp but brief, and you bear it without crying out.
+
+When the ceremony concludes, the tribe erupts in celebration. You have successfully taken your first step into a new phase of life.
+
+<<link "Join the celebration">>
+  <<goto "TeenageCelebration">>
+<</link>>

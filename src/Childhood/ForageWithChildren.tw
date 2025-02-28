@@ -1,0 +1,16 @@
+:: ForageWithChildren [childhood]
+# Finding Food Together
+
+You and several other children venture to the edge of camp where edible plants grow. The older children lead the way, showing the younger ones what to look for.
+
+"These berries are good to eat," explains an eight-year-old girl, pointing to small blue fruits growing on low bushes. "But only pick the dark ones - the red ones aren't ripe yet."
+
+Another child demonstrates how to dig for roots, using a small stick to loosen the soil. "Look for the plants with the star-shaped leaves," he advises. "Their roots are sweet."
+
+Working together, your small group gathers a surprising amount of food. Some children climb low branches to reach fruits, while others search the ground for nuts that have fallen from trees. You learn which plants grow in sunny spots and which prefer shade, which are found near water and which thrive in drier areas.
+
+When your containers are full, you return to camp proudly carrying your contribution to the tribe's food supply. The adults praise your efforts, and you feel a sense of accomplishment at having helped provide for your community.
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

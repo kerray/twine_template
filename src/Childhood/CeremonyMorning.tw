@@ -1,0 +1,20 @@
+:: CeremonyMorning [childhood]
+# The Day Arrives
+
+You wake with the first light of dawn, your dream still vivid in your mind. Today is the day - your childhood officially ends, and you begin your journey toward adulthood.
+
+Your mother is already awake, preparing a special wash of herbs and water for you to cleanse yourself. "The ceremony requires that you be pure," she explains. "Wash away your childhood self to make room for your new identity."
+
+The wash smells of sage and other herbs you don't recognize. As you use it to clean your face and body, it leaves your skin tingling slightly - a physical reminder of the transformation you're about to undergo.
+
+Your father brings the ceremonial clothing you'll wear - simple but decorated with symbols of the tribe and your family lineage. He helps you dress, explaining the meaning of each symbol.
+
+"This represents our ancestors," he says, pointing to a spiral pattern. "And this," he indicates a series of dots, "shows the path of life, with each stage marked by ceremony and change."
+
+Outside, you can hear the tribe beginning to gather. The atmosphere in camp is festive but also solemn - this is an important ritual that maintains the tribe's traditions and ensures proper passage between life stages.
+
+Your heart beats faster as the time approaches. This is the moment you've been preparing for throughout your childhood.
+
+<<link "Join your family for the ceremony">>
+  <<goto "ComingOfAgeCeremony">>
+<</link>>

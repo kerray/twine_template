@@ -2,20 +2,61 @@
 Created with Twine Template (TwT)
 
 :: StoryBanner
-<h1>My Twine Game</h1>
+<h1>Warmth of Tribe</h1>
 
 :: StoryCaption
-Navigation and game info can go here
+<<if def $character>>
+<div class="character-info">
+    <div class="character-basics">
+        <span class="character-name"><<print $character.name || "Unnamed">>
+        </span>
+        <span class="character-age">Age: <<print Math.floor($character.age)>>
+        </span>
+        <span class="character-stage"><<print $character.lifeStage.toUpperCase()>>
+        </span>
+    </div>
+    
+    <<if def $needs>>
+    <div class="needs-display">
+        <div class="need-bar hunger">
+            <span class="need-label">Hunger</span>
+            <div class="need-value" style="width: <<print $needs.hunger>>%;"></div>
+        </div>
+        <div class="need-bar thirst">
+            <span class="need-label">Thirst</span>
+            <div class="need-value" style="width: <<print $needs.thirst>>%;"></div>
+        </div>
+        <div class="need-bar fatigue">
+            <span class="need-label">Energy</span>
+            <div class="need-value" style="width: <<print 100 - $needs.fatigue>>%;"></div>
+        </div>
+        <div class="need-bar health">
+            <span class="need-label">Health</span>
+            <div class="need-value" style="width: <<print $needs.health>>%;"></div>
+        </div>
+    </div>
+    <</if>>
+    
+    <<if def $environment>>
+    <div class="environment-info">
+        <div class="season-indicator season-<<print $environment.season>>">
+            <<print $environment.season.charAt(0).toUpperCase() + $environment.season.slice(1)>> • 
+            <<print $environment.weather.charAt(0).toUpperCase() + $environment.weather.slice(1)>>
+        </div>
+    </div>
+    <</if>>
+</div>
+<</if>>
 
 :: StoryDisplayTitle
-My Twine Game
+Warmth of Tribe
 
 :: StoryMenu
 <<link "Start">><<goto "Start">><</link>>
 [[Credits]]
 
 :: StorySubtitle
-A game created with TwT
+A Paleolithic Survival Journey
 
 :: PassageHeader
 <hr>
@@ -27,6 +68,20 @@ A game created with TwT
 </div>
 
 :: Credits
-Created using the Twine Template (TwT).
+# Credits
+
+## Warmth of Tribe
+A Paleolithic survival journey created using the Twine Template (TwT).
+
+### Game Design
+- Character progression through life stages
+- Skill development system
+- Relationship mechanics
+- Survival needs simulation
+- Seasonal changes and environmental effects
+
+### Artwork
+- Primitive art-inspired UI design
+- Natural, earthy color palette
 
 <<link "Back to Start">><<goto "Start">><</link>>

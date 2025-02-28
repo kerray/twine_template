@@ -1,0 +1,12 @@
+:: SortFirewood [childhood]
+# Organizing Resources
+
+You help sort the gathered firewood by size - small twigs for kindling, medium branches for regular burning, and larger pieces that will burn longer.
+
+"Good organization makes the fire easier to build and maintain," explains one of the adults. "Always start with the smallest pieces, then gradually add larger ones as the fire grows stronger."
+
+As you work, you learn about different types of wood - which burn hot and fast, which create more smoke, and which last the longest. This knowledge will be essential throughout your life, as fire is central to the tribe's survival.
+
+<<link "Return to camp activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

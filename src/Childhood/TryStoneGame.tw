@@ -1,0 +1,18 @@
+:: TryStoneGame [childhood]
+# First Strategy
+
+"Would you like to try?" Agnis asks, seeing your interest in the stone game. When you nod eagerly, he makes space for you in the circle of players.
+
+"I'll teach you the simple version first," he says, arranging seven small holes in the dirt and placing stones in specific positions. "The goal is to jump your opponent's stones and remove them from the board."
+
+He demonstrates a move, showing how one stone can jump over another if there's an empty space beyond it. The jumped stone is then removed from the game. "The winner is the one who captures all of their opponent's stones or blocks them so they cannot move."
+
+Your first attempts are clumsy, and you make moves without thinking ahead. The other children are patient, though, offering advice and pointing out better options. "Always look at what will happen after your move," one girl suggests. "Think about what your opponent might do next."
+
+Gradually, you begin to see patterns in the game. You learn to set traps by sacrificing one stone to capture two, and to protect your pieces by keeping them in certain formations.
+
+Though you lose your first few games, you feel your mind stretching in new ways, learning to think strategically and plan ahead - skills that will serve you well throughout your life.
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

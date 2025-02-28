@@ -1,0 +1,20 @@
+:: DreamOfHunting [childhood]
+# Visions of the Hunt
+
+In your dream, you find yourself in a forest you've never seen before. The trees are taller than any near your camp, and the undergrowth is thick with unfamiliar plants. Yet somehow, you know exactly where you are and where you need to go.
+
+You carry a spear, perfectly balanced in your hand. Your movements are silent and sure as you track an animal through the forest. You can see its tracks clearly - a large deer, moving north.
+
+The forest seems to help you, branches moving aside as you pass, the ground cushioning your footsteps. You feel a deep connection to the hunt, understanding that it's not just about killing, but about respect for the animal that will give its life to feed the tribe.
+
+When you finally spot the deer, it's magnificent - larger than any you've seen, with impressive antlers. It seems to sense you but doesn't run. Instead, it turns to look directly at you, its eyes full of wisdom.
+
+"We are connected," a voice seems to say, though whether it comes from the deer or from within you is unclear. "Hunter and hunted, we are part of the same circle. Remember this when you take a life - it is given so that your people may live."
+
+The deer bows its head, offering itself, and you raise your spear...
+
+You wake with the first light of dawn, the dream vivid in your mind. Something has shifted in your understanding of hunting - it's not just a skill to be learned, but a sacred relationship with the animals that sustain your people.
+
+<<link "Prepare for the ceremony">>
+  <<goto "CeremonyMorning">>
+<</link>>

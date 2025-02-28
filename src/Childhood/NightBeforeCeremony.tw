@@ -1,0 +1,29 @@
+:: NightBeforeCeremony [childhood]
+# Dreams and Anticipation
+
+You return to your family's shelter for your last night as a child. Tomorrow's ceremony weighs on your mind, filling you with a mixture of excitement and nervousness.
+
+Your mother helps you prepare your sleeping area, and you remember the shaman's gift. You take out the small pouch of dream herbs and place it carefully under your sleeping mat as instructed.
+
+"The herbs will help the spirits find you in your dreams," your mother explains. "Listen carefully to any messages they send. They may guide your future path."
+
+Your father adds, "I remember the night before my ceremony. I dreamed of running with the deer, feeling their speed and grace. It helped me understand my path as a hunter."
+
+As you lie down to sleep, the familiar sounds of the camp surround you - quiet conversations, the crackling of the night fire, distant singing from where some adults still gather. These sounds have been the backdrop to your entire life, a constant reminder of the community that surrounds and protects you.
+
+Sleep comes slowly, your mind full of thoughts about what tomorrow will bring. But eventually, your eyes grow heavy, and you drift into dreams...
+
+<<link "Dream of hunting">>
+  <<set $skills.hunting += 0.3>>
+  <<goto "DreamOfHunting">>
+<</link>>
+
+<<link "Dream of plants and gathering">>
+  <<set $skills.foraging += 0.3>>
+  <<goto "DreamOfGathering">>
+<</link>>
+
+<<link "Dream of spirits and visions">>
+  <<set $relationships.shaman += 5>>
+  <<goto "DreamSpirits">>
+<</link>>

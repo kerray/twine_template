@@ -1,0 +1,32 @@
+:: StandUpToRival [childhood]
+# Finding Your Voice
+
+You take a deep breath and decide to stand up for yourself against your rival's pushing and boasting.
+
+"I was here first," you say firmly, meeting <<if $character.gender eq "female">>her<<else>>his<</if>> eyes. "And we should all take turns fairly."
+
+Your rival seems surprised by your direct challenge. For a moment, <<if $character.gender eq "female">>she<<else>>he<</if>> stares at you, perhaps trying to decide whether to escalate the confrontation or back down.
+
+The other children watch silently, waiting to see what will happen. In the tribe, these childhood conflicts are important - they help establish each person's place in the social order and teach important lessons about standing up for oneself while avoiding dangerous escalation.
+
+After a tense moment, your rival shrugs. "Fine. But I'm still better at this game than you are."
+
+This partial concession allows you both to save face. Your rival has acknowledged your right to your position, while still maintaining a claim to superior skill.
+
+One of the older children, who has been watching, nods approvingly. "Good," she says. "Now we can all play together."
+
+The game continues, and though your rival still tries to show off and dominate, there's a new respect in <<if $character.gender eq "female">>her<<else>>his<</if>> interactions with you. You've shown that you won't be easily pushed aside.
+
+<<if gameUtils.hasSkillLevelIncreased("charisma")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your charisma has improved!</span>
+  </div>
+<</if>>
+
+<<link "Continue playing with the group">>
+  <<goto "ContinuePlay">>
+<</link>>
+
+<<link "Talk to your rival privately later">>
+  <<goto "PrivateTalkWithRival">>
+<</link>>

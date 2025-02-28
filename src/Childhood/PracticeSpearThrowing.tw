@@ -1,0 +1,28 @@
+:: PracticeSpearThrowing [childhood]
+# Aiming True
+
+With your toy spear in hand, you find a clear area at the edge of camp where several children are practicing their throwing skills. They've set up a target - a pile of old hides stuffed with grass to resemble the shape of a small animal.
+
+An older boy, about ten summers old, is showing the younger children the proper technique. "Hold it like this," he demonstrates, gripping the spear at its balance point. "And when you throw, step forward with the opposite foot."
+
+You watch carefully before taking your turn. Your first throw falls short of the target, landing in the dirt several paces away. The second goes too far to the right.
+
+"Try again," encourages the older boy. "Keep your eye on where you want the spear to go."
+
+On your third attempt, you focus intently on the target, adjust your grip as shown, and throw with more confidence. The spear flies straighter this time, striking the edge of the hide bundle.
+
+The other children cheer for your improvement. You practice for some time, gradually developing better aim and distance with each throw. Though your arms grow tired, you feel proud of your progress.
+
+<<if gameUtils.hasSkillLevelIncreased("hunting")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your hunting skill has improved!</span>
+  </div>
+<</if>>
+
+<<link "Ask about real hunting techniques">>
+  <<goto "HuntingLessons">>
+<</link>>
+
+<<link "Return to play activities">>
+  <<goto "ChildhoodPlay">>
+<</link>>

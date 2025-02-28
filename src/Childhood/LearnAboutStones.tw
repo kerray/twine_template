@@ -1,0 +1,18 @@
+:: LearnAboutStones [childhood]
+# Earth's Treasures
+
+Your grandfather examines the collection of stones you've gathered, his weathered hands turning each one carefully. "You have found some useful stones here," he says with approval.
+
+He picks up a dark, glassy stone. "This is flint," he explains. "It is one of our most valuable resources. When struck properly, it creates sharp edges for cutting tools and sparks for making fire."
+
+Next, he shows you a reddish stone with bands of color. "We crush this to make paint for our bodies and for marking important objects. The color comes from the earth's blood."
+
+A smooth, round river stone catches his attention. "These make excellent hammers and grinding tools. The river has done the work of shaping them for us."
+
+Your grandfather explains how different stones have different properties - some are hard enough to shape other stones, some can hold heat from a fire, and others might contain minerals that give them special colors or properties.
+
+"Our ancestors learned which stones were useful through many generations of observation," he tells you. "This knowledge is part of what makes us human."
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

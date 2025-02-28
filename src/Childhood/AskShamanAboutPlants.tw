@@ -1,0 +1,16 @@
+:: AskShamanAboutPlants [childhood]
+# Sacred Healing
+
+"What are these plants?" you ask, pointing at the various dried leaves and roots arranged near the shaman.
+
+The shaman's eyes crinkle with pleasure at your curiosity. "These are the gifts of the earth spirits," the shaman explains. "Each has its own power and purpose."
+
+With reverent hands, the shaman shows you different plants - leaves that cool fever, roots that strengthen blood, and resins that draw poison from wounds. Each plant is handled with respect, and the shaman explains that they must be gathered with proper rituals and thanks.
+
+"When we take from the earth, we must always give something in return," the shaman tells you. "A prayer, an offering, or a promise to help the plants continue to grow."
+
+You learn that healing is not just about the plants themselves, but about understanding the connection between the physical world and the spirit world. The shaman's knowledge combines practical observation with spiritual wisdom passed down through many generations.
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

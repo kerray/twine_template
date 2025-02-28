@@ -1,0 +1,30 @@
+:: ChildrensDance [childhood]
+# Moving to the Rhythm
+
+As the celebration continues, a group of children begins a special dance near the edge of the main circle. An older girl is leading them, showing the steps and movements.
+
+"Come join us!" she calls to you when she notices your interest.
+
+You join the circle of children, watching carefully to learn the patterns of movement. The dance is simple but meaningful - the children mimic the movements of animals and elements of nature that are important to the tribe.
+
+Some children crouch low and then leap high, like the deer that provide meat and hides. Others move with arms outstretched, imitating the flight of birds. Still others sway like trees in the wind or ripple their arms like flowing water.
+
+The adults watch approvingly, occasionally calling encouragement or correcting a movement. Through these dances, children learn coordination and rhythm, but also absorb important cultural knowledge about the animals and natural forces that shape tribal life.
+
+As you dance, you feel a connection to the other children and to the celebration itself. The drumming seems to match your heartbeat, and your body moves more confidently with each repetition of the pattern.
+
+An elder watching nearby nods in approval at your efforts. "The child has good rhythm," she comments to another adult. "Like her mother/father."
+
+<<if gameUtils.hasSkillLevelIncreased("charisma")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your charisma has improved!</span>
+  </div>
+<</if>>
+
+<<link "Continue dancing until you're tired">>
+  <<goto "TiredFromDancing">>
+<</link>>
+
+<<link "Return to the main celebration">>
+  <<goto "TribalCelebration">>
+<</link>>

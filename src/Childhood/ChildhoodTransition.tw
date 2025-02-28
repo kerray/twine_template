@@ -1,0 +1,34 @@
+:: ChildhoodTransition [childhood]
+# The End of Childhood
+
+<<run gameUtils.ageCharacter(0, 6)>>
+
+<div class="season-indicator season-<<print $environment.season>>">
+  <<print $environment.season.charAt(0).toUpperCase() + $environment.season.slice(1)>> • 
+  <<print $environment.weather.charAt(0).toUpperCase() + $environment.weather.slice(1)>>
+</div>
+
+The seasons have continued to change, and you have grown with them. You are now approaching your thirteenth summer, the time when childhood ends and a new phase of life begins.
+
+Your body has grown taller and stronger. Your mind has absorbed many lessons about survival, tribal customs, and your place in the community. The games you played as a small child have gradually given way to more serious training for adult responsibilities.
+
+The elders have been watching your development, noting your strengths and the skills you seem most drawn to. Soon, you will undergo the coming-of-age ceremony that marks the transition to your teenage years - a time of more focused learning and greater responsibilities.
+
+Before this important transition, you have time for one more childhood activity. What would you like to do?
+
+<<link "Spend time with your parents, learning family traditions">>
+  <<set $relationships.mother += 5>>
+  <<set $relationships.father += 5>>
+  <<goto "FamilyTraditions">>
+<</link>>
+
+<<link "Play one last game with your childhood friends">>
+  <<set $relationships.bestFriend += 5>>
+  <<goto "FinalChildhoodGame">>
+<</link>>
+
+<<link "Seek wisdom from the tribal elders">>
+  <<set $relationships.shaman += 3>>
+  <<set $relationships.tribalLeader += 3>>
+  <<goto "ElderWisdom">>
+<</link>>

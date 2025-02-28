@@ -1,0 +1,18 @@
+:: AskAboutPlants [childhood]
+# Nature's Pantry
+
+"Which plants can we eat?" you ask, pointing to various items your mother has gathered.
+
+She smiles at your curiosity and pulls out several different berries and seeds from her pouch. With patience, she shows you the differences between edible and poisonous varieties.
+
+"These red berries with the star pattern on the bottom are sweet and good to eat," she explains. "But these," she points to similar-looking berries with a slightly different shape, "will make your stomach hurt terribly."
+
+She teaches you to look at leaf shapes, berry colors, and growth patterns. "The forest provides everything we need, but we must know how to read its signs."
+
+You learn that some plants are food in one season but not in another, and that certain parts of a plant might be edible while others are harmful.
+
+"Always ask an adult before eating any plant you find," she warns. "Until you are certain, it is better to be safe."
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

@@ -4,5 +4,12 @@
     "format": "SugarCube",
     "format-version": "2.30.0",
     "start": "Start",
-    "zoom": 1
+    "zoom": 1,
+    "tag-colors": {
+        "childhood": "green",
+        "teenage": "blue",
+        "adult": "purple",
+        "parent": "orange",
+        "elder": "red"
+    }
 }

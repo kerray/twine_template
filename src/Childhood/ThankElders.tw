@@ -1,0 +1,22 @@
+:: ThankElders [childhood]
+# Gratitude for Wisdom
+
+You bow your head respectfully to the elders. "Thank you for your guidance," you say. "I will remember your words as I begin my new journey."
+
+The tribal leader places a hand on your shoulder. "You have been a good child, attentive and willing to learn. These qualities will serve you well in the years ahead."
+
+The shaman gives you a small pouch made of soft hide. "A gift for your coming ceremony," the shaman explains. "Inside are special herbs to help you dream clearly. On the night before your ceremony, place them under your sleeping mat. The spirits may send you visions to guide your path."
+
+You accept the gift with both hands, showing proper respect. This small interaction is itself a lesson - in the tribe, wisdom is freely given to those who seek it with humility, and gifts are exchanged to strengthen bonds between members.
+
+As you prepare to leave, the tribal leader adds, "Remember that no one walks their path alone. The tribe supports each member, and each member supports the tribe. This is how we have survived for countless generations."
+
+<<set $inventory.carrying.push("dream herbs")>>
+
+<div class="inventory-update">
+  Dream herbs added to your inventory.
+</div>
+
+<<link "Go prepare for the ceremony">>
+  <<goto "PrepareForCeremony">>
+<</link>>

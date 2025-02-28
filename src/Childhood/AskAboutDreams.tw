@@ -1,0 +1,18 @@
+:: AskAboutDreams [childhood]
+# Messages from the Spirit World
+
+"Do dreams tell us things?" you ask the shaman, remembering a particularly vivid dream you had recently.
+
+The shaman's expression becomes serious and attentive. "Dreams are one of the most important ways the spirits speak to us," the shaman explains. "When we sleep, our spirits can travel beyond our bodies and receive messages from ancestors or animal guides."
+
+The shaman explains that there are different kinds of dreams. Some are just the mind's way of making sense of daily experiences. But others - the ones that feel especially real or strange - may contain guidance or warnings.
+
+"The tribal leaders often make important decisions based on dream messages," the shaman tells you. "And I learned many of my healing skills through dreams where ancestor spirits showed me which plants to use."
+
+You learn that remembering dreams is a skill that can be developed with practice. "When you wake, lie still and try to recall your dream before it fades," the shaman advises. "Some people keep special objects near them while they sleep to help remember or to invite specific dream messages."
+
+"As you grow older," the shaman adds, "you may learn to control your dreams or even choose where your spirit travels during sleep."
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

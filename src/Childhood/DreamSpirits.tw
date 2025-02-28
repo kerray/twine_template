@@ -1,0 +1,28 @@
+:: DreamSpirits [childhood]
+# Visions of the Spirit World
+
+In your dream, you find yourself in a misty landscape that seems both familiar and strange. The trees, rocks, and sky all have a luminous quality, as if glowing from within.
+
+A figure approaches through the mist - neither human nor animal, but somehow both. It has the general shape of a person but moves with the grace of a deer and has features that shift and change as you try to focus on them.
+
+"We have been watching you, child," the spirit says, its voice like wind through leaves. "Your time of change approaches."
+
+The spirit leads you through this dreamscape, showing you visions that seem significant but are difficult to fully comprehend. You see yourself standing at a crossroads with multiple paths stretching before you. Each path glows with a different color and seems to lead to a different future.
+
+"All paths have value," the spirit tells you. "The hunter, the gatherer, the toolmaker, the healer, the one who speaks with us - all are needed for the tribe to thrive. Your path will become clear in time."
+
+The spirit touches your forehead, and you feel a warm sensation spreading through your body. "You have the ability to hear us, if you choose to listen. Dreams are the doorway between our worlds."
+
+As the dream begins to fade, the spirit offers one last message: "Remember that all things are connected - the people, the animals, the plants, the earth, the sky, and the spirits. This understanding is the beginning of wisdom."
+
+You wake with the first light of dawn, the dream vivid in your mind. You feel a new awareness of the spiritual dimension that the shaman often speaks about - not just as stories told around the fire, but as a reality that exists alongside the physical world.
+
+<<set $relationships.shaman += 5>>
+
+<div class="relationship-change positive-change">
+  Your connection to spiritual matters has deepened!
+</div>
+
+<<link "Prepare for the ceremony">>
+  <<goto "CeremonyMorning">>
+<</link>>

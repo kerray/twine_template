@@ -1,0 +1,24 @@
+:: SeasonalEvent [childhood]
+# The Changing Seasons
+
+<<set $environment.season to gameUtils.changeSeason()>>
+<<set $environment.weather to gameUtils.changeWeather()>>
+
+<div class="season-indicator season-<<print $environment.season>>">
+  <<print $environment.season.charAt(0).toUpperCase() + $environment.season.slice(1)>> • 
+  <<print $environment.weather.charAt(0).toUpperCase() + $environment.weather.slice(1)>>
+</div>
+
+The world around your camp has changed. <<if $environment.season eq "spring">>The snow has melted, new plants push through the soil, and animals return from their winter territories. The tribe is busy gathering fresh plants and hunting animals that have grown thin over winter.<<elseif $environment.season eq "summer">>The days are long and warm, plants are abundant, and the tribe spends much time gathering and preserving food for the colder seasons ahead. Children play in the nearby stream, and nights are filled with stories around the fire.<<elseif $environment.season eq "fall">>The leaves have turned bright colors and begun to fall. The tribe works hard to gather the last fruits and nuts, and hunters bring in animals that have grown fat preparing for winter.<<else>>Snow covers the ground, and the air is bitter cold. The tribe stays close to the fires, conserving energy and living on stored food. Elders tell long stories to pass the time and teach the young.
+<</if>>
+
+This is an important time for the tribe, with specific activities and challenges.
+
+<<link "Help with seasonal activities">>
+  <<goto "SeasonalActivities">>
+<</link>>
+
+<<link "Learn about seasonal changes from the elders">>
+  <<set $skills.weatherPrediction += 0.2>>
+  <<goto "SeasonalLearning">>
+<</link>>

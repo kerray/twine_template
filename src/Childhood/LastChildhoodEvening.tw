@@ -1,0 +1,26 @@
+:: LastChildhoodEvening [childhood]
+# One Last Night
+
+You join the other children your age for what feels like a special moment - the last evening you'll all be considered children together. Tomorrow's ceremony will change your status in the tribe, moving you into a different group with different expectations.
+
+Your friends seem to sense this too. The usual games have a bittersweet quality tonight, played with extra enthusiasm but also with an awareness that things are changing.
+
+<<if $relationships.bestFriend > 60>>
+Your best friend, <<if $language eq "proto-indo-european">><<if $character.gender eq "female">>Pria<<else>>Agnis<</if>><<elseif $language eq "proto-uralic">><<if $character.gender eq "female">>Aino<<else>>Sampo<</if>><<else>><<if $character.gender eq "female">>Nefert<<else>>Khenti<</if>><</if>>, sits beside you. "We'll still be friends when we're grown, won't we?" <<if $character.gender eq "female">>she<<else>>he<</if>> asks.
+
+"Always," you promise. "Even when we're old like the elders."
+<</if>>
+
+<<if $relationships.rival < 50>>
+You notice your rival, <<if $language eq "proto-indo-european">><<if $character.gender eq "female">>Mori<<else>>Wlkwos<</if>><<elseif $language eq "proto-uralic">><<if $character.gender eq "female">>Kivi<<else>>Karhu<</if>><<else>><<if $character.gender eq "female">>Bastet<<else>>Sobek<</if>><</if>>, watching from nearby. There's a different look in <<if $character.gender eq "female">>her<<else>>his<</if>> eyes tonight - less hostile, more thoughtful. Perhaps the coming transition has softened the rivalry, or perhaps you're both simply growing up.
+<</if>>
+
+As the evening progresses, some of the older children who have already undergone their ceremonies come to share stories about what to expect. Their advice is part serious, part teasing - clearly enjoying their slightly elevated status.
+
+"The ceremony isn't as scary as they make it sound," one whispers. "Just don't forget the words you're supposed to say."
+
+Another adds, "The best part is after - when you're not a child anymore, but not quite grown. It's the perfect time."
+
+<<link "Return to your family's shelter for the night">>
+  <<goto "NightBeforeCeremony">>
+<</link>>

@@ -1,0 +1,30 @@
+:: ChildhoodInjury [childhood]
+# A Painful Lesson
+
+While playing near the edge of camp, you fall and cut your leg on a sharp stone. The pain is immediate and intense, bringing tears to your eyes. Blood trickles from the wound, frightening you even more than the pain.
+
+Your cries bring adults running. Your mother reaches you first, quickly examining the injury.
+
+"It's not too deep," she says reassuringly, though her face shows concern. "We must clean it to prevent bad spirits from entering the wound."
+
+She calls for the shaman, who brings healing materials - clean water, herbs, and a poultice made from specific plants. The shaman cleans the wound carefully, chanting softly while applying the medicine.
+
+"Be brave, little one," the shaman tells you. "This pain will teach you to be more careful, but it will pass."
+
+The adults explain that injuries are part of life, but knowing how to treat them is essential knowledge for survival.
+
+<<set $needs.health -= 10>>
+
+<div class="need-message">
+  Your health has decreased due to injury.
+</div>
+
+<<link "Rest and recover">>
+  <<set $needs.health += 5>>
+  <<goto "RecoverFromInjury">>
+<</link>>
+
+<<link "Ask to learn about healing plants">>
+  <<set $skills.medicinalPlants += 0.3>>
+  <<goto "LearnAboutHealing">>
+<</link>>

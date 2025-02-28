@@ -1,0 +1,30 @@
+:: HelpWithTools [childhood]
+# Learning by Helping
+
+"Can I help make something?" you ask the hunter, eager to try your hand at crafting.
+
+The hunter considers for a moment, then nods. "You can help me prepare sinew for binding spear points," he says, selecting a dried animal tendon from his collection of materials.
+
+He shows you how the dried sinew must be pounded gently with a smooth stone to separate the fibers, then moistened slightly to make it pliable. "When it dries again after being wrapped around the spear point, it will shrink and create a very tight bond," he explains.
+
+Your small fingers are actually well-suited for the delicate work of separating the sinew fibers. The hunter guides you, showing you how to apply just the right amount of pressure without damaging the material.
+
+"Good binding is as important as a sharp point," he tells you. "If the binding fails during a hunt, the point may come loose at the worst possible moment."
+
+As you work, he explains how different materials serve different purposes in toolmaking - stone for cutting edges, wood for handles and shafts, sinew and plant fibers for binding, resins for sealing and waterproofing.
+
+When you've finished preparing a length of sinew, the hunter uses it to bind a small stone point to a thin shaft, creating a dart for hunting birds or small animals. "This binding was prepared by <<print $character.name>>," he announces, showing the finished tool to another hunter nearby.
+
+<<if gameUtils.hasSkillLevelIncreased("toolMaking")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your tool making skill has improved!</span>
+  </div>
+<</if>>
+
+<<link "Ask to learn more about hunting tools">>
+  <<goto "HuntingTools">>
+<</link>>
+
+<<link "Return to watching the hunters">>
+  <<goto "WatchHunters">>
+<</link>>

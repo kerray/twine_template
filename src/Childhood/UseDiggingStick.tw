@@ -1,0 +1,28 @@
+:: UseDiggingStick [childhood]
+# Putting Your Tool to Work
+
+Proud of the digging stick you've made with your father's help, you're eager to try using it. You approach a group of women who are preparing to gather roots from a patch of ground near the camp.
+
+"Can I help?" you ask, showing them your new tool. "I made this digging stick."
+
+The women smile at your enthusiasm and your mother nods approvingly. "Yes, come with us," one of them says. "We'll show you how to find the best roots."
+
+At the gathering site, the women point out plants with certain leaf patterns. "The roots we want grow under these plants," they explain. "Watch how we use the digging stick."
+
+They demonstrate the proper technique - pushing the pointed end into the soil at an angle, then leveraging it to loosen the earth around the roots. With careful digging and pulling, they extract long, starchy roots that will be cooked for food.
+
+Now it's your turn. You position your digging stick as shown and push it into the ground. It's harder than it looked when the adults did it, but you persist. After some effort, you manage to loosen the soil enough to reveal a cluster of pale roots.
+
+"Good!" your mother encourages. "Now gently pull them out without breaking them."
+
+With careful maneuvering, you extract several intact roots. The women praise your first successful gathering with your own tool, and you feel a surge of pride at contributing to the tribe's food supply.
+
+This practical experience has taught you not just how to use the tool you made, but also how to identify useful plants and extract their edible parts - essential knowledge for survival.
+
+<<link "Continue gathering with the women">>
+  <<goto "ContinueGathering">>
+<</link>>
+
+<<link "Return to camp with your harvest">>
+  <<goto "ReturnWithHarvest">>
+<</link>>

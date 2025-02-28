@@ -1,0 +1,22 @@
+:: PrepareForCeremony [childhood]
+# The Coming Transition
+
+The day of your coming-of-age ceremony approaches. This important ritual will mark your transition from childhood to your teenage years, a time when you'll begin more serious training for adult responsibilities.
+
+Your mother helps you prepare, explaining the significance of each element of the ceremony. "You will be reborn," she tells you. "No longer a child, but not yet an adult. This in-between time is when you will discover your true path."
+
+She helps you create a special garment for the ceremony, decorated with symbols that represent your childhood achievements and the qualities your family has observed in you.
+
+Your father teaches you the words you will need to speak - an ancient pledge to honor the tribe, the ancestors, and the spirits that guide and protect your people.
+
+"The ceremony may seem frightening," he warns you. "But remember that all of us have passed through this doorway. It is the way our people have always marked this important change."
+
+The entire tribe will witness your transition, acknowledging your new status and the different expectations that come with it.
+
+<<link "Reflect on your childhood">>
+  <<goto "ChildhoodReflection">>
+<</link>>
+
+<<link "Look forward to your teenage years">>
+  <<goto "TeenageAnticipation">>
+<</link>>

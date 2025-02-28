@@ -1,0 +1,25 @@
+:: GatherFirewood [childhood]
+# Collecting Wood
+
+You join a small group of children heading to the edge of camp to gather firewood. An older boy leads the way, showing you which branches are best - dry, dead wood that will burn well without too much smoke.
+
+"Never take living branches," he explains. "They won't burn well, and the trees need them."
+
+You work together, collecting sticks and small branches that have fallen to the ground. Even though you're small, you can carry a bundle of twigs back to camp. The work makes your arms tired, but you feel proud to be contributing to the tribe's needs.
+
+When you return, the adults praise your effort. "Good work, little ones," says one of the women tending the main fire. "Without fire, we would have no warmth, no cooked food, and no protection from animals at night."
+
+<<if gameUtils.hasSkillLevelIncreased("strength")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your strength has improved!</span>
+  </div>
+<</if>>
+
+<<link "Help sort the wood by size">>
+  <<goto "SortFirewood">>
+<</link>>
+
+<<link "Watch how the fire is maintained">>
+  <<set $skills.fireMaking += 0.2>>
+  <<goto "LearnFireMaking">>
+<</link>>

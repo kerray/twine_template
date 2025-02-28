@@ -1,0 +1,18 @@
+:: AdultConversations [childhood]
+# The World of Adults
+
+You decide to listen to the adults' conversations, curious about the concerns and discussions that will soon become part of your world.
+
+Sitting quietly nearby, you observe the hunters discussing the movement of deer herds they've tracked. "They're moving north earlier than usual," one says. "The weather patterns are changing."
+
+Another group talks about relations with a neighboring tribe. "We should arrange a trading meeting before the cold season," suggests one woman. "Their stone tools are excellent, and we have extra hides this year."
+
+The shaman and several elders discuss signs and omens they've observed. "The birds flew in unusual patterns yesterday," the shaman notes. "And my dreams have been filled with water. We should prepare for heavy rains."
+
+You notice how decisions are made - not by one person alone, but through discussion and consensus. The tribal leader speaks last, weighing different opinions before suggesting a course of action that most agree with.
+
+This is the complex social world you'll soon enter more fully - a world of planning, negotiation, observation, and collective decision-making that ensures the tribe's survival.
+
+<<link "Join the other children for one last evening">>
+  <<goto "LastChildhoodEvening">>
+<</link>>

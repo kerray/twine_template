@@ -1,0 +1,28 @@
+:: HelpWithCooking [childhood]
+# Learning to Cook
+
+You move closer to the cooking fire, where several women are preparing the day's meal. One of them, an aunt in your extended family, invites you to help.
+
+"Here," she says, handing you a smooth stick. "Stir this pot of root stew so it doesn't burn at the bottom."
+
+You carefully stir the thick mixture, which contains various roots, herbs, and small pieces of meat. The steam carries a rich, savory smell that makes your stomach rumble.
+
+Your aunt explains how different foods need different cooking methods - some are roasted directly in the coals, others are boiled in water, and some are dried to preserve them for later use.
+
+"Cooking makes many plants safer to eat," she tells you. "And it makes meat last longer before it spoils."
+
+As you help, you learn not just about cooking, but about how fire itself is controlled - how to adjust the heat by moving food closer to or further from the flames.
+
+<<if gameUtils.hasSkillLevelIncreased("fireMaking")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your fire making skill has improved!</span>
+  </div>
+<</if>>
+
+<<link "Return to food preparation">>
+  <<goto "PrepareFood">>
+<</link>>
+
+<<link "Return to camp activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

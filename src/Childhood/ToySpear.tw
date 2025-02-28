@@ -1,0 +1,31 @@
+:: ToySpear [childhood]
+# First Hunting Skills
+
+You pick up a small toy spear - really just a straight stick with the end sharpened slightly, made safe for children to play with. Several other children have similar toy weapons, and you begin a game of pretend hunting.
+
+One of the older boys, about eight summers old, takes the lead. "I'll be the mammoth," he says, getting down on all fours. "You have to work together to hunt me."
+
+The "mammoth" moves around, while the rest of you try to surround it and make "attacks" with your toy spears. The older boy gives advice as you play.
+
+"No, don't approach from the front - that's where the tusks are! Circle around to the sides."
+
+"Stay downwind so the mammoth doesn't smell you!"
+
+"Work together - one distract, others attack!"
+
+Through play, you're learning the basics of hunting strategy that will be essential when you're old enough to join real hunts.
+
+<<if gameUtils.hasSkillLevelIncreased("hunting")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your hunting skill has improved!</span>
+  </div>
+<</if>>
+
+<<link "Practice your spear throwing">>
+  <<set $skills.hunting += 0.2>>
+  <<goto "PracticeSpearThrowing">>
+<</link>>
+
+<<link "Ask to play a different animal next">>
+  <<goto "PlayDifferentAnimal">>
+<</link>>

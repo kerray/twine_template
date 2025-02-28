@@ -1,0 +1,22 @@
+:: PersonalStrengths [childhood]
+# Discovering Your Path
+
+"What am I good at?" you ask the elders. "How will I know which path to follow?"
+
+The tribal leader considers you thoughtfully. "You have shown <<if $skills.hunting > $skills.foraging>>skill in tracking and understanding animals<<elseif $skills.foraging > $skills.hunting>>a keen eye for plants and where to find them<<elseif $skills.toolMaking > 2>>good hands for making things<<elseif $skills.storytelling > 2>>a gift for remembering and sharing stories<<elseif $skills.medicinalPlants > 2>>interest in healing plants and their uses<<else>>curiosity and willingness to learn many things<</if>>."
+
+The shaman adds, "Your spirit seems drawn to <<if $relationships.shaman > 70>>the ways of spiritual knowledge<<elseif $relationships.tribalLeader > 70>>leadership and guiding others<<elseif $skills.hunting > 3 || $skills.tracking > 3>>the hunt and providing food<<elseif $skills.foraging > 3 || $skills.plantIdentification > 3>>understanding the gifts of the earth<<elseif $skills.toolMaking > 3 || $skills.weaving > 3>>creating with your hands<<else>>many paths - your way may become clear later<</if>>."
+
+"But do not worry if your path is not yet clear," the tribal leader reassures you. "The teenage years are for trying different skills, for learning where your strengths truly lie. Some know their path early, others discover it later."
+
+The shaman nods in agreement. "The spirits will guide you, if you listen. Dreams, signs in nature, the words of elders - all these may point the way."
+
+Their words give you comfort. You don't need to know everything now; the coming years will be a time of discovery and growth.
+
+<<link "Thank the elders for their wisdom">>
+  <<goto "ThankElders">>
+<</link>>
+
+<<link "Ask about the ceremony">>
+  <<goto "CeremonyDetails">>
+<</link>>

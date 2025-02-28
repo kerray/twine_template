@@ -1,0 +1,30 @@
+:: FirstRival [childhood]
+# Conflict and Competition
+
+Not all relationships are harmonious. Another child in the tribe, <<if $language eq "proto-indo-european">><<if $character.gender eq "female">>Mori<<else>>Wlkwos<</if>><<elseif $language eq "proto-uralic">><<if $character.gender eq "female">>Kivi<<else>>Karhu<</if>><<else>><<if $character.gender eq "female">>Bastet<<else>>Sobek<</if>><</if>>, has begun to challenge you frequently.
+
+Today, while playing a game with other children, <<if $character.gender eq "female">>she<<else>>he<</if>> pushes in front of you, claiming the better position. "I'm stronger and faster," your rival boasts. "I should go first."
+
+The other children watch, waiting to see how you'll respond. In the tribe, learning to handle conflicts is important - adults won't always intervene in children's disagreements unless they become dangerous.
+
+This rivalry isn't necessarily bad. Competition can push you to develop your skills, and learning to resolve conflicts is an essential part of tribal life. Even as adults, tribe members sometimes disagree, but they must find ways to cooperate for the good of all.
+
+<<set $relationships.rival -= 5>>
+
+<div class="relationship-change negative-change">
+  Your relationship with your rival has worsened!
+</div>
+
+<<link "Stand up for yourself">>
+  <<set $attributes.charisma += 0.2>>
+  <<goto "StandUpToRival">>
+<</link>>
+
+<<link "Suggest a fair competition">>
+  <<set $relationships.rival += 3>>
+  <<goto "CompeteWithRival">>
+<</link>>
+
+<<link "Walk away and find other friends">>
+  <<goto "AvoidRival">>
+<</link>>

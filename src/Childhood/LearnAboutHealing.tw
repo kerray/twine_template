@@ -1,0 +1,34 @@
+:: LearnAboutHealing [childhood]
+# Wisdom of Healing
+
+While your leg is healing, you ask the shaman to teach you more about the healing plants used in your poultice.
+
+The shaman seems pleased by your interest. "It is good to be curious about healing," <<if $language eq "proto-indo-european">>Wekwos<<elseif $language eq "proto-uralic">>Tietäjä<<else>>Imhotep<</if>> says. "Every member of the tribe should know some basic remedies."
+
+The shaman shows you the components of the poultice that was applied to your wound:
+
+"This moss grows on the north side of trees. It absorbs blood and keeps the wound clean."
+
+"These leaves have a special oil that fights the invisible spirits of sickness that can enter wounds."
+
+"This tree resin forms a protective barrier and helps the skin grow back together."
+
+"And these crushed roots reduce the heat and pain of injury."
+
+The shaman explains that different injuries and illnesses require different treatments. Burns need cooling plants with soothing properties. Stomach ailments might need bitter herbs that purge bad spirits. Coughs and breathing troubles respond to plants that release their medicine when steeped in hot water.
+
+"Healing is not just about the plants," the shaman adds. "It is also about the proper words spoken to the spirits, the phase of the moon when plants are gathered, and the intention of the healer. All these things work together."
+
+<<if gameUtils.hasSkillLevelIncreased("medicinalPlants")>>
+  <div class="skill-message">
+    <span class="skill-increase">Your knowledge of medicinal plants has greatly improved!</span>
+  </div>
+<</if>>
+
+<<link "Ask about becoming a healer">>
+  <<goto "HealerPath">>
+<</link>>
+
+<<link "Thank the shaman and rest">>
+  <<goto "RecoverFromInjury">>
+<</link>>

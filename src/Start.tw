@@ -10,14 +10,202 @@
   <</link>>
   
   <<link "No, continue my current game">>
-    <<goto "FirstChoice">>
+    <<goto "CurrentAge">>
   <</link>>
 <<else>>
   <<set $gameStarted to true>>
   
-  # Welcome to My Twine Game
-  
-  This is the starting point of your adventure.
-  
-  [[Begin your journey->FirstChoice]]
+  <div class="title-screen">
+    # Warmth of Tribe
+    
+    <div class="season-indicator season-summer">A Paleolithic Survival Journey</div>
+    
+    <p>In a time before written history, when humans lived in small nomadic tribes and survival depended on the knowledge passed down through generations, you will experience a life from childhood to old age.</p>
+    
+    <p>Your choices will shape your skills, relationships, and the legacy you leave behind for your tribe.</p>
+    
+    <<link "Begin Your Journey">>
+      <<goto "LanguageSelection">>
+    <</link>>
+  </div>
 <</if>>
+
+:: LanguageSelection
+# Choose Your Language
+
+<p>The language of your tribe will influence certain cultural aspects and naming conventions throughout your journey.</p>
+
+<<link "Proto-Indo-European">>
+  <<set $language to "proto-indo-european">>
+  <<goto "GenderSelection">>
+<</link>>
+
+<<link "Proto-Uralic">>
+  <<set $language to "proto-uralic">>
+  <<goto "GenderSelection">>
+<</link>>
+
+<<link "Proto-Afroasiatic">>
+  <<set $language to "proto-afroasiatic">>
+  <<goto "GenderSelection">>
+<</link>>
+
+<div class="language-info">
+  <p><strong>Note:</strong> This choice is primarily for flavor and will affect names and certain cultural elements. All languages provide the same gameplay experience.</p>
+</div>
+
+:: GenderSelection
+# Choose Your Gender
+
+<p>In your tribe, different genders often have different roles and expectations, though individuals can sometimes challenge these norms.</p>
+
+<<link "Female">>
+  <<set $character to {
+    gender: "female",
+    name: "",
+    age: 3,
+    lifeStage: "childhood",
+    traits: [],
+    experiences: []
+  }>>
+  <<goto "NameSelection">>
+<</link>>
+
+<<link "Male">>
+  <<set $character to {
+    gender: "male",
+    name: "",
+    age: 3,
+    lifeStage: "childhood",
+    traits: [],
+    experiences: []
+  }>>
+  <<goto "NameSelection">>
+<</link>>
+
+:: NameSelection
+# Choose Your Name
+
+<p>Your name will be how others in the tribe know you. Names often reflect natural elements, animals, or desired traits.</p>
+
+<<if $language eq "proto-indo-european">>
+  <<if $character.gender eq "female">>
+    <<link "Alka (Elk)">>
+      <<set $character.name to "Alka">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+    
+    <<link "Bhāgā (Good Fortune)">>
+      <<set $character.name to "Bhāgā">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+    
+    <<link "Pria (Beloved)">>
+      <<set $character.name to "Pria">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+  <<else>>
+    <<link "Wlkwos (Wolf)">>
+      <<set $character.name to "Wlkwos">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+    
+    <<link "Dyēus (Sky)">>
+      <<set $character.name to "Dyēus">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+    
+    <<link "Weidos (Wise)">>
+      <<set $character.name to "Weidos">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+  <</if>>
+<<elseif $language eq "proto-uralic">>
+  <<if $character.gender eq "female">>
+    <<link "Lumi (Snow)">>
+      <<set $character.name to "Lumi">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+    
+    <<link "Päivä (Sun)">>
+      <<set $character.name to "Päivä">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+    
+    <<link "Metsä (Forest)">>
+      <<set $character.name to "Metsä">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+  <<else>>
+    <<link "Kala (Fish)">>
+      <<set $character.name to "Kala">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+    
+    <<link "Otso (Bear)">>
+      <<set $character.name to "Otso">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+    
+    <<link "Tuli (Fire)">>
+      <<set $character.name to "Tuli">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+  <</if>>
+<<else>>
+  <<if $character.gender eq "female">>
+    <<link "Neith (Water)">>
+      <<set $character.name to "Neith">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+    
+    <<link "Amunet (Hidden One)">>
+      <<set $character.name to "Amunet">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+    
+    <<link "Satet (Shooter)">>
+      <<set $character.name to "Satet">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+  <<else>>
+    <<link "Horus (Falcon)">>
+      <<set $character.name to "Horus">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+    
+    <<link "Khnum (Creator)">>
+      <<set $character.name to "Khnum">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+    
+    <<link "Amun (Hidden)">>
+      <<set $character.name to "Amun">>
+      <<goto "ChildhoodIntro">>
+    <</link>>
+  <</if>>
+<</if>>
+
+<<link "Choose a custom name">>
+  <<goto "CustomName">>
+<</link>>
+
+:: CustomName
+# Enter Your Name
+
+<p>What name would you like to be known by in your tribe?</p>
+
+<<textbox "$customName" "">>
+
+<<link "Confirm Name">>
+  <<if $customName>>
+    <<set $character.name to $customName>>
+    <<goto "ChildhoodIntro">>
+  <<else>>
+    <<goto "CustomName">>
+  <</if>>
+<</link>>
+
+<<link "Go back to name selection">>
+  <<goto "NameSelection">>
+<</link>>

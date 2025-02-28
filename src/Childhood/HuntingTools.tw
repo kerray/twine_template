@@ -1,0 +1,32 @@
+:: HuntingTools [childhood]
+# Weapons of the Hunt
+
+"Can you tell me more about the hunting tools?" you ask your father, particularly interested in the weapons used to bring down animals.
+
+Your father nods and begins to show you the various hunting implements used by your tribe.
+
+"The spear is our most important hunting weapon," he explains, showing you a long shaft with a carefully shaped stone point. "It can be thrust or thrown, and is used for large animals like deer, boar, and sometimes even bear."
+
+He demonstrates the proper grip and stance for using a spear, though the actual weapon is too large and heavy for you to handle yet.
+
+Next, he shows you a shorter, lighter throwing stick. "This can bring down birds or small animals. It spins when thrown correctly, making it harder for the animal to dodge."
+
+From a leather pouch, he produces a sling made of woven plant fibers. "This takes much practice to use well, but a skilled hunter can hurl stones with great force and accuracy."
+
+He explains how different hunting tools are used in different situations:
+- Spears for large game and defense against predators
+- Throwing sticks for birds and small mammals
+- Slings for medium-distance hunting in open areas
+- Snares and traps for catching animals without the hunter being present
+
+"Each hunter usually becomes especially skilled with one or two of these," your father tells you. "But a good hunter understands all of them and knows when each should be used."
+
+He promises that when you're older, you'll begin training with these tools, starting with the smaller, safer ones before progressing to spears.
+
+<<link "Ask about how the tools are made">>
+  <<goto "ToolMakingProcess">>
+<</link>>
+
+<<link "Return to camp activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

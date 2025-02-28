@@ -1,0 +1,20 @@
+:: ExamineAnimalTracks [childhood]
+# Reading the Land
+
+You crouch down to look at the marks in the soft earth at the edge of camp. There are several different kinds of tracks - some small and delicate, others larger with distinct claw marks.
+
+As you study them, a shadow falls over you. Looking up, you see one of the tribe's hunters, who crouches beside you with an approving nod.
+
+"You have a good eye, little one," he says. "Do you know what made these marks?"
+
+When you shake your head, he points to the smallest tracks. "These are from a mouse." Then to the medium-sized prints: "These are fox tracks. See how they make a straight line? Foxes place their back feet in the prints of their front feet to save energy."
+
+Finally, he indicates the largest tracks with claw marks. "And these belong to a wolf. We must always be aware when wolves are nearby."
+
+The hunter explains how tracking animals is essential for hunting, but also for safety - knowing which predators are in the area helps the tribe avoid danger. He shows you how to determine how fresh tracks are, which direction the animal was moving, and even whether it was running or walking.
+
+"The land is full of stories," he tells you. "You just need to learn how to read them."
+
+<<link "Return to your daily activities">>
+  <<goto "ChildhoodContinued">>
+<</link>>

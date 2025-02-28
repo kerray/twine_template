@@ -1,39 +1,103 @@
 :: StoryStylesheet [stylesheet]
-/* Base styles with enhanced colors and fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Base styles with earthy, natural tones for Paleolithic setting */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
 
 :root {
-    --primary-color: #6a5acd;
-    --primary-dark: #483d8b;
-    --primary-light: #8a7ddb;
-    --accent-color: #ff6b6b;
-    --text-color: #333;
-    --bg-color: #f5f5f7;
-    --ui-bg: #2d2b42;
-    --ui-text: #ffffff;
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+    /* Base colors */
+    --primary-color: #8B6D5C; /* Earthy brown */
+    --primary-dark: #5D4037; /* Dark brown */
+    --primary-light: #A1887F; /* Light brown */
+    --accent-color: #BF360C; /* Rust/ochre */
+    --text-color: #3E2723; /* Dark brown text */
+    --bg-color: #F5F3EF; /* Off-white/parchment */
+    --ui-bg: #3E2723; /* Dark brown UI */
+    --ui-text: #F5F3EF; /* Off-white text */
+    --shadow-sm: 0 2px 8px rgba(62, 39, 35, 0.1);
+    --shadow-md: 0 4px 12px rgba(62, 39, 35, 0.15);
+    --shadow-lg: 0 8px 24px rgba(62, 39, 35, 0.2);
     --transition-fast: 0.2s ease;
     --transition-med: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    
+    /* Season colors */
+    --spring-color: #7CB342; /* Fresh green */
+    --summer-color: #FBC02D; /* Warm yellow */
+    --fall-color: #E64A19; /* Orange/red */
+    --winter-color: #B3E5FC; /* Pale blue */
+    
+    /* Life phase colors - Childhood */
+    --childhood-primary: #8D6E63; /* Softer brown */
+    --childhood-accent: #FF9800; /* Warm orange */
+    --childhood-bg: #EBE5DC; /* Darker cream for better contrast */
+    --childhood-text: #3E2723; /* Dark brown text */
+    
+    /* Life phase colors - Teenage */
+    --teenage-primary: #795548; /* Medium brown */
+    --teenage-accent: #FF5722; /* Vibrant orange-red */
+    --teenage-bg: #E6DED5; /* Darker peach for better contrast */
+    --teenage-text: #3E2723; /* Dark brown */
+    
+    /* Life phase colors - Young Adult */
+    --youngadult-primary: #6D4C41; /* Rich brown */
+    --youngadult-accent: #F44336; /* Strong red */
+    --youngadult-bg: #E8E2D9; /* Off-white with better contrast */
+    --youngadult-text: #3E2723; /* Dark brown */
+    
+    /* Life phase colors - Parent */
+    --parent-primary: #5D4037; /* Deep brown */
+    --parent-accent: #8BC34A; /* Nurturing green */
+    --parent-bg: #E0DAD1; /* Soft green-white with better contrast */
+    --parent-text: #33691E; /* Forest green */
+    
+    /* Life phase colors - Elder */
+    --elder-primary: #4E342E; /* Deep, rich brown */
+    --elder-accent: #673AB7; /* Wise purple */
+    --elder-bg: #DCD6CD; /* Soft lavender with better contrast */
+    --elder-text: #311B92; /* Deep purple */
 }
 
+/* Life phase specific styling */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Crimson Text', serif;
     background-color: var(--bg-color);
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    background-image: url('data:image/png;base64,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');
     margin: 0;
     padding: 0;
+    color: var(--text-color);
     transition: background-color var(--transition-med);
 }
 
-/* UI Bar styling with gradient and improved contrast */
+/* Apply life phase specific styles */
+body.childhood {
+    background-color: var(--childhood-bg);
+    color: var(--childhood-text);
+}
+
+body.teenage {
+    background-color: var(--teenage-bg);
+    color: var(--teenage-text);
+}
+
+body.youngadult {
+    background-color: var(--youngadult-bg);
+    color: var(--youngadult-text);
+}
+
+body.parent {
+    background-color: var(--parent-bg);
+    color: var(--parent-text);
+}
+
+body.elder {
+    background-color: var(--elder-bg);
+    color: var(--elder-text);
+}
+
+/* UI Bar styling with natural wood-like appearance */
 #ui-bar {
     background: var(--ui-bg);
-    background: linear-gradient(to bottom, #343256, #2d2b42);
-    border-right: 1px solid #444;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #5D4037, #3E2723);
+    border-right: 1px solid #2D1E18;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
     transition: all var(--transition-med);
 }
 
@@ -43,13 +107,13 @@ body {
 
 #ui-bar.stowed {
     background: var(--ui-bg);
-    border-right: 1px solid #444;
+    border-right: 1px solid #2D1E18;
 }
 
 #ui-bar-toggle {
     color: var(--ui-text);
-    background-color: #444;
-    border: 1px solid #555;
+    background-color: #2D1E18;
+    border: 1px solid #1B120F;
     border-radius: 4px;
     transition: all var(--transition-fast);
 }
@@ -60,33 +124,28 @@ body {
     box-shadow: var(--shadow-sm);
 }
 
-/* Story title styling with text effects */
+/* Story title styling */
 #story-title {
     color: var(--ui-text);
     font-size: 1.7em;
     font-weight: 600;
     margin-bottom: 1.2em;
     text-align: center;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     letter-spacing: 1px;
-    transition: all var(--transition-med);
+    font-family: 'Poppins', sans-serif;
 }
 
-#story-title:hover {
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    transform: translateY(-2px);
-}
-
-/* Menu button styling with improved hover effects */
+/* Menu button styling */
 #menu-core {
     margin-top: 1.2em;
 }
 
 #menu-core .button {
-    background-color: #444;
-    background-image: linear-gradient(to bottom, #555, #444);
+    background-color: #4E342E;
+    background-image: linear-gradient(to bottom, #5D4037, #4E342E);
     color: var(--ui-text);
-    border: 1px solid #555;
+    border: 1px solid #3E2723;
     padding: 0.6em;
     margin-bottom: 0.7em;
     width: 100%;
@@ -94,8 +153,6 @@ body {
     border-radius: 5px;
     transition: all var(--transition-fast);
     box-shadow: var(--shadow-sm);
-    position: relative;
-    overflow: hidden;
 }
 
 #menu-core .button:hover {
@@ -109,36 +166,7 @@ body {
     box-shadow: var(--shadow-sm);
 }
 
-#menu-core .button::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 5px;
-    height: 5px;
-    background: rgba(255, 255, 255, 0.5);
-    opacity: 0;
-    border-radius: 100%;
-    transform: scale(1, 1) translate(-50%);
-    transform-origin: 50% 50%;
-}
-
-#menu-core .button:hover::after {
-    animation: ripple 1s ease-out;
-}
-
-@keyframes ripple {
-    0% {
-        transform: scale(0, 0);
-        opacity: 0.5;
-    }
-    100% {
-        transform: scale(20, 20);
-        opacity: 0;
-    }
-}
-
-/* Main content area with improved spacing and transitions */
+/* Main content area */
 #story {
     margin-left: 17.5em; /* Adjust based on UI bar width */
     padding: 2.5em;
@@ -148,35 +176,52 @@ body {
 #passages {
     max-width: 800px;
     margin: 0 auto;
-    transition: opacity var(--transition-med);
 }
 
 .passage {
-    background-color: white;
+    background-color: #E8E2D9; /* Darker background for better contrast */
     padding: 2.5em;
     border-radius: 10px;
     box-shadow: var(--shadow-md);
     line-height: 1.7;
     transition: all var(--transition-med);
-    animation: fadeIn 0.5s ease-out;
+    border: 1px solid #D8D0C5;
 }
 
-.passage:hover {
-    box-shadow: var(--shadow-lg);
+/* Life phase specific passage styling */
+body.childhood .passage {
+    background-color: var(--childhood-bg);
+    border-color: #E0D5C9;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+body.teenage .passage {
+    background-color: var(--teenage-bg);
+    border-color: #D8D0C5;
 }
 
-/* Headers with improved styling */
+body.youngadult .passage {
+    background-color: var(--youngadult-bg);
+    border-color: #D8D0C5;
+}
+
+body.parent .passage {
+    background-color: var(--parent-bg);
+    border-color: #D0C8BD;
+}
+
+body.elder .passage {
+    background-color: var(--elder-bg);
+    border-color: #C8C0B5;
+}
+
+/* Headers styling */
 h1 {
     color: var(--primary-dark);
     margin-bottom: 1em;
     font-weight: 600;
     position: relative;
     padding-bottom: 0.3em;
+    font-family: 'Poppins', sans-serif;
 }
 
 h1::after {
@@ -186,11 +231,52 @@ h1::after {
     left: 0;
     width: 60px;
     height: 3px;
-    background: var(--primary-color);
+    background: var(--accent-color);
     border-radius: 3px;
 }
 
-/* Links with enhanced hover effects */
+/* Life phase specific header styling */
+body.childhood h1 {
+    color: var(--childhood-primary);
+}
+
+body.childhood h1::after {
+    background: var(--childhood-accent);
+}
+
+body.teenage h1 {
+    color: var(--teenage-primary);
+}
+
+body.teenage h1::after {
+    background: var(--teenage-accent);
+}
+
+body.youngadult h1 {
+    color: var(--youngadult-primary);
+}
+
+body.youngadult h1::after {
+    background: var(--youngadult-accent);
+}
+
+body.parent h1 {
+    color: var(--parent-primary);
+}
+
+body.parent h1::after {
+    background: var(--parent-accent);
+}
+
+body.elder h1 {
+    color: var(--elder-primary);
+}
+
+body.elder h1::after {
+    background: var(--elder-accent);
+}
+
+/* Links styling */
 .link-internal {
     color: var(--primary-color);
     text-decoration: none;
@@ -200,7 +286,7 @@ h1::after {
 }
 
 .link-internal:hover {
-    color: var(--primary-dark);
+    color: var(--accent-color);
     text-decoration: none;
 }
 
@@ -211,7 +297,7 @@ h1::after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
@@ -222,148 +308,293 @@ h1::after {
     transform-origin: bottom left;
 }
 
-/* Footer styles with improved spacing */
+/* Life phase specific link styling */
+body.childhood .link-internal {
+    color: var(--childhood-primary);
+}
+
+body.childhood .link-internal:hover {
+    color: var(--childhood-accent);
+}
+
+body.childhood .link-internal::after {
+    background-color: var(--childhood-accent);
+}
+
+body.teenage .link-internal {
+    color: var(--teenage-primary);
+}
+
+body.teenage .link-internal:hover {
+    color: var(--teenage-accent);
+}
+
+body.teenage .link-internal::after {
+    background-color: var(--teenage-accent);
+}
+
+body.youngadult .link-internal {
+    color: var(--youngadult-primary);
+}
+
+body.youngadult .link-internal:hover {
+    color: var(--youngadult-accent);
+}
+
+body.youngadult .link-internal::after {
+    background-color: var(--youngadult-accent);
+}
+
+body.parent .link-internal {
+    color: var(--parent-primary);
+}
+
+body.parent .link-internal:hover {
+    color: var(--parent-accent);
+}
+
+body.parent .link-internal::after {
+    background-color: var(--parent-accent);
+}
+
+body.elder .link-internal {
+    color: var(--elder-primary);
+}
+
+body.elder .link-internal:hover {
+    color: var(--elder-accent);
+}
+
+body.elder .link-internal::after {
+    background-color: var(--elder-accent);
+}
+
+/* Footer styles */
 .footer-links {
     text-align: center;
     margin-top: 2.5em;
     padding-top: 1.2em;
-    border-top: 1px solid #eee;
-    color: #777;
+    border-top: 1px solid #D8D0C5;
+    color: #8D6E63;
     font-size: 0.9em;
 }
 
-/* Inventory styles with card-like appearance */
-.inventory {
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    padding: 1.2em;
+/* Needs display styling */
+.needs-display {
+    background-color: rgba(224, 213, 201, 0.5);
+    border: 1px solid #D8D0C5;
+    padding: 1em;
     margin-bottom: 1.2em;
     border-radius: 8px;
     box-shadow: var(--shadow-sm);
-    transition: all var(--transition-fast);
 }
 
-.inventory:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
+.need-bar {
+    height: 20px;
+    background-color: #D8D0C5;
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
 }
 
-.inventory-title {
-    font-weight: 600;
-    margin-bottom: 0.7em;
-    color: var(--primary-dark);
-    border-bottom: 2px solid var(--primary-light);
-    padding-bottom: 0.3em;
+.need-label {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    font-size: 0.8em;
+    line-height: 20px;
+    color: #3E2723;
+    z-index: 2;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
-.inventory-items {
-    list-style-type: none;
-    padding-left: 0;
+.need-value {
+    height: 100%;
+    background-color: #8D6E63;
+    border-radius: 10px;
+    transition: width 0.3s ease;
 }
 
-.inventory-item {
-    margin-bottom: 0.4em;
-    padding: 0.4em 0;
-    transition: all var(--transition-fast);
-    border-left: 0 solid var(--primary-light);
-    padding-left: 0;
+.hunger .need-value {
+    background-color: #FF8A65; /* Orange for hunger */
 }
 
-.inventory-item:hover {
-    border-left: 3px solid var(--primary-light);
-    padding-left: 8px;
-    background-color: rgba(106, 90, 205, 0.05);
+.thirst .need-value {
+    background-color: #4FC3F7; /* Blue for thirst */
 }
 
-/* Character and location styles with enhanced colors */
+.fatigue .need-value {
+    background-color: #9575CD; /* Purple for fatigue */
+}
+
+.health .need-value {
+    background-color: #81C784; /* Green for health */
+}
+
+/* Character info display */
+.character-info {
+    background-color: rgba(224, 213, 201, 0.5);
+    border: 1px solid #D8D0C5;
+    padding: 1em;
+    margin-bottom: 1.2em;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.character-basics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8em;
+    border-bottom: 1px solid #D8D0C5;
+    padding-bottom: 0.5em;
+}
+
 .character-name {
     font-weight: 600;
-    color: var(--primary-color);
-    transition: all var(--transition-fast);
+    color: var(--primary-dark);
 }
 
-.character-name:hover {
-    text-shadow: 0 0 1px var(--primary-light);
+.character-age {
+    color: #5D4037;
 }
 
-.location-name {
+.character-stage {
+    font-size: 0.8em;
+    background-color: #8D6E63;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Life phase specific character stage styling */
+body.childhood .character-stage {
+    background-color: var(--childhood-primary);
+}
+
+body.teenage .character-stage {
+    background-color: var(--teenage-primary);
+}
+
+body.youngadult .character-stage {
+    background-color: var(--youngadult-primary);
+}
+
+body.parent .character-stage {
+    background-color: var(--parent-primary);
+}
+
+body.elder .character-stage {
+    background-color: var(--elder-primary);
+}
+
+.character-attributes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8em;
+}
+
+.attribute {
+    text-align: center;
+    font-size: 0.9em;
+    color: #5D4037;
+}
+
+.character-traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.trait {
+    font-size: 0.8em;
+    background-color: #D8D0C5;
+    color: #5D4037;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.no-traits {
     font-style: italic;
-    color: #555;
-    transition: all var(--transition-fast);
-    border-bottom: 1px dotted transparent;
+    color: #8D6E63;
+    font-size: 0.9em;
 }
 
-.location-name:hover {
-    border-bottom: 1px dotted #555;
-}
-
-/* Save slots styling with improved appearance */
-#menu-core .saves {
-    border: 1px solid #555;
-    background-color: #444;
-    background-image: linear-gradient(to bottom, #555, #444);
-    padding: 0.6em;
-    margin-top: 1.2em;
-    border-radius: 5px;
-    transition: all var(--transition-fast);
+/* Skill check display */
+.skill-check {
+    background-color: rgba(224, 213, 201, 0.5);
+    border: 1px solid #D8D0C5;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 8px;
     box-shadow: var(--shadow-sm);
 }
 
-#menu-core .saves:hover {
-    background-image: linear-gradient(to bottom, var(--primary-color), var(--primary-dark));
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+.skill-check-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #D8D0C5;
+    padding-bottom: 0.5em;
 }
 
-/* Dialog styling */
-.ui-dialog {
-    border-radius: 10px;
-    box-shadow: var(--shadow-lg);
-    border: none;
-    overflow: hidden;
-    animation: dialogFadeIn 0.3s ease-out;
+.skill-name {
+    font-weight: 600;
+    color: var(--primary-dark);
 }
 
-.ui-dialog-titlebar {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 10px 10px 0 0;
-    padding: 0.8em 1em;
+.skill-difficulty {
+    font-size: 0.9em;
+    color: #5D4037;
 }
 
-.ui-dialog-content {
-    padding: 1.5em;
-    background: white;
-}
-
-.ui-dialog-buttonpane {
-    background: #f5f5f7;
-    border-top: 1px solid #eee;
-    padding: 0.8em;
-}
-
-.ui-dialog-buttonpane button {
-    background: var(--primary-color);
-    color: white;
-    border: none;
+.skill-check-result {
+    text-align: center;
+    padding: 0.5em;
+    margin: 0.5em 0;
     border-radius: 5px;
-    padding: 0.5em 1em;
-    transition: all var(--transition-fast);
 }
 
-.ui-dialog-buttonpane button:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-sm);
+.skill-check-result.success {
+    background-color: rgba(129, 199, 132, 0.2);
+    color: #2E7D32;
 }
 
-@keyframes dialogFadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+.skill-check-result.failure {
+    background-color: rgba(229, 115, 115, 0.2);
+    color: #C62828;
 }
 
-/* Mobile responsiveness with improved transitions */
+/* Season indicators */
+.season-indicator {
+    display: inline-block;
+    padding: 0.3em 0.6em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+.season-spring {
+    background-color: rgba(124, 179, 66, 0.2);
+    color: #33691E;
+}
+
+.season-summer {
+    background-color: rgba(251, 192, 45, 0.2);
+    color: #F57F17;
+}
+
+.season-fall {
+    background-color: rgba(230, 74, 25, 0.2);
+    color: #BF360C;
+}
+
+.season-winter {
+    background-color: rgba(179, 229, 252, 0.2);
+    color: #0277BD;
+}
+
+/* Mobile responsiveness */
 @media screen and (max-width: 768px) {
     #story {
         margin-left: 0;
@@ -385,37 +616,95 @@ h1::after {
     #ui-bar-toggle {
         box-shadow: var(--shadow-sm);
     }
+    
+    .character-basics, .character-attributes {
+        flex-direction: column;
+        gap: 0.5em;
+    }
 }
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-color: #1a1a2e;
-        --text-color: #e6e6e6;
-        --ui-bg: #16213e;
-        --ui-text: #ffffff;
+        --bg-color: #2D2418;
+        --text-color: #F0EBE5;
+        --ui-bg: #1B120F;
+        --ui-text: #F0EBE5;
         --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
         --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
         --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+        
+        /* Override life phase backgrounds for dark mode */
+        --childhood-bg: #3E2E21;
+        --teenage-bg: #3A2C1F;
+        --youngadult-bg: #362A1D;
+        --parent-bg: #32281C;
+        --elder-bg: #2E261A;
+        
+        /* Override text colors for dark mode */
+        --childhood-text: #F0EBE5;
+        --teenage-text: #F0EBE5;
+        --youngadult-text: #F0EBE5;
+        --parent-text: #F0EBE5;
+        --elder-text: #F0EBE5;
     }
     
     body {
-        background-image: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        background-image: linear-gradient(135deg, #2D2418 0%, #1B120F 100%);
         color: var(--text-color);
     }
     
     .passage {
-        background-color: #222639;
+        background-color: #3E2E21;
         color: var(--text-color);
+        border-color: #4E3B2A;
     }
     
-    .inventory {
-        background-color: #2c2c44;
-        border-color: #3d3d5c;
+    .needs-display, .character-info, .skill-check {
+        background-color: rgba(62, 46, 33, 0.7);
+        border-color: #4E3B2A;
+    }
+    
+    .need-bar {
+        background-color: #4E3B2A;
+    }
+    
+    .need-label {
+        color: #F0EBE5;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    .character-basics {
+        border-color: #4E3B2A;
+    }
+    
+    .character-name {
+        color: #A1887F;
+    }
+    
+    .attribute {
+        color: #D7CCC8;
+    }
+    
+    .trait {
+        background-color: #4E3B2A;
+        color: #D7CCC8;
     }
     
     .footer-links {
-        border-top-color: #3d3d5c;
-        color: #aaa;
+        border-top-color: #4E3B2A;
+        color: #A1887F;
+    }
+    
+    h1 {
+        color: #A1887F;
+    }
+    
+    .link-internal {
+        color: #A1887F;
+    }
+    
+    .link-internal:hover {
+        color: #BCAAA4;
     }
 }
