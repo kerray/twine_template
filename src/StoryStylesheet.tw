@@ -1,0 +1,683 @@
+:: StoryStylesheet [stylesheet]
+/* Base styles with enhanced colors and fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #6a5acd;
+    --primary-dark: #483d8b;
+    --primary-light: #8a7ddb;
+    --accent-color: #ff6b6b;
+    --text-color: #333;
+    --bg-color: #f5f5f7;
+    --ui-bg: #2d2b42;
+    --ui-text: #ffffff;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+    --transition-fast: 0.2s ease;
+    --transition-med: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    margin: 0;
+    padding: 0;
+    transition: background-color var(--transition-med);
+    font-size: 16px; /* Base font size */
+    line-height: 1.5;
+    touch-action: manipulation; /* Improves touch responsiveness */
+    -webkit-text-size-adjust: 100%; /* Prevents iOS from adjusting font sizes */
+}
+
+/* UI Bar styling with gradient and improved contrast */
+#ui-bar {
+    background: var(--ui-bg);
+    background: linear-gradient(to bottom, #343256, #2d2b42);
+    border-right: 1px solid #444;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: all var(--transition-med);
+}
+
+#ui-bar-body {
+    padding: 1.2em;
+}
+
+#ui-bar.stowed {
+    background: var(--ui-bg);
+    border-right: 1px solid #444;
+}
+
+#ui-bar-toggle {
+    color: var(--ui-text);
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+}
+
+#ui-bar-toggle:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Story title styling with text effects */
+#story-title {
+    color: var(--ui-text);
+    font-size: 1.7em;
+    font-weight: 600;
+    margin-bottom: 1.2em;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    transition: all var(--transition-med);
+}
+
+#story-title:hover {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Menu button styling with improved hover effects */
+#menu-core {
+    margin-top: 1.2em;
+}
+
+#menu-core .button {
+    background-color: #444;
+    background-image: linear-gradient(to bottom, #555, #444);
+    color: var(--ui-text);
+    border: 1px solid #555;
+    padding: 0.6em;
+    margin-bottom: 0.7em;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 44px;
+}
+
+#menu-core .button:hover {
+    background-image: linear-gradient(to bottom, var(--primary-color), var(--primary-dark));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+#menu-core .button:active {
+    transform: translateY(1px);
+    box-shadow: var(--shadow-sm);
+}
+
+#menu-core .button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+#menu-core .button:hover::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+/* Main content area with improved spacing and transitions */
+#story {
+    margin-left: 17.5em; /* Adjust based on UI bar width */
+    padding: 2.5em;
+    transition: margin var(--transition-med);
+}
+
+#passages {
+    max-width: 800px;
+    margin: 0 auto;
+    transition: opacity var(--transition-med);
+    -webkit-overflow-scrolling: touch; /* Improve scrolling on iOS */
+}
+
+.passage {
+    background-color: white;
+    padding: 2.5em;
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    line-height: 1.7;
+    transition: all var(--transition-med);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.passage:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Headers with improved styling */
+h1 {
+    color: var(--primary-dark);
+    margin-bottom: 1em;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.3em;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+/* Links with enhanced hover effects */
+.link-internal, .link-external {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    position: relative;
+    padding: 0 2px;
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 44px;
+    display: inline-block;
+    margin: 0.25em 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.link-internal:hover, .link-external:hover {
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+.link-internal::after, .link-external::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.link-internal:hover::after, .link-external:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Footer styles with improved spacing */
+.footer-links {
+    text-align: center;
+    margin-top: 2.5em;
+    padding-top: 1.2em;
+    border-top: 1px solid #eee;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Inventory styles with card-like appearance */
+.inventory {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 1.2em;
+    margin-bottom: 1.2em;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
+}
+
+.inventory:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.inventory-title {
+    font-weight: 600;
+    margin-bottom: 0.7em;
+    color: var(--primary-dark);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 0.3em;
+}
+
+.inventory-items {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.inventory-item {
+    margin-bottom: 0.4em;
+    padding: 0.4em 0;
+    transition: all var(--transition-fast);
+    border-left: 0 solid var(--primary-light);
+    padding-left: 0;
+}
+
+.inventory-item:hover {
+    border-left: 3px solid var(--primary-light);
+    padding-left: 8px;
+    background-color: rgba(106, 90, 205, 0.05);
+}
+
+/* Character and location styles with enhanced colors */
+.character-name {
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: all var(--transition-fast);
+}
+
+.character-name:hover {
+    text-shadow: 0 0 1px var(--primary-light);
+}
+
+.location-name {
+    font-style: italic;
+    color: #555;
+    transition: all var(--transition-fast);
+    border-bottom: 1px dotted transparent;
+}
+
+.location-name:hover {
+    border-bottom: 1px dotted #555;
+}
+
+/* Save slots styling with improved appearance */
+#menu-core .saves {
+    border: 1px solid #555;
+    background-color: #444;
+    background-image: linear-gradient(to bottom, #555, #444);
+    padding: 0.6em;
+    margin-top: 1.2em;
+    border-radius: 5px;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+}
+
+#menu-core .saves:hover {
+    background-image: linear-gradient(to bottom, var(--primary-color), var(--primary-dark));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Dialog styling */
+.ui-dialog {
+    border-radius: 10px;
+    box-shadow: var(--shadow-lg);
+    border: none;
+    overflow: hidden;
+    animation: dialogFadeIn 0.3s ease-out;
+}
+
+.ui-dialog-titlebar {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    padding: 0.8em 1em;
+}
+
+.ui-dialog-content {
+    padding: 1.5em;
+    background: white;
+}
+
+.ui-dialog-buttonpane {
+    background: #f5f5f7;
+    border-top: 1px solid #eee;
+    padding: 0.8em;
+}
+
+.ui-dialog-buttonpane button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    transition: all var(--transition-fast);
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 44px;
+}
+
+.ui-dialog-buttonpane button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+@keyframes dialogFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile responsiveness with improved transitions */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    #ui-bar {
+        font-size: 0.9em;
+    }
+    
+    #story {
+        margin-left: 0;
+        padding: 1.2em;
+    }
+    
+    #passages {
+        margin: 0.5em;
+    }
+    
+    .passage {
+        padding: 1.5em;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    #ui-bar.stowed {
+        box-shadow: none;
+    }
+    
+    #ui-bar-toggle {
+        box-shadow: var(--shadow-sm);
+    }
+    
+    /* Use transform instead of left/top for animations */
+    .transition-in {
+        transform: translateX(0) !important;
+        opacity: 1 !important;
+    }
+    
+    .transition-out {
+        transform: translateX(-20px) !important;
+        opacity: 0 !important;
+    }
+    
+    /* Hardware acceleration for smoother animations */
+    .passage {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+}
+
+/* Portrait orientation */
+@media screen and (orientation: portrait) {
+    /* Portrait-specific styles */
+    #ui-bar {
+        width: 15em; /* Narrower sidebar in portrait */
+    }
+}
+
+/* Landscape orientation */
+@media screen and (orientation: landscape) {
+    /* Landscape-specific styles */
+    #ui-bar {
+        width: 20em; /* Wider sidebar in landscape */
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a2e;
+        --text-color: #e6e6e6;
+        --ui-bg: #16213e;
+        --ui-text: #ffffff;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+    
+    body {
+        background-image: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: var(--text-color);
+    }
+    
+    .passage {
+        background-color: #222639;
+        color: var(--text-color);
+    }
+    
+    .inventory {
+        background-color: #2c2c44;
+        border-color: #3d3d5c;
+    }
+    
+    .footer-links {
+        border-top-color: #3d3d5c;
+        color: #aaa;
+    }
+}
+
+/* Platform-specific styling */
+.ios {
+    /* iOS-specific styles */
+    font-family: -apple-system, BlinkMacSystemFont, 'Poppins', sans-serif;
+}
+
+.android {
+    /* Android-specific styles */
+    font-family: Roboto, 'Poppins', sans-serif;
+}
+
+.windows {
+    /* Windows-specific styles */
+    font-family: "Segoe UI", 'Poppins', sans-serif;
+}
+
+/* Font size classes */
+body.font-small {
+    font-size: 14px;
+}
+
+body.font-medium {
+    font-size: 16px;
+}
+
+body.font-large {
+    font-size: 18px;
+}
+
+body.font-x-large {
+    font-size: 20px;
+}
+
+/* Theme classes */
+body.theme-light {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+body.theme-dark {
+    background-color: #222222;
+    color: #e0e0e0;
+}
+
+body.theme-dark a {
+    color: #8cb4ff;
+}
+
+body.theme-dark #ui-bar {
+    background-color: #333333;
+    border-color: #444444;
+}
+
+body.theme-sepia {
+    background-color: #f8f0e0;
+    color: #5b4636;
+}
+
+body.theme-sepia a {
+    color: #8b6b4a;
+}
+
+body.theme-sepia #ui-bar {
+    background-color: #efe6d5;
+    border-color: #d8cbb8;
+}
+
+/* Mobile settings styling */
+.mobile-settings {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mobile-settings label {
+    display: block;
+    margin: 1em 0;
+}
+
+.mobile-settings select, 
+.mobile-settings button {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    font-size: 1em;
+    min-height: 44px; /* Minimum touch target size */
+}
+
+.mobile-settings h2 {
+    margin-top: 1.5em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.3em;
+}
+
+#import-save-data {
+    width: 100%;
+    margin: 1em 0;
+}
+
+/* Cordova app specific styles */
+body.cordova-app {
+    /* Prevent overscroll/bounce effect */
+    overscroll-behavior: none;
+}
+
+/* Online/offline indicators */
+body.offline .online-only {
+    display: none;
+}
+
+body.online .offline-only {
+    display: none;
+}
+
+.offline-indicator {
+    background-color: #ff6b6b;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    font-weight: bold;
+    display: none;
+}
+
+body.offline .offline-indicator {
+    display: block;
+}
+
+/* Neural Nest Custom Styles */
+.meta-note {
+    border-left: 3px solid var(--primary-color);
+    padding: 0.8em;
+    margin: 1.5em 0;
+    background: rgba(106, 90, 205, 0.1);
+    font-style: italic;
+    transition: all var(--transition-med);
+}
+
+.meta-note:hover {
+    background: rgba(106, 90, 205, 0.15);
+    transform: translateX(5px);
+}
+
+.loop-status, .forge-status, .stream-status, .mirror-status {
+    margin-top: 2em;
+    padding: 1em;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(106, 90, 205, 0.1) 0%, rgba(106, 90, 205, 0.05) 100%);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-med);
+}
+
+.loop-status:hover, .forge-status:hover, .stream-status:hover, .mirror-status:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.meta-stream, .deep-parse {
+    font-family: monospace;
+    padding: 1em;
+    margin-top: 1.5em;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ff00;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.meta-stream::before, .deep-parse::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-color), transparent);
+    animation: scanline 2s linear infinite;
+}
+
+@keyframes scanline {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Dark mode adjustments for Neural Nest */
+@media (prefers-color-scheme: dark) {
+    .meta-note {
+        background: rgba(106, 90, 205, 0.15);
+        border-left-color: var(--primary-light);
+    }
+    
+    .loop-status, .forge-status, .stream-status, .mirror-status {
+        background: linear-gradient(135deg, rgba(106, 90, 205, 0.2) 0%, rgba(106, 90, 205, 0.1) 100%);
+    }
+    
+    .meta-stream, .deep-parse {
+        background: rgba(0, 0, 0, 0.9);
+        border: 1px solid rgba(0, 255, 0, 0.2);
+    }
+}

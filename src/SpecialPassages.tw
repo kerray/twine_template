@@ -1,0 +1,165 @@
+:: StoryAuthor
+Created with Twine Template (TwT)
+
+:: StoryBanner
+<h1>(TwT) Demo</h1>
+
+:: StoryCaption
+Navigation and game info will go here
+
+:: StoryDisplayTitle
+The Neural Nest
+:: StoryMenu
+<<link "Start">><<goto "Start">><</link>>
+[[Credits]]
+[[Display Settings]]
+
+:: StorySubtitle
+A game created with (TwT)
+
+:: PassageHeader
+<div class="offline-indicator">You are currently offline. Some features may be unavailable.</div>
+<hr>
+
+:: PassageFooter
+<hr>
+<div class="footer-links">
+<<link "Start">><<goto "Start">><</link>> | [[Credits]] | [[Display Settings]]
+</div>
+
+:: Credits
+Created using the Twine Template (TwT).
+
+<<link "Back to Start">><<goto "Start">><</link>>
+
+:: StoryMobileInit [script]
+// This passage runs when the story is first loaded on mobile devices
+$(document).ready(function() {
+    // Check if we're running in a Cordova app
+    if (window.cordova) {
+        console.log('Running in Cordova app');
+        
+        // Add any mobile-specific initialization here
+        
+        // Example: Hide splash screen after a delay
+        if (navigator.splashscreen) {
+            setTimeout(function() {
+                navigator.splashscreen.hide();
+            }, 1000);
+        }
+        
+        // Example: Set status bar style
+        if (window.StatusBar) {
+            StatusBar.styleDefault();
+            StatusBar.overlaysWebView(false);
+        }
+    }
+});
+
+:: Display Settings [nobr]
+<h1>Display Settings</h1>
+
+<div class="mobile-settings">
+    <h2>Display</h2>
+    
+    <label>
+        Font Size:
+        <select id="font-size-setting">
+            <option value="small">Small</option>
+            <option value="medium" selected>Medium</option>
+            <option value="large">Large</option>
+            <option value="x-large">Extra Large</option>
+        </select>
+    </label>
+    
+    <label>
+        Theme:
+        <select id="theme-setting">
+            <option value="light" selected>Light</option>
+            <option value="dark">Dark</option>
+            <option value="sepia">Sepia</option>
+        </select>
+    </label>
+    
+    <h2>Saves</h2>
+    
+    <button id="export-saves-btn">Export Save Data</button>
+    <button id="import-saves-btn">Import Save Data</button>
+    
+    <div id="import-save-container" style="display: none;">
+        <textarea id="import-save-data" rows="5" placeholder="Paste save data JSON here"></textarea>
+        <button id="confirm-import-btn">Confirm Import</button>
+        <button id="cancel-import-btn">Cancel</button>
+    </div>
+</div>
+
+<script>
+    // Font size setting
+    $('#font-size-setting').on('change', function() {
+        const fontSize = $(this).val();
+        $('body').removeClass('font-small font-medium font-large font-x-large')
+                 .addClass('font-' + fontSize);
+        
+        // Save setting
+        if (window.localStorage) {
+            localStorage.setItem('twine-font-size', fontSize);
+        }
+    });
+    
+    // Theme setting
+    $('#theme-setting').on('change', function() {
+        const theme = $(this).val();
+        $('body').removeClass('theme-light theme-dark theme-sepia')
+                 .addClass('theme-' + theme);
+        
+        // Save setting
+        if (window.localStorage) {
+            localStorage.setItem('twine-theme', theme);
+        }
+    });
+    
+    // Export saves
+    $('#export-saves-btn').on('click', function() {
+        window.gameUtils.exportSaveData();
+    });
+    
+    // Import saves
+    $('#import-saves-btn').on('click', function() {
+        $('#import-save-container').show();
+    });
+    
+    $('#confirm-import-btn').on('click', function() {
+        const jsonData = $('#import-save-data').val();
+        window.gameUtils.importSaveData(jsonData);
+        $('#import-save-container').hide();
+    });
+    
+    $('#cancel-import-btn').on('click', function() {
+        $('#import-save-container').hide();
+    });
+    
+    // Load saved settings
+    $(document).ready(function() {
+        if (window.localStorage) {
+            // Load font size
+            const savedFontSize = localStorage.getItem('twine-font-size');
+            if (savedFontSize) {
+                $('#font-size-setting').val(savedFontSize);
+                $('body').addClass('font-' + savedFontSize);
+            } else {
+                $('body').addClass('font-medium');
+            }
+            
+            // Load theme
+            const savedTheme = localStorage.getItem('twine-theme');
+            if (savedTheme) {
+                $('#theme-setting').val(savedTheme);
+                $('body').addClass('theme-' + savedTheme);
+            } else {
+                $('body').addClass('theme-light');
+            }
+        }
+    });
+</script>
+
+<<link "Back">><<goto "Start">><</link>>

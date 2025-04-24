@@ -1,0 +1,211 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      deploy_to_pages:
+        description: "Deploy to GitHub Pages"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "true"
+          - "false"
+
+jobs:
+  build-web:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Just
+        run: |
+          ./scripts/download-just.sh
+          echo "$PWD/bin/just-linux-x64" >> $GITHUB_PATH
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+          chmod +x scripts/*.sh
+          ./scripts/install-dependencies.sh
+
+      - name: Install Just Dependencies
+        run: |
+          just install-deps
+
+      - name: Compile Game
+        run: |
+          just compile
+
+      - name: Upload Web Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-game
+          path: dist/index.html
+
+      - name: Deploy to GitHub Pages
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && (github.event.inputs.deploy_to_pages == 'true' || github.repository_owner == github.actor) }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          branch: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  build-android:
+    runs-on: ubuntu-latest
+    needs: build-web
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Just
+        run: |
+          ./scripts/download-just.sh
+          echo "$PWD/bin/just-linux-x64" >> $GITHUB_PATH
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+          chmod +x scripts/*.sh
+          ./scripts/install-dependencies.sh
+
+      - name: Download Web Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: web-game
+          path: dist
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: "11"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Cordova and cordova-res
+        run: |
+          npm install -g cordova
+          npm install -g cordova-res
+
+      - name: Install Just Dependencies
+        run: |
+          just install-deps
+
+      - name: Build Android App
+        run: |
+          just cordova-android
+
+      - name: Upload Android Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-app
+          path: cordova/platforms/android/app/build/outputs/apk/debug/app-debug.apk
+
+  build-windows:
+    runs-on: windows-latest
+    needs: build-web
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Just
+        shell: bash
+        run: |
+          ./scripts/download-just.sh
+          echo "$PWD/bin/just-windows-x64" >> $GITHUB_PATH
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Download Web Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: web-game
+          path: dist
+
+      - name: Install Cordova and cordova-res
+        run: |
+          npm install -g cordova
+          npm install -g cordova-res
+
+      - name: Install Just Dependencies
+        run: |
+          just install-deps
+
+      - name: Build Windows App
+        run: |
+          just cordova-windows
+
+      - name: Upload Windows Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-app
+          path: cordova/platforms/windows/AppPackages
+
+  build-ios:
+    runs-on: macos-latest
+    needs: build-web
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Just
+        run: |
+          ./scripts/download-just.sh
+          echo "$PWD/bin/just-macos-x64" >> $GITHUB_PATH
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install Dependencies
+        run: |
+          brew install imagemagick
+          chmod +x scripts/*.sh
+          ./scripts/install-dependencies.sh
+
+      - name: Download Web Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: web-game
+          path: dist
+
+      - name: Install Cordova and cordova-res
+        run: |
+          npm install -g cordova
+          npm install -g cordova-res
+
+      - name: Install Just Dependencies
+        run: |
+          just install-deps
+
+      - name: Build iOS App
+        run: |
+          just cordova-ios
+
+      - name: Upload iOS Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-app
+          path: cordova/platforms/ios/build/device

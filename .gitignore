@@ -1,0 +1,80 @@
+# Windows-specific files
+*Zone.Identifier
+*Zone - kopie.Identifier
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Cordova
+cordova/node_modules/
+cordova/platforms/
+cordova/plugins/
+cordova/www/
+!cordova/www/.gitkeep
+
+# Keep scripts
+!cordova/scripts/
+
+# Android
+cordova/platforms/android/build/
+cordova/platforms/android/app/build/
+cordova/platforms/android/.gradle/
+cordova/platforms/android/local.properties
+cordova/platforms/android/CordovaLib/build/
+cordova/platforms/android/app/src/main/assets/www/
+
+# iOS
+cordova/platforms/ios/build/
+cordova/platforms/ios/DerivedData/
+cordova/platforms/ios/www/
+cordova/platforms/ios/cordova/console.log
+cordova/platforms/ios/cordova/node_modules/
+cordova/platforms/ios/CordovaLib/build/
+cordova/platforms/ios/ios.json
+cordova/platforms/ios/platform_www/
+cordova/platforms/ios/pods/
+
+# Windows
+cordova/platforms/windows/build/
+cordova/platforms/windows/bld/
+cordova/platforms/windows/www/
+cordova/platforms/windows/platform_www/
+
+# Browser
+cordova/platforms/browser/build/
+cordova/platforms/browser/www/
+cordova/platforms/browser/platform_www/
+
+# Generated resources
+cordova/res/android/
+cordova/res/ios/
+cordova/res/windows/
+cordova/res/browser/
+!cordova/res-templates/
+
+# Keep generated games
+!dist/
+!pub/
+
+# Logs
+logs/
+*.log
+
+# IDE and editor files
+.idea/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Just symlink
+/just
+bin/**

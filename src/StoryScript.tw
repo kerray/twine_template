@@ -1,0 +1,303 @@
+:: Script [script]
+// Game variables initialization
+$(document).on(':storyready', function() {
+    if (!State.variables.gameStarted) {
+        State.variables.gameStarted = false;
+        State.variables.visitedStart = true;
+        State.variables.awareness = 0;
+        State.variables.loops = 0;
+    }
+    
+    // Initialize platform detection
+    detectPlatform();
+    
+    // Set up mobile event handlers
+    setupMobileEvents();
+    
+    // Set up touch optimizations
+    setupTouchOptimizations();
+    
+    // Set up offline support
+    setupOfflineSupport();
+    
+    // Auto-save on passage navigation
+    setupAutoSave();
+});
+
+// Game functions
+window.gameUtils = {
+    resetGameState: function() {
+        // Reset all game variables to their initial state
+        // Clear existing variables
+        Object.keys(State.variables).forEach(function(key) {
+            delete State.variables[key];
+        });
+        
+        // Set initial values
+        State.variables.gameStarted = true;
+        State.variables.visitedStart = true;
+        State.variables.inventory = [];
+        
+        // Add any other variables that need to be reset here
+        
+        // Save the clean state
+        Save.browser.auto.save();
+    },
+    
+    randomNumber: function(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    },
+    
+    checkInventory: function(item) {
+        return State.variables.inventory && State.variables.inventory.includes(item);
+    },
+    
+    addToInventory: function(item) {
+        if (!State.variables.inventory) {
+            State.variables.inventory = [];
+        }
+        if (!State.variables.inventory.includes(item)) {
+            State.variables.inventory.push(item);
+        }
+    },
+    
+    removeFromInventory: function(item) {
+        if (State.variables.inventory) {
+            const index = State.variables.inventory.indexOf(item);
+            if (index !== -1) {
+                State.variables.inventory.splice(index, 1);
+            }
+        }
+    },
+    
+    // Export save data function (useful for backing up saves)
+    exportSaveData: function() {
+        if (!Save.browser.isEnabled()) {
+            return alert('Save functionality is not available.');
+        }
+        
+        try {
+            const saveData = {};
+            
+            // Get all save slots
+            for (let i = 0; i < Save.browser.slot.size; i++) {
+                const save = Save.browser.slot.get(i);
+                if (save) {
+                    saveData["slot" + i] = save;
+                }
+            }
+            
+            // Convert to JSON string
+            const saveDataString = JSON.stringify(saveData);
+            
+            // Create a data URI
+            const dataUri = 'data:text/json;charset=utf-8,' + encodeURIComponent(saveDataString);
+            
+            // Create a download link
+            const a = document.createElement('a');
+            a.href = dataUri;
+            a.download = "twine-game-save-" + new Date().toISOString().slice(0, 10) + ".json";
+            a.click();
+            
+            return true;
+        } catch (e) {
+            console.error('Failed to export save data:', e);
+            alert('Failed to export save data: ' + e.message);
+            return false;
+        }
+    },
+    
+    // Import save data function
+    importSaveData: function(jsonString) {
+        if (!Save.browser.isEnabled()) {
+            return alert('Save functionality is not available.');
+        }
+        
+        try {
+            const saveData = JSON.parse(jsonString);
+            
+            // Restore all save slots
+            for (const key in saveData) {
+                if (key.startsWith('slot')) {
+                    const slotNum = parseInt(key.replace('slot', ''), 10);
+                    Save.browser.slot.save(slotNum, saveData[key].title, saveData[key].data);
+                }
+            }
+            
+            alert('Save data imported successfully!');
+            return true;
+        } catch (e) {
+            console.error('Failed to import save data:', e);
+            alert('Failed to import save data: ' + e.message);
+            return false;
+        }
+    }
+};
+
+// Platform detection
+function detectPlatform() {
+    // Detect platform and add appropriate class to body
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+    if (/windows phone/i.test(userAgent) || /windows/i.test(userAgent)) {
+        $('body').addClass('windows');
+        window.currentPlatform = 'windows';
+    } else if (/android/i.test(userAgent)) {
+        $('body').addClass('android');
+        window.currentPlatform = 'android';
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        $('body').addClass('ios');
+        window.currentPlatform = 'ios';
+    } else {
+        window.currentPlatform = 'unknown';
+    }
+    
+    // Log the detected platform
+    console.log('Detected platform:', window.currentPlatform);
+}
+
+// Mobile event handling
+function setupMobileEvents() {
+    // Handle back button on Android
+    document.addEventListener('backbutton', function(e) {
+        e.preventDefault();
+        
+        // If we can go back in story history, do so
+        if (State.length > 1) {
+            Engine.backward();
+        } else {
+            // Otherwise, show a confirmation dialog to exit the app
+            if (window.confirm('Are you sure you want to exit the game?')) {
+                navigator.app && navigator.app.exitApp();
+            }
+        }
+    }, false);
+    
+    // Handle device pause/resume
+    document.addEventListener('pause', function() {
+        // Auto-save game state when app is paused
+        if (Save.browser.isEnabled()) {
+            Save.browser.slot.save(0, 'Auto-save on pause');
+            console.log('Game auto-saved on pause');
+        }
+    }, false);
+    
+    document.addEventListener('resume', function() {
+        // Refresh UI when app is resumed
+        console.log('App resumed');
+    }, false);
+    
+    // Handle orientation changes
+    window.addEventListener('orientationchange', function() {
+        // Refresh UI when orientation changes
+        console.log('Orientation changed');
+    }, false);
+}
+
+// Touch optimizations
+function setupTouchOptimizations() {
+    // Add touch-device class to body if device has touch capability
+    if ('ontouchstart' in window) {
+        $('body').addClass('touch-device');
+        
+        // Use FastClick if available
+        if (typeof FastClick !== 'undefined') {
+            FastClick.attach(document.body);
+        }
+    }
+    
+    // Improve scrolling performance
+    const scrollElements = document.querySelectorAll('#passages');
+    scrollElements.forEach(function(el) {
+        el.style.webkitOverflowScrolling = 'touch';
+    });
+}
+
+// Offline support
+function setupOfflineSupport() {
+    // Check if we're running in Cordova
+    const isCordova = !!window.cordova;
+    
+    if (isCordova) {
+        // Add cordova-app class to body
+        $('body').addClass('cordova-app');
+        
+        // Wait for device ready event
+        document.addEventListener('deviceready', onDeviceReady, false);
+    } else {
+        // We're in a browser, initialize anyway
+        onDeviceReady();
+    }
+    
+    function onDeviceReady() {
+        console.log('Device ready');
+        
+        // Handle online/offline events
+        document.addEventListener('online', function() {
+            console.log('Device is online');
+            $('body').removeClass('offline').addClass('online');
+        }, false);
+        
+        document.addEventListener('offline', function() {
+            console.log('Device is offline');
+            $('body').removeClass('online').addClass('offline');
+        }, false);
+        
+        // Check initial connection state
+        if (navigator.connection && navigator.connection.type === "NONE") {
+            $('body').removeClass('online').addClass('offline');
+        } else {
+            $('body').removeClass('offline').addClass('online');
+        }
+    }
+}
+
+// Auto-save on passage navigation
+function setupAutoSave() {
+    $(document).on(':passagedisplay', function() {
+        // Auto-save in slot 0 after each passage
+        if (Save.browser.isEnabled()) {
+            Save.browser.slot.save(0, 'Auto-save');
+        }
+    });
+}
+
+// Lazy load images
+$(document).ready(function() {
+    // Function to lazy load images
+    function lazyLoadImages() {
+        // Find all images with data-src attribute
+        $('img[data-src]').each(function() {
+            const img = $(this);
+            
+            // Check if the image is in viewport
+            if (isElementInViewport(this)) {
+                // Replace src with data-src
+                img.attr('src', img.attr('data-src'));
+                // Remove data-src attribute
+                img.removeAttr('data-src');
+            }
+        });
+    }
+    
+    // Helper function to check if element is in viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+    
+    // Run on passage display
+    $(document).on(':passagedisplay', lazyLoadImages);
+    
+    // Run on scroll (debounced)
+    let scrollTimeout;
+    $(window).on('scroll', function() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(lazyLoadImages, 200);
+    });
+});

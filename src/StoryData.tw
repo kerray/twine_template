@@ -1,0 +1,13 @@
+:: StoryData
+{
+    "ifid": "550E8400-E29B-41D4-A716-446655440000",
+    "format": "SugarCube",
+    "format-version": "2.30.0",
+    "start": "Start",
+    "zoom": 1
+}
+
+:: StoryMeta
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">

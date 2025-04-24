@@ -1,0 +1,88 @@
+# Twine Template (TwT)
+
+A comprehensive batteries-included template for creating text games in Twine with Sugarcube, designed to work seamlessly with AI agents.
+
+## Project Structure
+
+- `./src/` - Twine source files (*.tw), can be in subfolders
+  - All game content goes into passage .tw files
+  - All CSS styling goes into StoryStylesheet.tw
+  - All JavaScript goes into StoryScript.tw
+  - No HTML files allowed - everything must be in .tw files
+  - Media files (images, audio, etc.) go in ./src/_media
+- `./world/` - Game world information and templates
+- `./prompts/` - AI role prompts
+- `./bin/` - Tweego compiler and Just binaries
+- `./docs/` - Documentation
+- `./memlog/` - Work logs and plans
+- `./scripts/` - Build and utility scripts
+
+## Build System
+
+We use Just (https://just.systems) as the central build system to ensure consistency across different platforms and environments. The justfile is used by both VSCode tasks and GitHub Actions for:
+- Compiling the game
+- Installing dependencies
+- Building mobile versions (via Cordova)
+- Running development tools
+
+## Development Rules
+
+1. **Source Organization**
+   - Keep passages in separate .tw files
+   - Group related passages in subfolders
+   - Follow Sugarcube v2 format conventions
+
+2. **World Building**
+   - Define game world in ./world/World.md
+   - Use templates in ./world/templates/ for consistency
+   - Keep world files updated as content develops
+   - Use world files to set boundaries and inspire content
+
+3. **Work Tracking**
+   - Log completed work in ./memlog with datetime stamped files
+   - Use ./memlog/*-plan.md for planning
+   - Mark completed sections and clean up regularly
+
+4. **Content Creation**
+   - Work step by step, one piece at a time
+   - Always maintain active conversation with the user
+   - Create stubs for mentioned but unwritten passages
+   - Update world files when content adds new elements
+   - Ensure all content respects world file boundaries
+   - Search for context before working on missing passages
+   - Avoid duplicate passages
+
+5. **Code Generation**
+   - Always produce compilable game code
+   - Keep track of passage relationships
+   - Document dependencies between passages
+   - Create stubs with links back for mentioned paths
+
+## Getting Started
+
+For detailed setup and installation instructions, refer to INSTALL.md. The document serves as a protocol that both human users and AI agents can follow to properly set up a new project.
+
+## Development Workflow
+
+1. **Content Creation**
+   - Write passages in ./src/*.tw files and subfolders
+   - Keep passages focused and well-organized - it's possible to put game sections in subfolders etc.
+   - Create stubs for mentioned but unwritten passages, but don't stray too deep
+   - Track passage relationships and dependencies, keep track of what needs to be wr
+   - Update world files to reflect new content
+
+2. **Building**
+   - Use Just commands, called via symlink in root like `./just`
+   - Watch for changes during development, update /world files to keep up with current state of the game.
+   - Test compilation regularly
+
+3. **Documentation**
+   - Use documentation from /docs to read up on Sugarcube format details and other stuff
+   - Log completed work in ./memlog
+   - Keep planning documents current
+
+4. **Version Control**
+   - Use Git for tracking changes
+   - Follow repository structure
+   - Document significant changes
+   - When collaborating, use branches and git flow

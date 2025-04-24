@@ -1,0 +1,28 @@
+<platform name="ios">
+	<allow-intent href="itms:*" />
+	<allow-intent href="itms-apps:*" />
+	<preference name="deployment-target" value="13.0" />
+	<preference name="BackupWebStorage" value="none" />
+	<preference name="StatusBarOverlaysWebView" value="false" />
+	<preference name="StatusBarStyle" value="default" />
+
+	<!-- Icons -->
+	<icon height="20" src="res/ios/icon/icon-20.png" width="20" />
+	<icon height="40" src="res/ios/icon/icon-20@2x.png" width="40" />
+	<icon height="60" src="res/ios/icon/icon-20@3x.png" width="60" />
+	<icon height="29" src="res/ios/icon/icon-29.png" width="29" />
+	<icon height="58" src="res/ios/icon/icon-29@2x.png" width="58" />
+	<icon height="87" src="res/ios/icon/icon-29@3x.png" width="87" />
+	<icon height="40" src="res/ios/icon/icon-40.png" width="40" />
+	<icon height="80" src="res/ios/icon/icon-40@2x.png" width="80" />
+	<icon height="120" src="res/ios/icon/icon-40@3x.png" width="120" />
+	<icon height="120" src="res/ios/icon/icon-60@2x.png" width="120" />
+	<icon height="180" src="res/ios/icon/icon-60@3x.png" width="180" />
+	<icon height="76" src="res/ios/icon/icon-76.png" width="76" />
+	<icon height="152" src="res/ios/icon/icon-76@2x.png" width="152" />
+	<icon height="167" src="res/ios/icon/icon-83.5@2x.png" width="167" />
+	<icon height="1024" src="res/ios/icon/icon-1024.png" width="1024" />
+
+	<!-- Splash Screens -->
+	<splash height="2732" src="res/ios/splash/Default@2x~universal~anyany.png" width="2732" />
+</platform>

@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate Image</title>
+  <style>
+    body { margin: 0; padding: 0; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="1024" height="1024"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Background
+    ctx.fillStyle = '#6A5ACD';
+    ctx.fillRect(0, 0, 1024, 1024);
+    
+    // Text
+    ctx.fillStyle = '#FFFFFF';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    
+    // Draw app name
+    ctx.font = 'bold 102px Arial';
+    ctx.fillText('Twine Game', 512, 444);
+    
+    // Draw "Made with TwT"
+    ctx.font = '51px Arial';
+    ctx.fillText('Made with Twine Template', 512, 580);
+    
+    // Save as PNG
+    const link = document.createElement('a');
+    link.download = 'image.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  </script>
+</body>
+</html>
+  

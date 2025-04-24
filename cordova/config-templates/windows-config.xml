@@ -1,0 +1,22 @@
+<platform name="windows">
+	<preference name="windows-target-version" value="10.0" />
+	<preference name="windows-phone-target-version" value="10.0" />
+
+	<!-- Icons -->
+	<icon src="res/windows/icon/Square30x30Logo.scale-100.png" target="Square30x30Logo" />
+	<icon src="res/windows/icon/Square44x44Logo.scale-100.png" target="Square44x44Logo" />
+	<icon src="res/windows/icon/Square44x44Logo.scale-240.png" target="Square44x44Logo.scale-240" />
+	<icon src="res/windows/icon/Square70x70Logo.scale-100.png" target="Square70x70Logo" />
+	<icon src="res/windows/icon/Square71x71Logo.scale-100.png" target="Square71x71Logo" />
+	<icon src="res/windows/icon/Square71x71Logo.scale-240.png" target="Square71x71Logo.scale-240" />
+	<icon src="res/windows/icon/Square150x150Logo.scale-100.png" target="Square150x150Logo" />
+	<icon src="res/windows/icon/Square150x150Logo.scale-240.png"
+		target="Square150x150Logo.scale-240" />
+	<icon src="res/windows/icon/Square310x310Logo.scale-100.png" target="Square310x310Logo" />
+	<icon src="res/windows/icon/Wide310x150Logo.scale-100.png" target="Wide310x150Logo" />
+	<icon src="res/windows/icon/Wide310x150Logo.scale-240.png" target="Wide310x150Logo.scale-240" />
+
+	<!-- Splash Screen -->
+	<splash src="res/windows/splash/SplashScreen.scale-100.png" target="SplashScreen" />
+	<splash src="res/windows/splash/SplashScreen.scale-240.png" target="SplashScreen.scale-240" />
+</platform>

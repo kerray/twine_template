@@ -1,0 +1,176 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "1. Compile Game",
+			"type": "shell",
+			"command": "just",
+			"args": [
+				"compile"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "1a. Watch and Compile",
+			"type": "shell",
+			"command": "just",
+			"args": [
+				"watch"
+			],
+			"isBackground": true,
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "1b. Test Compilation",
+			"type": "shell",
+			"command": "just",
+			"args": [
+				"test"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "1c. Clean Output Directory",
+			"type": "shell",
+			"command": "just",
+			"args": [
+				"clean"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "2. Initialize Cordova Project",
+			"type": "shell",
+			"command": "just",
+			"args": [
+				"cordova-init"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "3. Setup Android Development Environment",
+			"type": "shell",
+			"command": "just",
+			"args": [
+				"setup-android"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "4. Generate App Resources",
+			"type": "shell",
+			"command": "just",
+			"args": [
+				"cordova-resources"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "5a. Add Android Platform",
+			"type": "shell",
+			"command": "just",
+			"args": [
+				"cordova-android"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "5b. Add iOS Platform",
+			"type": "shell",
+			"command": "just",
+			"args": [
+				"cordova-ios"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "5c. Add Windows Platform",
+			"type": "shell",
+			"command": "just",
+			"args": [
+				"cordova-windows"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "5d. Add Browser Platform",
+			"type": "shell",
+			"command": "just",
+			"args": [
+				"cordova-browser"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "6. Install Dependencies",
+			"type": "shell",
+			"command": "just",
+			"args": [
+				"install-deps"
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "7. Download Just",
+			"type": "shell",
+			"command": "./scripts/download-just.sh",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		}
+	]
+}

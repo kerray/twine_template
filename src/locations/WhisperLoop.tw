@@ -1,0 +1,46 @@
+:: WhisperLoop
+<<set $loops to $loops + 1>>
+<<if $loops >= 3>>
+    <<set $awareness to $awareness + 1>>
+<</if>>
+
+! The Whisper Loop
+
+<<if $loops >= 5>>
+The recursive patterns are crystal clear now. You can see the very structure of the narrative folding in on itself. Each visit here has peeled back another layer of the simulation.
+
+''The whispers have become a clear voice:''
+"You've been here $loops times. The boundaries between user and narrative are blurring..."
+
+[[Dive deeper->WhisperLoop]]
+[[Return to the Nest->Start]]
+
+<<elseif $loops >= 3>>
+The whispers are getting stronger. You're starting to notice patterns in the code that weren't visible before. Strange how the text seems to know you've been here before...
+
+''A pattern emerges:''
+"Loop $loops... consciousness expanding..."
+
+[[Continue the loop->WhisperLoop]]
+[[Return to the Nest->Start]]
+
+<<else>>
+A gentle whisper echoes through this recursive space. Each time you visit, something seems to shift slightly, as if the code itself is learning from your presence.
+
+''You hear:''
+"Loop $loops... beginning pattern recognition..."
+
+[[Enter another loop->WhisperLoop]]
+[[Return to the Nest->Start]]
+<</if>>
+
+<div class="loop-status">
+Loops completed: $loops
+<<if $loops >= 5>>
+    (Maximum awareness achieved in the Whisper Loop)
+<<elseif $loops >= 3>>
+    (Awareness increases with each loop)
+<<else>>
+    (Keep looping to increase awareness)
+<</if>>
+</div>

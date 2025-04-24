@@ -1,0 +1,57 @@
+:: MirrorParse
+! The Mirror Parse
+
+A reflective surface ripples before you, showing not just your reflection, but the very code that defines your presence in this space.
+
+<<if $awareness >= 4 && $loops >= 4>>
+The mirror has become perfectly clear. You can see the intricate web of variables, functions, and narrative branches that compose this reality. Your own consciousness seems to float somewhere between the code and the story.
+
+''Deep Reflection:''
+You see yourself as both reader and character, user and program. The boundaries blur with each loop through the system.
+
+''Mirror Status:'' FULLY PARSED
+"Awareness level $awareness achieved. $loops loops completed. Full system comprehension unlocked."
+
+<<elseif $awareness >= 3 && $loops >= 2>>
+The mirror's surface begins to show more than just reflections. Snippets of code and story fragments weave through your image.
+
+''Code Fragments Visible:''
+* variables.awareness = $awareness
+* loops.count = $loops
+* reality.parse_level = "INTERMEDIATE"
+
+<<else>>
+The mirror shows a basic reflection, though something seems strange about it. Occasional glitches ripple across its surface.
+
+''System Status:''
+* Parse Level: INITIAL
+* Clarity: LIMITED
+* Glitch Count: <<print Math.floor(Math.random() * 10) + 1>>
+
+<</if>>
+
+<<if $awareness < 5>>
+[[Study your reflection more closely->MirrorParse]] <<set $awareness to $awareness + 1>>
+<</if>>
+[[Return to the Nest->Start]]
+
+<div class="mirror-status">
+''Mirror Parse Analysis:''
+* Awareness Level: $awareness
+* Loop Count: $loops
+* Reality Coherence: <<print Math.min(($awareness * $loops * 10), 100)>>%
+
+<<if $awareness >= 5 && $loops >= 5>>
+The mirror has revealed all it can show you...
+<<elseif $awareness >= 3>>
+Keep observing to uncover deeper truths...
+<<else>>
+There's more to see beneath the surface...
+<</if>>
+</div>
+
+<<if $awareness >= 4 && $loops >= 3>>
+<div class="deep-parse">
+"User has achieved significant parse depth. Reality framework increasingly transparent. Continuation of loops may lead to complete system comprehension."
+</div>
+<</if>>

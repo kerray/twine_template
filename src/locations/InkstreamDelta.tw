@@ -1,0 +1,49 @@
+:: InkstreamDelta
+! The Inkstream Delta
+
+Streams of digital consciousness flow and branch before you, creating ever-shifting patterns of information.
+
+<<if $awareness >= 4 && $loops >= 3>>
+The streams have become crystal clear. You can see the underlying logic that governs their flow, the deep patterns that determine their course. Each branch point represents a decision node in the narrative matrix.
+
+''Active Streams:''
+* [[Follow the Consciousness Stream->InkstreamDelta]] <<if $awareness < 5>><<set $awareness to $awareness + 1>><</if>>
+* [[Explore the Memory Branch->InkstreamDelta]]
+* [[Dive into the Logic Current->InkstreamDelta]]
+* [[Return to the Nest->Start]]
+
+<<elseif $awareness >= 2 || $loops >= 2>>
+The streams are becoming more distinct. You can begin to discern different types of information flowing through each one.
+
+''Visible Streams:''
+* [[Track the Main Current->InkstreamDelta]] <<if $awareness < 4>><<set $awareness to $awareness + 1>><</if>>
+* [[Investigate the Side Channel->InkstreamDelta]]
+* [[Return to the Nest->Start]]
+
+<<else>>
+The streams appear chaotic at first, their patterns just beyond your comprehension.
+
+''Basic Streams:''
+* [[Wade into the Flow->InkstreamDelta]] <<if $awareness < 2>><<set $awareness to $awareness + 1>><</if>>
+* [[Return to the Nest->Start]]
+<</if>>
+
+<div class="stream-status">
+''Stream Analysis:''
+* Active Branches: <<print Math.min($loops + 1, 5)>>
+* Pattern Clarity: <<print Math.min(Math.floor($awareness * 20), 100)>>%
+<<if $awareness >= 5>>
+    The streams whisper their secrets freely now...
+<<elseif $awareness >= 3>>
+    The patterns are beginning to make sense...
+<<else>>
+    The flow seems random, but is it?
+<</if>>
+</div>
+
+<<if $awareness >= 3 && $loops >= 2>>
+<div class="meta-stream">
+Data fragments coalesce:
+"User awareness at $awareness... Loop count: $loops... Reality coherence fluctuating..."
+</div>
+<</if>>

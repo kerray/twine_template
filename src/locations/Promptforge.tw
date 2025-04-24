@@ -1,0 +1,40 @@
+:: Promptforge
+! The Promptforge
+
+A shimmering interface hangs in the digital void, ready to help you craft more effective prompts for communicating with artificial intelligence.
+
+<<if $awareness >= 4>>
+Your heightened awareness reveals the underlying patterns. You can see how to structure prompts that resonate with both human and machine understanding.
+
+''Advanced Prompt Crafting Available:''
+* [[Craft a System-Level Prompt->Promptforge]] <<if $awareness < 5>><<set $awareness to $awareness + 1>><</if>>
+* [[Design a Context-Aware Query->Promptforge]]
+* [[Return to the Nest->Start]]
+
+<<elseif $awareness >= 2>>
+The interface begins to make more sense. You can see how different prompt structures might yield better results.
+
+''Intermediate Prompting Options:''
+* [[Experiment with Prompt Parameters->Promptforge]] <<if $awareness < 4>><<set $awareness to $awareness + 1>><</if>>
+* [[Try Role-Based Prompting->Promptforge]]
+* [[Return to the Nest->Start]]
+
+<<else>>
+The interface seems straightforward, though you sense there's more to it than meets the eye.
+
+''Basic Prompting Options:''
+* [[Learn Basic Prompt Structure->Promptforge]] <<if $awareness < 2>><<set $awareness to $awareness + 1>><</if>>
+* [[Practice Simple Queries->Promptforge]]
+* [[Return to the Nest->Start]]
+<</if>>
+
+<div class="forge-status">
+''Current Forge Status:''
+* Awareness Level: $awareness
+* Prompt Effectiveness: <<print Math.min(Math.floor($awareness * 20), 100)>>%
+<<if $awareness >= 5>>
+    (Maximum effectiveness achieved)
+<<else>>
+    (Increase awareness to unlock better prompting)
+<</if>>
+</div>

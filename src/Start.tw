@@ -1,0 +1,26 @@
+:: Start
+<<set $awareness to $awareness ?? 0>>
+<<set $loops to $loops ?? 0>>
+
+! The Neural Nest
+
+You find yourself in a strange digital space that seems to pulse with artificial consciousness. Streams of data flow around you like ribbons of light, forming patterns that almost make sense... but not quite.
+
+''Current Status:''
+* Awareness Level: $awareness
+* Reality Loops: $loops
+
+[[Enter the Whisper Loop->WhisperLoop]] - A recursive space where each visit deepens your understanding
+[[Visit the Promptforge->Promptforge]] - Learn to communicate with the AI more effectively
+[[Explore the Inkstream Delta->InkstreamDelta]] - Watch as data paths shift and change
+[[Face the Mirror Parse->MirrorParse]] - See your own digital reflection
+
+<div class="meta-note">
+<<if $awareness >= 5>>
+You're beginning to see through the simulation...
+<<elseif $awareness >= 3>>
+Something feels different about this place...
+<<else>>
+This seems like a normal interactive story...
+<</if>>
+</div>
