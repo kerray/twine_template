@@ -5,6 +5,84 @@ const path = require('path');
 const os = require('os');
 const https = require('https');
 
+// Check and install JDK if needed
+async function ensureJdk17() {
+  try {
+    // Check current Java version
+    try {
+      const javaVersion = execSync('java -version 2>&1').toString();
+      const versionMatch = javaVersion.match(/version "(\d+)/);
+      if (versionMatch) {
+        const majorVersion = parseInt(versionMatch[1]);
+        if (majorVersion >= 17) {
+          console.log('JDK 17 or later is already installed.');
+          return;
+        }
+      }
+    } catch (error) {
+      // Java not installed
+    }
+
+    console.log('Installing JDK 17...');
+
+    if (isWindows) {
+      // For Windows, download OpenJDK and set JAVA_HOME
+      const jdkUrl = 'https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_windows-x64_bin.zip';
+      const jdkZip = path.join(os.tmpdir(), 'jdk17.zip');
+      const jdkDir = path.join(os.homedir(), 'jdk-17.0.2');
+
+      await downloadFile(jdkUrl, jdkZip);
+      execSync(`powershell -command "Expand-Archive -Path '${jdkZip}' -DestinationPath '${os.homedir()}'"`, { stdio: 'inherit' });
+      process.env.JAVA_HOME = jdkDir;
+      process.env.PATH = `${path.join(jdkDir, 'bin')}${path.delimiter}${process.env.PATH}`;
+
+    } else if (isLinux) {
+      // For Linux, use apt
+      execSync('sudo apt-get update', { stdio: 'inherit' });
+      execSync('sudo apt-get install -y openjdk-17-jdk', { stdio: 'inherit' });
+
+    } else if (isMac) {
+      // For macOS, use Homebrew
+      try {
+        execSync('brew --version', { stdio: 'ignore' });
+      } catch {
+        execSync('/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"', { stdio: 'inherit' });
+      }
+      execSync('brew install openjdk@17', { stdio: 'inherit' });
+      execSync('sudo ln -sfn $(brew --prefix)/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk', { stdio: 'inherit' });
+    }
+
+    // Verify installation
+    const newJavaVersion = execSync('java -version 2>&1').toString();
+    console.log('Installed Java version:', newJavaVersion.split('\n')[0]);
+
+  } catch (error) {
+    if (!process.env.SKIP_JDK_VERSION_CHECK) {
+      console.error('Error installing JDK 17:', error.message);
+      console.error('Please install JDK 17 manually or set SKIP_JDK_VERSION_CHECK to proceed.');
+      process.exit(1);
+    } else {
+      console.warn('Warning: Proceeding despite JDK installation failure (SKIP_JDK_VERSION_CHECK is set)');
+    }
+  }
+}
+
+// Helper function to download files
+async function downloadFile(url, dest) {
+  return new Promise((resolve, reject) => {
+    const file = fs.createWriteStream(dest);
+    https.get(url, (response) => {
+      response.pipe(file);
+      file.on('finish', () => {
+        file.close();
+        resolve();
+      });
+    }).on('error', (err) => {
+      fs.unlink(dest, () => reject(err));
+    });
+  });
+}
+
 // Determine OS
 const platform = process.platform;
 const isWindows = platform === 'win32';
@@ -123,6 +201,7 @@ function setEnvironmentVariables() {
 // Main setup function
 async function setup() {
   try {
+    await ensureJdk17();
     createDirectories();
     await downloadAndExtractTools();
     acceptLicenses();

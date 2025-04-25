@@ -30,6 +30,7 @@ TWEEGO_BIN := if os() == "windows" {
 # Default recipe - shows help
 default:
   @echo "Available recipes:"
+  @echo "Run './just <recipe>' to execute a recipe"
   @./just --list
 
 # Ensure output directory exists
@@ -60,6 +61,7 @@ download-sugarcube:
 # Install all dependencies
 install-deps: download-just download-tweego download-sugarcube
   @echo "Installing dependencies..."
+  chmod +x ./scripts/install-dependencies.sh
   ./scripts/install-dependencies.sh
   @echo "Dependencies installed!"
 
@@ -98,21 +100,22 @@ cordova-resources:
   @echo "Cordova resources generated!"
 
 # Add and build Android platform
-cordova-android: cordova-init
+cordova-android: cordova-init cordova-resources
   @echo "Building Android app..."
+  node cordova/scripts/setup-android-env.js
   node cordova/scripts/add-platforms.js android
   node cordova/scripts/build-android.js
   @echo "Android app built!"
 
 # Add and build iOS platform
-cordova-ios: cordova-init
+cordova-ios: cordova-init cordova-resources
   @echo "Building iOS app..."
   node cordova/scripts/add-platforms.js ios
   node cordova/scripts/build-ios.js
   @echo "iOS app built!"
 
 # Add and build Windows platform
-cordova-windows: cordova-init
+cordova-windows: cordova-init cordova-resources
   @echo "Building Windows app..."
   node cordova/scripts/add-platforms.js windows
   node cordova/scripts/build-windows.js
