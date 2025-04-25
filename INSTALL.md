@@ -16,6 +16,7 @@ This document serves as a step-by-step protocol/checklist for both human users a
 ### Optional but Recommended
 - GitHub account for:
   - Version control
+  - Automated build and publication
   - Web hosting via GitHub Pages
   - Access to the "Use this template" feature
 
@@ -54,15 +55,18 @@ This document serves as a step-by-step protocol/checklist for both human users a
 
 ### 2. Install Dependencies
 
-1. Copy the environment configuration template:
-   ```bash
-   cp .env.example .env
-   ```
+Run the installation script:
+```bash
+./install.sh
+```
 
-2. Install required tools and dependencies:
-   ```bash
-   ./scripts/install-dependencies.sh
-   ```
+This script will:
+1. Create the `.env` file from `.env.example` if it doesn't exist
+2. Download and set up Just command runner
+3. Download and set up Tweego compiler
+4. Download and set up Sugarcube storyformat
+5. Install other dependencies
+6. Compile the initial game
 
 ### 3. Initial Configuration
 

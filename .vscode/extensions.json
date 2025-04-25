@@ -9,8 +9,7 @@
 		"yzhang.markdown-all-in-one",
 		"bierner.markdown-preview-github-styles",
 		"ms-vscode.live-server",
-		"rooveterinaryinc.roo-cline",
-		"saoudrizwan.claude-dev"
+		"rooveterinaryinc.roo-cline"
 	],
 	"unwantedRecommendations": []
 }

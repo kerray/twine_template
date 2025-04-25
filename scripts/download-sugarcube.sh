@@ -5,7 +5,10 @@ set -e
 
 # Load environment variables from .env if it exists
 if [ -f .env ]; then
-  export $(cat .env | grep -v '^#' | xargs)
+  # Try to load the .env file, but don't fail if it can't be read
+  if ! export $(cat .env | grep -v '^#' | xargs) 2>/dev/null; then
+    echo "Warning: Could not fully load .env file. Using default values."
+  fi
 fi
 
 # Set default version if not provided in .env
