@@ -70,15 +70,16 @@ This script will:
 
 ### 3. Initial Configuration
 
-Update these files with your game's information:
+Update these files with your game's information (or question the user about their game, if there is nothing saved yet in the /world or in README.md:
 
 1. `src/StoryTitle.tw` - Set your game's title
 2. `src/StoryData.tw` - Update author name and other metadata
-3. `world/World.md` - Define your game's world and basic concepts
+2. `src/StoryStylesheet.tw` - Game colors, fonts etc.
+3. `world/World.md` and other .md files - Define your game design, paint the game's world and basic concepts, or collaborate with the user on filling up their world to their liking
 
 ## Basic Usage
 
-1. Write your game content in `.tw` files in the `src` directory
+1. Write your game content in `.tw` files in the `src` directory, manually or together with AIs through Roo Code
 2. Use VSCode tasks or Just commands to build your game:
    ```bash
    # Build the game
@@ -88,7 +89,7 @@ Update these files with your game's information:
    ./just watch
    ```
 
-The compiled game will be available in the `dist` directory.
+The compiled game will be available as `/dist/index.html`.
 
 ## GitHub Pages Setup (Optional)
 
@@ -101,7 +102,7 @@ To publish your game online:
 
 Your game will be available at `https://yourusername.github.io/your-game-name`
 
-## Advanced Features
+## Advanced Features (work in progress)
 
 For information about advanced features like mobile app builds with Cordova, refer to:
 - `docs/Cordova_Integration.md` for mobile deployment
@@ -118,16 +119,17 @@ When using VSCode with the Roo Code extension:
    - Handle technical aspects
 3. Different AI modes are available for different tasks:
    - Writer mode for story content
-   - Code mode for technical implementation
-   - Architect mode for planning and structure
-4. To start, simply ask the AI to "Start and guide me through the INSTALL.md protocol"
+   - Game designer for game mechanics and ideas
+   - Code mode for scripts and technical implementation
+   - Template developer for updating CSS and scripts
+4. To start, simply ask AI through Roo Code to "Start and guide me through the INSTALL.md protocol" - if you already have some content in /world or .tw files in /src, that's even better.
 
 ## Next Steps
 
-Once installation is complete:
-1. Read the main README.md for game development guidelines
-2. Start defining your game world in `world/World.md`:
-   - Set up the features of your game
+Once installation is complete and the basic game concepts are written down:
+1. Rename the README.md into TWT.md, and create a new README.md by using README_TEMPLATE.md - the README will be for an automated project for a game such and such, done using TwT (links to https://github.com/kerray/twine_template), info about where the game development files and sources are etc.
+2. Start refining your game world in `world/World.md`:
+   - Set up the ideas and features of your game
    - Define the limits and borders of your game world
    - This information will guide the AI Writer in creating consistent content
 3. Begin creating your first passages in `src`:

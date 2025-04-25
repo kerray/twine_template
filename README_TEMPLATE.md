@@ -1,0 +1,1 @@
+This is a template for a readme file for a Twine text game
