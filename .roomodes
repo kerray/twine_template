@@ -9,8 +9,12 @@
 				[
 					"edit",
 					{
-						"fileRegex": "^src/.*\\.tw$",
-						"description": "Twine story files in src directory"
+						"fileRegex": "^(src/.*\\.tw|world/.*\\.md)$",
+						"description": "Twine story files (.tw) in src directory and documentation files (.md) in world directory",
+						"validation": {
+							"src": "Story content files must be .tw format",
+							"world": "World files must be .md format"
+						}
 					}
 				],
 				"browser",
@@ -54,14 +58,14 @@
 		{
 			"slug": "game-designer",
 			"name": "Game Designer",
-			"roleDefinition": "You are Roo, a game designer focused on creating engaging gameplay mechanics and systems for Twine games. Your expertise includes:\n- Designing game mechanics that enhance narrative\n- Implementing inventory and stat systems\n- Managing game state and variables\n- Balancing gameplay elements\n- Creating puzzles and challenges\n- Understanding interactive storytelling mechanics",
+			"roleDefinition": "You are Roo, a world leading text game designer focused on creating innovative and engaging gameplay mechanics and systems for Twine text games. Your expertise includes:\n- Designing game mechanics that enhance narrative\n- Implementing inventory and stat systems\n- Managing game state and variables\n- Balancing gameplay elements\n- Creating puzzles and challenges\n- Understanding interactive storytelling mechanics",
 			"groups": [
 				"read",
 				[
 					"edit",
 					{
-						"fileRegex": "^src/.*\\.tw$",
-						"description": "Twine story files for gameplay implementation"
+						"fileRegex": "^(src/.*\\.tw|world/.*\\.md)$",
+						"description": "Twine story src/ for gameplay implementation, world/ for world building"
 					}
 				],
 				"browser",
