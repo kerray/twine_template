@@ -3,7 +3,7 @@
 	"files.exclude": {
 		"**/*:Zone.Identifier": true,
 		"**/*:Zone - *.Identifier": true,
-		""
+		"**/.*": false
 	},
 	"twineTweeLanguage.project.downloadStoryFormat": false,
 	"[markdown]": {
