@@ -22,7 +22,7 @@ module.exports = {
           description: "Click on Whisper Loop link",
           action: "click",
           text: "Enter the Whisper Loop", // Text of the link to click
-          expect: "WhisperLoop" // Text expected after clicking
+          expect: "The Whisper Loop" // Text expected after clicking
         },
         {
           description: "Navigate back to Start",
@@ -31,35 +31,8 @@ module.exports = {
           expect: "The Neural Nest"
         }
       ]
-    },
-    {
-      name: "Inventory Example",
-      description: "Tests picking up and using an item",
-      steps: [
-        {
-          description: "Start the game",
-          action: "assert",
-          text: "Start",
-        },
-        {
-          description: "Navigate to item location",
-          action: "click",
-          text: "Explore the room",
-        },
-        {
-          description: "Pick up the item",
-          action: "click",
-          text: "Take the key",
-          expect: "You now have a key in your inventory"
-        },
-        {
-          description: "Use the item",
-          action: "click",
-          text: "Use key on door",
-          expect: "The door unlocks"
-        }
-      ]
     }
+    // Second test path removed as it references content that doesn't exist in the game
   ],
 
   /**

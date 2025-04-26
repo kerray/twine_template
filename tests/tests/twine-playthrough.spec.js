@@ -1,6 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 const config = require('../config/config');
+const path = require('path');
 
 /**
  * Helper function to wait for a short time
@@ -15,7 +16,8 @@ const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 test(`Playthrough: ${config.testPaths?.[0]?.name || 'Default'}`, async ({ page }) => {
   // Load the game
   console.log('Navigating to the game...');
-  await page.goto('/');
+  const distPath = path.resolve(__dirname, '../../dist/index.html');
+  await page.goto(`file://${distPath}`);
   
   // Log page title to help with debugging
   const title = await page.title();
@@ -60,7 +62,8 @@ test(`Playthrough: ${config.testPaths?.[0]?.name || 'Default'}`, async ({ page }
           if (step.selector) {
             await page.click(step.selector);
           } else if (step.text) {
-            await page.getByText(step.text, { exact: false }).first().click();
+            // Target text within the #passages container to avoid tw-passagedata elements
+            await page.locator('#passages').getByText(step.text, { exact: false }).click();
           }
           break;
           
@@ -76,7 +79,8 @@ test(`Playthrough: ${config.testPaths?.[0]?.name || 'Default'}`, async ({ page }
           
         case 'assert':
           if (step.text) {
-            await expect(page.getByText(step.text, { exact: false })).toBeVisible();
+            // Target text within the #passages container to avoid tw-passagedata elements
+            await expect(page.locator('#passages').getByText(step.text, { exact: false })).toBeVisible();
           } else if (step.selector) {
             await expect(page.locator(step.selector)).toBeVisible();
           }
@@ -91,7 +95,8 @@ test(`Playthrough: ${config.testPaths?.[0]?.name || 'Default'}`, async ({ page }
       
       // If verification is specified, check that the expected content is visible
       if (step.expect) {
-        await expect(page.getByText(step.expect, { exact: false })).toBeVisible();
+        // Target text within the #passages container to avoid tw-passagedata elements
+        await expect(page.locator('#passages').getByText(step.expect, { exact: false })).toBeVisible();
       }
     }
   }

@@ -16,7 +16,8 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    baseURL: 'file://' + require('path').resolve(__dirname, '../dist/index.html'),
+    // We're using direct file:// URLs in the tests, so baseURL is not needed
+    // baseURL: 'file://' + require('path').resolve(__dirname, '../dist/'),
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     // Always run in headless mode since we're in a code-server environment
