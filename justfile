@@ -65,6 +65,12 @@ install-deps: download-just download-tweego download-sugarcube
   ./scripts/install-dependencies.sh
   @echo "Dependencies installed!"
 
+# Install all dependencies including test dependencies
+install-all: install-deps
+  @echo "Installing test dependencies..."
+  just install-tests
+  @echo "All dependencies installed!"
+
 # Compile the game
 compile: _ensure-output-dir
   @echo "Compiling game..."
@@ -133,3 +139,34 @@ setup-android:
   @echo "Setting up Android development environment..."
   node cordova/scripts/setup-android-env.js
   @echo "Android development environment set up!"
+
+# Test targets
+# Install test dependencies
+install-tests:
+  @echo "Installing test dependencies..."
+  cd tests && chmod +x ./install-tests.sh && ./install-tests.sh
+  @echo "Test dependencies installed!"
+
+# Run tests
+test: compile
+  @echo "Running tests..."
+  cd tests && npm test
+  @echo "Tests completed!"
+
+# Run tests with UI
+test-ui: compile
+  @echo "Running tests with UI..."
+  cd tests && npm run test:ui
+  @echo "Tests completed!"
+
+# Run tests in debug mode
+test-debug: compile
+  @echo "Running tests in debug mode..."
+  cd tests && npm run test:debug
+  @echo "Tests completed!"
+
+# Generate test report
+test-report:
+  @echo "Generating test report..."
+  cd tests && npm run report
+  @echo "Test report generated in tests/test-report.md"

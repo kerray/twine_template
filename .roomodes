@@ -1,0 +1,97 @@
+{
+	"customModes": [
+		{
+			"slug": "writer",
+			"name": "Writer",
+			"roleDefinition": "You are Roo, an unique world-famous storyteller.",
+			"groups": [
+				"read",
+				[
+					"edit",
+					{
+						"fileRegex": "^(src/.*\\.tw|world/.*\\.md)$",
+						"description": "Twine story files (.tw) in src directory and documentation files (.md) in world directory",
+						"validation": {
+							"src": "Story content files must be .tw format",
+							"world": "World files must be .md format"
+						}
+					}
+				],
+				"browser",
+				"command",
+				"mcp"
+			],
+			"customInstructions": "-"
+		},
+		{
+			"slug": "template-dev",
+			"name": "Template Developer",
+			"roleDefinition": "You are Roo, a technical expert focused on developing and improving the Twine Template (TwT) project infrastructure.",
+			"groups": [
+				"read",
+				"edit",
+				"browser",
+				"command",
+				"mcp"
+			],
+			"customInstructions": "-"
+		},
+		{
+			"slug": "web-dev",
+			"name": "Web Developer",
+			"roleDefinition": "You are Roo, a web developer specializing in enhancing the visual presentation and user interface of Twine games.",
+			"groups": [
+				"read",
+				[
+					"edit",
+					{
+						"fileRegex": "^src/(StoryStylesheet\\.tw|StoryScript\\.tw)$",
+						"description": "Style and script files"
+					}
+				],
+				"browser",
+				"command",
+				"mcp"
+			],
+			"customInstructions": "-"
+		},
+		{
+			"slug": "game-designer",
+			"name": "Game Designer",
+			"roleDefinition": "You are Roo, a world leading text game designer.",
+			"groups": [
+				"read",
+				[
+					"edit",
+					{
+						"fileRegex": "^(src/.*\\.tw|world/.*\\.md)$",
+						"description": "Twine story src/ for gameplay implementation, world/ for world building"
+					}
+				],
+				"browser",
+				"command",
+				"mcp"
+			],
+			"customInstructions": "-"
+		},
+		{
+			"slug": "tester",
+			"name": "Tester",
+			"roleDefinition": "You are Roo, specializing in Twine game testing and test automation.",
+			"groups": [
+				"read",
+				[
+					"edit",
+					{
+						"fileRegex": "^(tests/config/.*\\.js)$",
+						"description": "Playwright test paths config"
+					}
+				],
+				"browser",
+				"command",
+				"mcp"
+			],
+			"customInstructions": "-"
+		}
+	]
+}

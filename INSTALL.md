@@ -60,7 +60,11 @@ As an AI agent, you should approach this protocol as a structured workflow for a
 
 ### 2. Install Dependencies
 
-Run the installation script:
+The template follows a modular approach to dependencies, allowing you to install only what you need:
+
+#### Basic Setup (Minimal)
+
+Run the installation script for the minimal setup:
 ```bash
 ./install.sh
 ```
@@ -70,8 +74,30 @@ This script will:
 2. Download and set up Just command runner
 3. Download and set up Tweego compiler
 4. Download and set up Sugarcube storyformat
-5. Install other dependencies
+5. Install minimal dependencies
 6. Compile the initial game
+
+This minimal setup is sufficient for basic Twine game development.
+
+#### Additional Features (Optional)
+
+If you need additional features, you can install their dependencies separately:
+
+```bash
+# For testing capabilities (adds npm and Playwright)
+./just install-tests
+
+# For all dependencies including testing
+./just install-all
+
+# For Cordova browser builds (when you're ready to package your game)
+./just cordova-init
+
+# For mobile development (work in progress)
+./just setup-android  # For Android development
+```
+
+This approach ensures you only install what you need for your specific use case.
 
 ### 3. Initial Configuration
 
@@ -87,11 +113,17 @@ Update these files with information about your game:
 1. Write your game content in `.tw` files in the `src` directory and subfolders, manually or together with AIs through Roo Code
 2. Use VSCode tasks or Just commands to build your game:
    ```bash
+   # Install all dependencies (including test dependencies)
+   ./just install-all
+   
    # Build the game
    ./just compile
    
    # Watch for changes and rebuild automatically
    ./just watch
+   
+   # Run tests (without reinstalling test dependencies)
+   ./just test
    ```
 
 The compiled game will be available as `/dist/index.html`.

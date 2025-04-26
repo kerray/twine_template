@@ -1,0 +1,16 @@
+{
+  "name": "twine-template-tests",
+  "version": "1.0.0",
+  "description": "Automated tests for Twine Template",
+  "scripts": {
+    "pretest": "node scripts/ensure-compiled.js",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "node scripts/generate-report.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "playwright": "^1.40.0"
+  }
+}

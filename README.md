@@ -87,12 +87,41 @@ Once you have the template set up:
 
 The template includes a comprehensive build system using Just and shell scripts:
 
+### Dependency Management Philosophy
+
+The template follows a modular approach to dependencies:
+
+1. **Base Setup (Minimal)**:
+   - Just Tweego and Just command runner
+   - Sufficient for basic Twine game development
+   - No npm, Java, or other heavy dependencies
+   - Use `just install-deps` for this minimal setup
+
+2. **Testing Layer**:
+   - Adds npm and Playwright
+   - Only installed when user explicitly needs testing capabilities
+   - Use `just install-tests` to set up
+
+3. **Cordova Browser Builds**:
+   - Adds capabilities for browser app packaging
+   - Separate from mobile builds to keep dependencies minimal
+
+4. **Mobile Builds** (work in progress):
+   - Adds Java for Android and Mac-specific requirements
+   - Heaviest dependency footprint
+   - Only installed when explicitly needed for mobile development
+
+This approach ensures you only install what you need for your specific use case.
+
 ### Basic Commands
 
 - `just compile` - Compiles the game to a single HTML file.
 - `just watch` - Watches for changes and recompiles the game file automatically
 - `just clean` - Cleans the output directory
-- `just install-deps` - Installs dependencies
+- `just install-deps` - Installs core dependencies (Tweego, Sugarcube, etc.)
+- `just install-tests` - Installs test dependencies (npm, Playwright)
+- `just install-all` - Installs all dependencies including test dependencies
+- `just test` - Runs tests (without reinstalling test dependencies)
 
 ### Mobile App Commands - TODO - not yet tested
 

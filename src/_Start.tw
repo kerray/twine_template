@@ -1,0 +1,11 @@
+:: _Start [startup nobr]
+/* 
+This is a universal starting point for your Twine game.
+To create your own game, replace the <<goto>> destination with your own starting passage.
+For example, if your first passage is called "Introduction", change it to:
+<<goto "Introduction">>
+
+The demo content has been moved to the demo folder.
+*/
+
+<<goto "demo/Start">>

@@ -75,6 +75,11 @@ logs/
 .DS_Store
 Thumbs.db
 
+# Test results
+tests/playwright-report/
+tests/test-results/
+tests/tests/test-results/
+
 # Just symlink
 /just
 bin/**
